@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Login</title>
+    <title>Register</title>
 
     <link href="styles/login.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -17,9 +17,9 @@
 </head>
 <body>
     
-<form class="form-login" name="loginForm" action="/api/user/login" method="POST">
+<form class="form-login" name="registerForm" action="/api/user/register" method="POST">
     <div class="brand" style="display:none;">
-        <!--<img class="mb-2" src="./PerfectHR.png"/>-->
+        <!--<img class="mb-2" src="brand2.png" width="100%" height="100"/>-->
         <div  style="color:white; font-size:24px; font-family:'Courier New'">
             <span style="border-bottom:1px solid white;">Bİ'DOLU YAZILIM</span>
         </div>
@@ -32,7 +32,25 @@
                 <span class="input-group-addon">
                     <i class="fas fa-user"></i>
                 </span>
-                <input type="text" class="form-control" name="username" placeholder="Kullanıcı Adı / E-posta"/>
+                <input type="text" class="form-control" name="name" required placeholder="Ad/Soyad"/>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="fas fa-phone"></i>
+                </span>
+                <input type="text" class="form-control" name="phone" required placeholder="Telefon"/>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="fas fa-user"></i>
+                </span>
+                <input type="email" class="form-control" name="email" required placeholder="Kullanıcı Adı / E-posta"/>
 
             </div>
         </div>
@@ -41,35 +59,19 @@
                 <span class="input-group-addon">
                     <i class="fas fa-lock"></i>
                 </span>
-                <input type="password" name="password" class="form-control" placeholder="Parola"/>
+                <input type="password" name="password" class="form-control" required placeholder="Parola"/>
 
             </div>
         </div>
-        <div class="form-group">
-            <div class="row">
-                <div class="col-5" style="font-size:14px; margin-top:10px">
-                    <label>
-                        <input style="vertical-align:middle; height:18px;width:18px;" type="checkbox" class="form-check d-inline" />
-                        <span style="vertical-align:middle; font-size:15px;">Beni Hatırla</span>
-                    </label>
-                </div>
-                <div class="col-7">
-                    <button class="btn btn-success float-right col-6" type="submit">
-                        <span>Giriş <i class="far fa-arrow-alt-circle-right"></i></span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <hr />
-        <div class="form-group text-center">
-            
-            <h4 class="font-weight-lighter" style="font-size:18px;">Hesabınız Yok Mu?</h4>
-            <a class="btn btn-danger btn-20" href="register">Şimdi Kaydol</a>
-        </div>
         
+        <button class="btn btn-success form-group input-group" type="submit" style="margin:auto">
+            <span style="margin:auto">Kaydol</span>
+        </button>    
+                    
     </div>
 
 </form>
+
 
 </body>
 </html>
