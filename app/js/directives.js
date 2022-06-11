@@ -1,4 +1,6 @@
 //import {sideBarMenuDirective} from './drct/sideBarMenuDirective';
-import {sideBarMenuDirective} from './drct/sideBarMenuDirective';
+import SideBarMenuDirective from './drct/SideBarMenuDirective';
 
-myApp.directive('sideBarMenu', sideBarMenuDirective)
+var myApp = angular.module('myApp', []);
+
+myApp.directive('sideBarMenu', SideBarMenuDirective);

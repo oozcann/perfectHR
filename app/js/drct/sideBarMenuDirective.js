@@ -1,15 +1,9 @@
-import htmlTemplate from '../../view/drct/sidebar-menu.html';
-export const sideBarMenuDirective = [
+/*import htmlTemplate from '../../view/drct/sidebar-menu.html';
+export const SideBarMenuDirective = [
 	() => ({
 		restrict: 'A',
 		scope: {
-			tag: '=',
-			beingEdited: '=',
-			postCancelFunction: '&',
-			postSaveFunction: '&',
-			justSaved: '=',
-			isNew: '@',
-			tags: '='
+			
 		},
 		template: htmlTemplate,
 		controller: [
@@ -24,4 +18,25 @@ export const sideBarMenuDirective = [
 			
 		}
 	})
-];
+];*/
+myApp.directive('sideBarMenu', function(){
+
+    return {
+
+        restrict : "A",
+        //template : '<div class="p-3 d-inline-block"><button ng-click="goToNewEmployeePage()" class="btn btn-success btn-square" style="width:112px;">Yeni Çalışan</button></div>'
+        template : '<button ng-click="goToNewEmployeePage()" class="btn btn-success btn-square" style="width:112px;">Yeni Çalışan</button>'
+
+    }
+
+
+});
+
+/*
+<div class="p-3">
+
+    <button ng-click="goToNewEmployeePage()" class="btn btn-success btn-square" style="width:112px;">Yeni Çalışan</button>
+
+</div>
+
+*/
