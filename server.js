@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const UserRoute = require('./server/routes/userRoutes');
+const EmployeeRoute = require('./server/routes/employeeRoutes');
 const path = require('path');
 mongoose.connect('mongodb://localhost:27017/application',{useNewUrlParser:true, useUnifiedTopology:true});
 const db = mongoose.connection;
@@ -33,3 +34,4 @@ app.listen(3000, () => {
     console.log('Server is running on port 3000');
 });
 app.use('/api/user', UserRoute);
+app.use('/api/employee', EmployeeRoute);
