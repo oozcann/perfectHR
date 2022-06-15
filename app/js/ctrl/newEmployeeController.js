@@ -2,11 +2,17 @@ myApp.controller('newEmployeeController', ['$scope', '$state', '$stateParams','$
     function ($scope, $state, $stateParams, $http) {
 
     $scope.goBack = function () {
-
             $state.go('home', {})
-
-
     };
+    
+    $scope.breadcrumbItems = [
+        {name: "Anasayfa", link:"#!/", icon:"fas fa-home"},
+        {name: "Çalışanlar", link:"#!/employees"},
+        {name: "Yeni Çalışan", link:""}
+    ];
+    //console.log($scope.breadcrumbItems);
+    //console.log($state.current);
+    console.log("ABC : " + ($state.current.url == '/new-employee'));
     $scope.saveEmployee = function (data) {
         $http.post('/api/employee/save', JSON.stringify(data)).then(function (response) {
         

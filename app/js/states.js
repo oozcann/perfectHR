@@ -1,6 +1,5 @@
 var myApp = angular.module("myApp", ['ui.router']);
 
-
 myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
     $stateProvider.state('home', {
@@ -34,7 +33,19 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
     .state('new-employee', {
         url: '/new-employee',
         templateUrl: "../view/new-employee.html",
-        controller : "newEmployeeController"
+        controller : "newEmployeeController",
+        data: {
+            pageHeader: {
+                title: 'PAGE_HEADER.EQUIPMENT.TITLE',
+                titleSmall: 'PAGE_HEADER.EQUIPMENT.DESCRIPTION'
+            },
+            breadcrumbItems: [
+                {name: "Anasayfa", link:"#!/", icon:"fas fa-home"},
+                {name: "Çalışanlar", link:"#!/employees"},
+                {name: "Yeni Çalışan", link:""}
+            ]
+        },
+        reload: true
 
     })
     .state('edit-employee', {

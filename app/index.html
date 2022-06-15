@@ -26,6 +26,7 @@
     <script type="module" src="js/drct/SideBarMenuDirective.js"></script>
     <script src="js/states.js"></script>
     <script src="js/ctrl/newEmployeeController.js"></script>
+    <script src="js/ctrl/breadcrumbController.js"></script>
     <!--
     
     <script src="js\controllers\employeesListController.js"></script>
@@ -80,14 +81,12 @@
 
                 </div>
                 <div class="content-area col-10 p-0">
-                    <!--
-                    <div class="pl-2 pr-2 mt-2" ui-view="breadcrumb">
+                    <div class="pl-2 pr-2 mt-2" ng-controller="breadcrumbController">
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#!/"><i class="fas fa-home"></i> Anasayfa</a></li>
-                            <li class="breadcrumb-item"><a href="#!/employees">Arşivli Çalışanlar</a></li>
+                            <li ng-repeat="item in breadcrumbItems" class="breadcrumb-item" ng-if="item.link"><a href="{{item.link}}"><i class="{{item.icon}}"></i> {{item.name}}</a></li>
+                            <li ng-repeat="item in breadcrumbItems" class="breadcrumb-item" ng-if="!item.link">{{item.name}}</li>
                         </ul>
                     </div>
-                    -->
                     <div ui-view="">
 
                     </div>

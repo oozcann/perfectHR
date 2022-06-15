@@ -19,6 +19,7 @@ export const SideBarMenuDirective = [
 		}
 	})
 ];*/
+
 myApp.directive('sideBarMenu', function(){
 
     return {
@@ -31,12 +32,3 @@ myApp.directive('sideBarMenu', function(){
 
 
 });
-
-/*
-<div class="p-3">
-
-    <button ng-click="goToNewEmployeePage()" class="btn btn-success btn-square" style="width:112px;">Yeni Çalışan</button>
-
-</div>
-
-*/
