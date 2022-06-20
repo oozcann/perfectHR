@@ -1,6 +1,7 @@
 <div class="pl-3 pr-3 mb-1">
-    <div class="btn-group d-inline-block">
-        <go-to-new-employee-page></go-to-new-employee-page>
+    <div class="btn-group ">
+        <go-to-new-employee></go-to-new-employee>
+        <button ng-click="toggleArchivedEmployee()" class="btn btn-square {{btnClass}}">{{showHideArchivedEmployees}} Çalışanları Göster</button>
         <button ng-click="exportData()" class="btn btn-square" style="color:#333; border:1px solid #cecece; width:70px!important;">EXCEL</button>
     </div>
         <input ng-model="search" type="search" class="form-control emp-search-input" placeholder="Bir isim yazınız" />
@@ -22,10 +23,10 @@
         </thead>
         <tbody ng-repeat="employee in employees  | filter : {name : search}">
 
-            <tr ng-hide="employee.archived==true">
+            <tr>
                 <td id="uniqueName{{employee.id}}">{{employee.uniqueName}}</td>
                 <td id="name{{employee.id}}">
-                    <a href="#!/employee/{{employee.id}}" class="text-danger">
+                    <a href="#!/employee/{{employee._id}}" class="text-danger">
                         <i ng-if="employee.gender == 'E'" class="fas fa-male"></i>
                         <i ng-if="employee.gender == 'K'" class="fas fa-female"></i>
                         {{employee.name}} {{employee.surname}}
@@ -36,7 +37,7 @@
                 <td id="gender{{employee.id}}">{{employee.gender}}</td>
                 <td id="phone{{employee.id}}">{{employee.phone}}</td>
                 <td id="email{{employee.id}}">{{employee.email}}</td>
-                <td id="age{{employee.id}}" ng-model="test">{{employee.age}}</td>
+                <td id="age{{employee.id}}">{{employee.age}}</td>
 
             </tr>            
 

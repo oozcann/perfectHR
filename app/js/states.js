@@ -11,16 +11,10 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
         templateUrl: "html/employeesList.html",
         controller:"employeesListController"
 
-    })
-    .state('archived-employees', {
-        url: '/archived-employees',
-        templateUrl: "html/archived-employees.html",
-        controller:"archivedEmployeesController"
-
-    })    
+    })   
     .state('employee', {
-        url: '/employee/{id}',
-        templateUrl: "html/employee-detail.html",
+        url: '/employee/{employeeId}',
+        templateUrl: "../view/employee-detail.html",
         controller : "employeeDetailController"
 
     })

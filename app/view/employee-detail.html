@@ -1,0 +1,78 @@
+<!--employee detail
+
+thttps://stackoverflow.com/questions/19590063/get-specific-object-by-id-from-array-of-objects-in-angularjs
+-->
+<!--
+<div class="pl-2 pr-2 mt-2">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#!/"><i class="fas fa-home"></i> Anasayfa</a></li>
+        <li class="breadcrumb-item"><a href="#!/employees">Çalışanlar</a></li>
+        <li class="breadcrumb-item">{{selectedEmployee.name}} {{selectedEmployee.surname}}</li>
+    </ul>
+</div>
+-->
+<div class="row m-2 p-3 border" style="background-color:#eee;">
+    <div class="col-2 p-3 bg-light">
+        <img ng-show="showMaleImg" src="../assets/images/avatar/avatar-male.png"/>
+        <img ng-show="showFemaleImg" src="../assets/images/avatar/avatar-female.png"/>
+    </div>
+    <div class="col-10 p-3 bg-light" style="font-family: 'Open Sans', sans-serif;">
+        <h3 class="m-0 p-0">{{selectedEmployee.name}} {{selectedEmployee.surname}}</h3>
+        <div class="w-25 d-inline-block">
+            <span class="emp-detail-label">TC Kimlik:</span>
+            <p class="emp-detail-property">{{selectedEmployee.uniqueName}}</p>
+            <span class="emp-detail-label">D. Tarihi:</span>
+            <p class="emp-detail-property">{{selectedEmployee.dateOfBirth}}</p>
+            <span class="emp-detail-label">İşe Başlama Tarihi:</span>
+            <p class="emp-detail-property">{{selectedEmployee.jobStartDate}}</p>
+        </div>
+        <div class="w-25 d-inline-block">
+            <span class="emp-detail-label">Telefon:</span>
+            <p class="emp-detail-property">{{selectedEmployee.phone}}</p>
+            <span class="emp-detail-label">Email:</span>
+            <p class="emp-detail-property">{{selectedEmployee.email}}</p>
+            <span class="emp-detail-label">Cinsiyet:</span>
+            <p class="emp-detail-property">{{selectedEmployee.gender}}</p>
+        </div>
+        <div class="w-25 d-inline-block">
+            <span class="emp-detail-label">Kullanılan İzin:</span>
+            <p class="emp-detail-property font-weight-bold">{{selectedEmployee.annualLeaveSpent}}</p>
+            <span style="visibility:hidden" class="emp-detail-label">Kullanılan İzin:</span>
+            <p style="visibility:hidden" class="emp-detail-property">{{selectedEmployee.annualLeaveSpent}}</p>
+            <span style="visibility:hidden" class="emp-detail-label">Kullanılan İzin:</span>
+            <p style="visibility:hidden" class="emp-detail-property">{{selectedEmployee.annualLeaveSpent}}</p>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<div class="row m-2 p-3" ng-hide="showAddingDay || activated">
+
+    <button class="btn btn-square btn-success" ng-click="openAddingDay()">İzin Ekle</button>
+    <button class="btn btn-square btn-primary" ng-click="openEditPage()">Düzenle</button>       
+    <button class="btn btn-square btn-danger" ng-click="openDeletePage()">Sil</button>
+
+</div>
+
+
+<form>
+    <div class="row m-2 p-3 border" style="background-color:#eee;" ng-show="showAddingDay">
+
+        <input type="number" class="form-control" name="annualLeave" placeholder="Gün sayısı giriniz" />
+        <input type="number" class="form-control" name="empID" style="display:none;" ng-model="selectedEmployee.id" />
+        <div class="ml-4">
+            <button class="btn btn-square btn-success p-1">Ekle</button>
+            <button ng-click="closeAddingDay()" class="btn btn-square btn-danger p-1">Vazgeç</button>
+        </div>
+    </div>
+</form>
+ 
+    <div ng-show="activated" class="row m-2 p-3 border" style="background-color:#eee;">
+
+        <button class="btn btn-success btn-square" ng-click="openActivatePage()">Aktif Et</button>
+        
+    </div>

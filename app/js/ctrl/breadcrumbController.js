@@ -15,7 +15,13 @@ myApp.controller('breadcrumbController', ['$scope', '$state', '$stateParams','$h
                 {name: "Aktif Çalışanlar", link:""}
             ];
         });
-
+        $rootScope.$on('employeeDetail', ()=>{
+            $scope.breadcrumbItems = [
+                {name: "Anasayfa", link:"#!/", icon:"fas fa-home"},
+                {name: "Çalışanlar", link:"#!/employees"},
+                {name: "{{selectedEmployee.name}} {{selectedEmployee.surname}}", link:""}
+            ];
+        });
         /*
         if ($location.path() == '/new-employee') {
             $scope.breadcrumbItems = [
