@@ -26,26 +26,14 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
     })
     .state('employees', {
         url: '/employees',
-        templateUrl: "html/employees.html",
+        templateUrl: "../view/employees.html",
         controller : "employeesListController"
 
     })
     .state('new-employee', {
         url: '/new-employee',
         templateUrl: "../view/new-employee.html",
-        controller : "newEmployeeController",
-        data: {
-            pageHeader: {
-                title: 'PAGE_HEADER.EQUIPMENT.TITLE',
-                titleSmall: 'PAGE_HEADER.EQUIPMENT.DESCRIPTION'
-            },
-            breadcrumbItems: [
-                {name: "Anasayfa", link:"#!/", icon:"fas fa-home"},
-                {name: "Çalışanlar", link:"#!/employees"},
-                {name: "Yeni Çalışan", link:""}
-            ]
-        },
-        reload: true
+        controller : "newEmployeeController"
 
     })
     .state('edit-employee', {
