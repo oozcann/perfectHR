@@ -12,8 +12,10 @@ myApp.controller('newEmployeeController', ['$scope', '$state', '$stateParams','$
     ];
     $scope.saveEmployee = function (data) {
         $http.post('/api/employee/save', JSON.stringify(data)).then(function (response) {
-        
+            console.log(response);
+            $scope.employeeId = response.data._id;
         });
+        
         const bootboxOpts = {};
 		bootboxOpts.title = '';
         bootboxOpts.message = 'Çalışan Kaydedilmiştir!';
@@ -25,13 +27,15 @@ myApp.controller('newEmployeeController', ['$scope', '$state', '$stateParams','$
 			confirm: { label: 'Çalışan Detayına Git', className: 'btn-success' }
 		};
 		bootboxOpts.buttons.confirm.callback = function () {
-			bootbox.alert('Çalışan Detayı');
+			$state.go('employee', {
+                employeeId: $scope.employeeId
+            })
 		};
 		bootboxOpts.buttons.cancel.callback = function () {
 			$state.go('home', {})
 		};
 		bootbox.dialog(bootboxOpts);				
-        
+    
     };
     
 }]);

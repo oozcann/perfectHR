@@ -19,6 +19,7 @@ const saveEmployee = (req,res,next) => {
     .then(response => {
         console.log('Employee saved successfully : ' + employee.name + ' ' + employee.surname);
         //res.redirect('/login');
+        res.json(response);
     })
     .catch(err => {
         res.json({
