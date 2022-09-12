@@ -1,11 +1,6 @@
 myApp.controller('employeesListController', ['$scope', '$state','$stateParams','$http', '$rootScope', '$window',
     function ($scope, $state,$stateParams, $http, $rootScope, $window) {
   
-    $scope.goToNewEmployeePage = function () {
-
-        $state.go('new-employee',{});
-
-    };
     $rootScope.$emit('employees');
     $scope.archivedEmployee = false;
     $scope.showHideArchivedEmployees = "Arşivli";
