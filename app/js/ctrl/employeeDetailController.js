@@ -34,7 +34,29 @@ myApp.controller('employeeDetailController', ['$scope', '$state', '$stateParams'
         }
 
     });
-
+    $scope.deleteEmployee = function () {
+        const bootboxOpts = {};
+		bootboxOpts.title = 'Devam etmek için onayınız gerekmektedir';
+        bootboxOpts.message = 'Çalışanı arşivlemek istediğinize emin misiniz? Arşivlenmiş çalışanlara çalışan liste ekranından tekrar ulaşarak aktif edebilir veya kalıcı olarak silebilirsiniz.';
+        bootboxOpts.size = 'large'
+        bootboxOpts.closeButton = false;
+						
+		bootboxOpts.buttons = {
+			cancel: { label: 'Vazgeç', className: 'btn-success' },
+			confirm: { label: 'Arşivle', className: 'btn-danger' }
+		};
+		bootboxOpts.buttons.confirm.callback = function () {
+			$http.post('/api/employee/delete', JSON.stringify($scope.selectedEmployee)).then(function (response) {
+                console.log(response);
+                $state.go('home', {})
+            });	
+		};
+		bootboxOpts.buttons.cancel.callback = function () {
+			
+		};
+		bootbox.dialog(bootboxOpts);		
+        		
+    };
     $scope.openAddingDay = function(){        
         $scope.showAddingDay = true;
     }

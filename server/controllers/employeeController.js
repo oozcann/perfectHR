@@ -23,7 +23,7 @@ const saveEmployee = (req,res,next) => {
     })
     .catch(err => {
         res.json({
-            message: 'An error ocurred while registering : ' + err
+            message: 'An error ocurred while saving employee : ' + err
         })
     })    
 };
@@ -38,7 +38,7 @@ const getEmployees = (req, res, next) => {
     })
     .catch(err => {
         res.json({
-            message: 'An error ocurred while registering : ' + err
+            message: 'An error ocurred while getting employeees : ' + err
         })
     })  
 };
@@ -53,9 +53,28 @@ const getEmployeeById = (req, res, next) => {
     })
     .catch(err => {
         res.json({
-            message: 'An error ocurred while registering : ' + err
+            message: 'An error ocurred while getting employee by id : ' + err
         })
     })  
 };
 
-module.exports = {saveEmployee, getEmployees, getEmployeeById};
+
+//Delete Employee (archived: true)
+
+const deleteEmployee = (req,res,next) => {
+    let empId = req.body._id;
+    Employee.findByIdAndUpdate(empId,{archived:true})
+    .then(response => {
+        res.json(response);
+        //res.redirect('/login');
+    })
+    .catch(err => {
+        res.json({
+            message: 'An error ocurred while deleting employee : ' + err
+        })
+    })
+};
+
+
+
+module.exports = {saveEmployee, getEmployees, getEmployeeById, deleteEmployee};
