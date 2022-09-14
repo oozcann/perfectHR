@@ -21,7 +21,7 @@
 
             </tr>
         </thead>
-        <tbody ng-repeat="employee in employees  | filter : {name : search}">
+        <tbody ng-repeat="employee in employees  | filter : {name : search} | orderBy : 'name'">
 
             <tr>
                 <td id="uniqueName{{employee.id}}">{{employee.uniqueName}}</td>
