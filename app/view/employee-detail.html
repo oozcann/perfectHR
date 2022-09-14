@@ -52,7 +52,7 @@ thttps://stackoverflow.com/questions/19590063/get-specific-object-by-id-from-arr
 
 <div class="row m-2 p-3" ng-hide="showAddingDay || activated">
 
-    <button class="btn btn-square btn-success" ng-click="">İzin Ekle</button>
+    <button class="btn btn-square btn-success" ng-click="openAddingDay()">İzin Ekle</button>
     <button class="btn btn-square btn-primary" ng-click="">Düzenle</button>       
     <button class="btn btn-square btn-danger" ng-click="deleteEmployee()">Arşivle</button>
 
@@ -73,6 +73,6 @@ thttps://stackoverflow.com/questions/19590063/get-specific-object-by-id-from-arr
  
     <div ng-show="activated" class="row m-2 p-3 border" style="background-color:#eee;">
 
-        <button class="btn btn-success btn-square" ng-click="openActivatePage()">Aktif Et</button>
+        <button class="btn btn-success btn-square" ng-click="activateEmployee()">Aktif Et</button>
         
     </div>

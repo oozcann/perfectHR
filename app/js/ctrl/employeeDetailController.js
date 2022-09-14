@@ -47,14 +47,19 @@ myApp.controller('employeeDetailController', ['$scope', '$state', '$stateParams'
 		};
 		bootboxOpts.buttons.confirm.callback = function () {
 			$http.post('/api/employee/delete', JSON.stringify($scope.selectedEmployee)).then(function (response) {
-                console.log(response);
-                $state.go('home', {})
+                $state.go('employees', {})
             });	
 		};
 		bootboxOpts.buttons.cancel.callback = function () {
 			
 		};
 		bootbox.dialog(bootboxOpts);		
+        		
+    };
+    $scope.activateEmployee = function () {
+		$http.post('/api/employee/activate', JSON.stringify($scope.selectedEmployee)).then(function (response) {
+            $state.go($state.current, {}, {reload: true});
+        });			
         		
     };
     $scope.openAddingDay = function(){        

@@ -6,12 +6,14 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
         url: '/',
         templateUrl: '../view/home.html'
     })
+    /*
     .state('employees-list', {
         url: '/employees-list',
         templateUrl: "html/employeesList.html",
         controller:"employeesListController"
 
-    })   
+    })
+    */   
     .state('employee', {
         url: '/employee/{employeeId}',
         templateUrl: "../view/employee-detail.html",

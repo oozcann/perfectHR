@@ -75,6 +75,20 @@ const deleteEmployee = (req,res,next) => {
     })
 };
 
+//Activate Employee (archived: true)
 
+const activateEmployee = (req,res,next) => {
+    let empId = req.body._id;
+    Employee.findByIdAndUpdate(empId,{archived:false})
+    .then(response => {
+        res.json(response);
+        //res.redirect('/login');
+    })
+    .catch(err => {
+        res.json({
+            message: 'An error ocurred while activating employee : ' + err
+        })
+    })
+};
 
-module.exports = {saveEmployee, getEmployees, getEmployeeById, deleteEmployee};
+module.exports = {saveEmployee, getEmployees, getEmployeeById, deleteEmployee, activateEmployee};
