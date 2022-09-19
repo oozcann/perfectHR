@@ -70,9 +70,11 @@ thttps://stackoverflow.com/questions/19590063/get-specific-object-by-id-from-arr
         </div>
     </div>
 </form>
- 
-    <div ng-show="activated" class="row m-2 p-3 border" style="background-color:#eee;">
 
-        <button class="btn btn-success btn-square" ng-click="activateEmployee()">Aktif Et</button>
-        
-    </div>
+
+<div class="alert alert-danger" ng-show="activated">
+    <strong>Arşivlenmiş Çalışan Uyarısı!</strong> Bu çalışan arşivlenmiştir. Aktif etmek için lütfen butona tıklayınız.
+</div> 
+<div ng-show="activated" class="row m-2 p-3 border" style="background-color:#eee;">
+    <button class="btn btn-success btn-square" ng-click="activateEmployee()">Aktif Et</button>
+</div>
