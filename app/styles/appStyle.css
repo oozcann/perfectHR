@@ -66,12 +66,12 @@ h3 {
                 text-decoration: none;
             }
 
-input.form-control {
+.col-sm-9 > input.form-control, .col-sm-9 > select.form-control {
     width: 100% !important;
     height: 34px !important;
     border-radius:0;
 }
-input[type=search].form-control {
+.form-control {
     width: 200px !important;
     height: 34px !important;
     border-radius:0;
