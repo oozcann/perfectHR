@@ -33,8 +33,8 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
 
     })
     .state('edit-employee', {
-        url: '/edit-employee/{id}',
-        templateUrl: "html/edit-employee.html",
+        url: '/employee/:employeeId/edit',
+        templateUrl: "../view/drct/neweditView/new-employee.html",
         controller : "editEmployeeController"
 
     })

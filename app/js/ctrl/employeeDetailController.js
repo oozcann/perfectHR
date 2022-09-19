@@ -34,6 +34,11 @@ myApp.controller('employeeDetailController', ['$scope', '$state', '$stateParams'
         }
 
     });
+    $scope.editEmployee = function () {
+        $state.go('edit-employee', {
+            employeeId: $stateParams.employeeId
+        })
+    };
     $scope.deleteEmployee = function () {
         const bootboxOpts = {};
 		bootboxOpts.title = 'Devam etmek için onayınız gerekmektedir';
