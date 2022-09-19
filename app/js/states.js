@@ -28,7 +28,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
     })
     .state('new-employee', {
         url: '/new-employee',
-        templateUrl: "../view/new-employee.html",
+        templateUrl: "../view/drct/neweditView/new-employee.html",
         controller : "newEmployeeController"
 
     })
