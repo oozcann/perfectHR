@@ -185,3 +185,6 @@ h3 {
     padding: 20px;
     background-color: #eaeaea;
 }
+button:focus, button, .btn, .btn:focus {
+    box-shadow: none !important;
+}
