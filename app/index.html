@@ -32,7 +32,8 @@
 
 
     <!-- ************************** DIRECTIVE IMPORT START ******************************************** -->
-    <script type="module" src="js/drct/newEditView/EmployeeDirective.js"></script>
+    <script src="js/drct/newEditView/EmployeeDirective.js"></script>
+    <script src="js/drct/main/SidebarMenuDirective.js"></script>
     <!-- ************************** DIRECTIVE IMPORT END ******************************************** -->
 
     <!--
@@ -66,18 +67,10 @@
             <div class="row m-0 p-0 h-100 main-area">
 
 
-                <div class="side-bar-menu col-2" ui-view="sidebar">  
-                    <ul>
-
-                        <li><a href="#!/"><i class="fas fa-home"></i>Anasayfa</a></li>
-                        <li><a href="#!/employees"><i class="fas fa-user"></i>Çalışanlar</a></li>
-                        <li><a href="#!/employee/new"><i class="fas fa-user-plus"></i>Yeni Çalışan</a></li>
-                        <li><a href="#!/employees-list"><i class="fas fa-scroll"></i>İzin Tablosu</a></li>
-                        <li><a href="#!/birthday"><i class="fas fa-birthday-cake"></i>Doğum Günleri</a></li>
-                        <li><a href="#!/test">TEST</a></li>
-
-                    </ul> 
+                <div class="side-bar-menu col-2" ui-view="sidebar">
+                    <div sidebar-menu></div>
                 </div>
+
                 <div ui-view="header">
 
                 </div>
