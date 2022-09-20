@@ -50,6 +50,7 @@ myApp.directive('employee', function(){
                 	bootbox.dialog(bootboxOpts);
                 };
 
-            }]
+            }
+        ]
     }
 });
