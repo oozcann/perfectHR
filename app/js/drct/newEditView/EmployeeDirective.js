@@ -18,12 +18,7 @@ myApp.directive('employee', function(){
                 $scope.goBack = function () {
                     $state.go('home', {})
                 };
-                $rootScope.$emit('newEmployee');
-                $scope.breadcrumbItems = [
-                    {name: "Anasayfa", link:"#!/", icon:"fas fa-home"},
-                    {name: "Çalışanlar", link:"#!/employees"},
-                    {name: "Yeni Çalışan", link:""}
-                ];
+                $rootScope.$emit('newEmployeeBreadcrumb');
                 $scope.saveEmployee = function (data) {
                     $http.post('/api/employee/save', JSON.stringify(data)).then(function (response) {
                         $scope.employeeId = response.data._id;

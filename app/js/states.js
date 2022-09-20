@@ -4,7 +4,13 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
 
     $stateProvider.state('home', {
         url: '/',
-        templateUrl: '../view/home.html'
+        templateUrl: '../view/home.html',
+        controller: [
+             '$rootScope',
+             function ($rootScope) {
+                 $rootScope.$emit('homePageBreadcrumb');
+             }
+        ]
     })
     /*
     .state('employees-list', {

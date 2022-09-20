@@ -1,8 +1,12 @@
 myApp.controller('breadcrumbController', ['$scope', '$state', '$stateParams','$http', '$location', '$rootScope',
     function ($scope, $state, $stateParams, $http, $location,$rootScope) {
         
-        
-        $rootScope.$on('newEmployee', ()=>{
+        $rootScope.$on('homePageBreadcrumb',()=>{
+            $scope.breadcrumbItems = [
+                {name: "Anasayfa", link:"#!/", icon:"fas fa-home"}
+            ];
+        });
+        $rootScope.$on('newEmployeeBreadcrumb', ()=>{
             $scope.breadcrumbItems = [
                 {name: "Anasayfa", link:"#!/", icon:"fas fa-home"},
                 {name: "Çalışanlar", link:"#!/employees"},
