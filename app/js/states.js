@@ -20,16 +20,22 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
         controller : "employeeDetailController"
 
     })
+    .state('new-employee', {
+        url: '/employee/new',
+        template: '<div employee being-edited="beingEdited" is-new="isNew"></div>',
+        controller: [
+            '$scope',
+            '$state',
+            function ($scope, $state) {
+                $scope.beingEdited = true;
+                $scope.isNew = true;
+            }
+        ]
+    })
     .state('employees', {
         url: '/employees',
         templateUrl: "../view/employees.html",
         controller : "employeesListController"
-
-    })
-    .state('new-employee', {
-        url: '/new-employee',
-        templateUrl: "../view/drct/neweditView/new-employee.html",
-        controller : "newEmployeeController"
 
     })
     .state('edit-employee', {
