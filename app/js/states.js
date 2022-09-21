@@ -28,7 +28,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
     })
     .state('new-employee', {
         url: '/employee/new',
-        template: '<div employee being-edited="beingEdited" is-new="isNew"></div>',
+        template: '<div employee-directive being-edited="beingEdited" is-new="isNew" employee="employee"></div>',
         controller: [
             '$scope',
             '$state',
@@ -38,22 +38,53 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
             }
         ]
     })
-    .state('employees', {
-        url: '/employees',
-        templateUrl: "../view/employees.html",
-        controller : "employeesListController"
-
-    })
     .state('edit-employee', {
         url: '/employee/:employeeId/edit',
-        templateUrl: "../view/drct/neweditView/new-employee.html",
-        controller : "editEmployeeController"
-
+        params: { employeeId: null },
+        template: '<div employee-directive being-edited="beingEdited" is-new="isNew" employee="employee"></div>',
+        controller: [
+            '$scope',
+            '$state',
+            'employee',
+            function ($scope, $state, employee) {
+                $scope.beingEdited = true;
+                $scope.isNew = false;
+                $scope.employee = employee;
+            }
+        ],
+        resolve: {
+            employee : [
+                '$http',
+                '$stateParams',
+                '$q',
+                ($http,$stateParams,$q) => {
+                    const query = {
+                        "employeeId": $stateParams.employeeId
+                    };
+                    const deferred = $q.defer();
+                    $http.post("/api/employee/:employeeId", query)
+                    .then(function (response) {
+                        if (response && response.data) {
+                            deferred.resolve(response.data);
+                        } else {
+                            deferred.resolve();
+                        }
+                    });
+                    return deferred.promise;
+                }
+            ]
+        }
     })
     .state('delete-employee', {
         url: '/delete-employee/{id}',
         templateUrl: "html/delete-employee.html",
         controller : "deleteEmployeeController"
+
+    })
+    .state('employees', {
+        url: '/employees',
+        templateUrl: "../view/employees.html",
+        controller : "employeesListController"
 
     })
     .state('activate-employee', {

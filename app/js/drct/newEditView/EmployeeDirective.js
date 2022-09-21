@@ -1,10 +1,11 @@
-myApp.directive('employee', function(){
+myApp.directive('employeeDirective', function(){
 
     return {
         restrict : "EA",
         scope: {
             beingEdited: '=',
-            isNew: '='
+            isNew: '=',
+            employee: '='
         },
         templateUrl: '../../../view/drct/newEditView/employee-directive.html',
         controller: [

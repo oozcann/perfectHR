@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-28 SidebarMenuDirective yapılması">
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-8 Breadcrumb section'ın oluşturulması">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/ctrl/breadcrumbController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/ctrl/breadcrumbController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/ctrl/employeeDetailController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/ctrl/employeeDetailController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/drct/newEditView/EmployeeDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/newEditView/EmployeeDirective.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/states.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/states.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/employee-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/employee-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/employeeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/employeeController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/employeeRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/employeeRoutes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,29 +34,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/ozcan/Desktop/projects/perfectHR",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ozcan/Desktop/projects/perfectHR&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="perfectHR" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="perfectHR" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -91,7 +79,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663701622385</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="MAN-8 Breadcrumb section'ın oluşturulması">
+      <created>1663702192167</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1663702192167</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -108,6 +103,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="MAN-24 EmployeeDirective oluşturulması" />
     <MESSAGE value="MAN-28 SidebarMenuDirective yapılması" />
-    <option name="LAST_COMMIT_MESSAGE" value="MAN-28 SidebarMenuDirective yapılması" />
+    <MESSAGE value="MAN-8 Breadcrumb section'ın oluşturulması" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAN-8 Breadcrumb section'ın oluşturulması" />
   </component>
 </project>

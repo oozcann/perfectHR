@@ -34,9 +34,9 @@ myApp.controller('employeeDetailController', ['$scope', '$state', '$stateParams'
         }
 
     });
-    $scope.editEmployee = function () {
+    $scope.editEmployee = function (employeeId) {
         $state.go('edit-employee', {
-            employeeId: $stateParams.employeeId
+            employeeId: employeeId
         })
     };
     $scope.deleteEmployee = function () {
