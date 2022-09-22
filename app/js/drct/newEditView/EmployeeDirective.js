@@ -28,24 +28,9 @@ myApp.directive('employeeDirective', function(){
                     });
                 };
                 $scope.redirectAfterSave = function () {
-                    const bootboxOpts = {};
-                    bootboxOpts.title = '';
-                    bootboxOpts.message = 'Çalışan Kaydedilmiştir!';
-                    bootboxOpts.centerVertical  = true;
-                    bootboxOpts.closeButton = false;
-                    bootboxOpts.buttons = {
-                    	cancel: { label: 'Anasayfa', className: 'btn-danger' },
-                    	confirm: { label: 'Çalışan Detayına Git', className: 'btn-success' }
-                    };
-                    bootboxOpts.buttons.confirm.callback = function () {
-                    	$state.go('employee', {
-                            employeeId: $scope.employeeId
-                        })
-                    };
-                    bootboxOpts.buttons.cancel.callback = function () {
-                    	$state.go('home', {})
-                    };
-                    bootbox.dialog(bootboxOpts);
+                    $state.go('employee', {
+                        employeeId: $scope.employeeId
+                    })
                 };
 
             }
