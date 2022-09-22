@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-29 save,update,delete için angularjs service oluşturulması">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/drct/newEditView/EmployeeDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/newEditView/EmployeeDirective.js" afterDir="false" />
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-34 employee-save için redirectAfterSave fonksiyonunun oluşturulması">
+      <change beforePath="$PROJECT_DIR$/app/js/ctrl/employeeDetailController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/ctrl/employeeDetailController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/services.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663871649369</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="MAN-34 employee-save için redirectAfterSave fonksiyonunun oluşturulması">
+      <created>1663872155971</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1663872155971</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,6 +130,7 @@
     <MESSAGE value="MAN-12 employee edit api + frontend oluşturulması" />
     <MESSAGE value="MAN-31 entityService oluşturulması ve findById methodu eklenmesi" />
     <MESSAGE value="MAN-29 save,update,delete için angularjs service oluşturulması" />
-    <option name="LAST_COMMIT_MESSAGE" value="MAN-29 save,update,delete için angularjs service oluşturulması" />
+    <MESSAGE value="MAN-34 employee-save için redirectAfterSave fonksiyonunun oluşturulması" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAN-34 employee-save için redirectAfterSave fonksiyonunun oluşturulması" />
   </component>
 </project>

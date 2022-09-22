@@ -1,5 +1,6 @@
-myApp.controller('employeeDetailController', ['$scope', '$state', '$stateParams','$http', '$rootScope',
-    function ($scope, $state, $stateParams, $http, $rootScope) {
+myApp.controller('employeeDetailController',
+    ['$scope', '$state', '$stateParams','$http', '$rootScope','entityService',
+    function ($scope, $state, $stateParams, $http, $rootScope, entityService) {
     $rootScope.$emit('employeeDetail');
     $http.get("/api/employee/list").then(function (response) {
         $scope.employees = response.data;
@@ -51,9 +52,9 @@ myApp.controller('employeeDetailController', ['$scope', '$state', '$stateParams'
 			confirm: { label: 'Arşivle', className: 'btn-danger' }
 		};
 		bootboxOpts.buttons.confirm.callback = function () {
-			$http.post('/api/employee/delete', JSON.stringify($scope.selectedEmployee)).then(function (response) {
+            entityService.deleteEntity('employee/delete', JSON.stringify($scope.selectedEmployee)).then(function (response) {
                 $state.go('employees', {})
-            });	
+            });
 		};
 		bootboxOpts.buttons.cancel.callback = function () {
 			
