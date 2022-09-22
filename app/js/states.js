@@ -53,7 +53,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
             }
         ],
         resolve: {
-            employee: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.findById("/employee/:employeeId", {"employeeId": $stateParams.employeeId})}]
+            employee: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.findById("employee/:employeeId", {"employeeId": $stateParams.employeeId})}]
         }
     })
     .state('delete-employee', {
