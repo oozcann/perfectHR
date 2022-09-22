@@ -38,6 +38,23 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
             }
         ]
     })
+    .state('detail-employee', {
+        url: '/employee/{employeeId}/detail',
+        template: '<div employee-directive being-edited="beingEdited" is-new="isNew" employee="employee"></div>',
+        controller: [
+            '$scope',
+            '$state',
+            'employee',
+            function ($scope, $state, employee) {
+                $scope.beingEdited = false;
+                $scope.isNew = false;
+                $scope.employee = employee;
+            }
+        ],
+        resolve: {
+            employee: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.findById("employee/:employeeId", {"employeeId": $stateParams.employeeId})}]
+        }
+    })
     .state('edit-employee', {
         url: '/employee/:employeeId/edit',
         params: { employeeId: null },

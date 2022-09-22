@@ -6,18 +6,21 @@
         <div class="col-sm-9" ng-show="beingEdited">
             <input class="{{employee.name ? '' : 'red-border'}} form-control" type="text" name="name" ng-model="employee.name" ng-required="true"/>
         </div>
+        <span ng-show="!beingEdited">{{employee.name}}</span>
     </div>
     <div class="form-group row">
         <label class="col-sm-3 control-label">Soyad</label>
         <div class="col-sm-9" ng-show="beingEdited">
             <input type="text" class="{{employee.surname ? '' : 'red-border'}} form-control" name="surname" ng-model="employee.surname" ng-required="true"/>
         </div>
+        <span ng-show="!beingEdited">{{employee.surname}}</span>
     </div>
     <div class="form-group row">
         <label class="col-sm-3 control-label">TC Kimlik No</label>
         <div class="col-sm-9" ng-show="beingEdited">
             <input type="text" minlength="11" maxlength="11" class="{{employee.uniqueName ? '' : 'red-border'}} form-control" name="uniqueName" ng-model="employee.uniqueName" ng-required="true"/>
         </div>
+        <span ng-show="!beingEdited">{{employee.uniqueName}}</span>
     </div>
     <div class="form-group row">
         <label class="col-sm-3 control-label">Cinsiyet</label>
@@ -27,6 +30,7 @@
                 <option value="E">Erkek</option>
             </select>
         </div>
+        <span ng-show="!beingEdited">{{employee.gender}}</span>
     </div>
     <h3 class="pt-4 pl-3">İletişim Bilgileri</h3>
     <hr class="m-3" />
@@ -36,16 +40,20 @@
         <div class="col-sm-9" ng-show="beingEdited">
             <input type="tel" placeholder="___-_______" class="form-control" name="phone" ng-model="employee.phone" />
         </div>
+        <span ng-show="!beingEdited">{{employee.phone}}</span>
     </div>
     <div class="form-group row">
         <label class="col-sm-3 control-label">E-mail</label>
         <div class="col-sm-9" ng-show="beingEdited">
             <input type="email" class="form-control" name="email" ng-model="employee.email" />
         </div>
+        <span ng-show="!beingEdited">{{employee.email}}</span>
     </div>
 
     <div class="sticky-button">
-        <button class="btn btn-success btn-square" ng-disabled="newEmployee.$invalid" ng-click="saveEmployee(employee)">Kaydet</button>
-        <button ng-click="goBack()" class="btn btn-danger btn-square">Vazgeç</button>
+        <button class="btn btn-success btn-square" ng-show="beingEdited" ng-disabled="newEmployee.$invalid" ng-click="saveEmployee(employee)">Kaydet</button>
+        <button ng-click="editEmployee()" ng-show="!beingEdited" class="btn btn-success btn-square">Düzenle</button>
+        <button ng-click="deleteEmployee()" ng-show="!beingEdited" class="btn btn-danger btn-square">Sil</button>
+        <button ng-click="cancel()" ng-show="beingEdited" class="btn btn-danger btn-square">Vazgeç</button>
     </div>
 </form>
