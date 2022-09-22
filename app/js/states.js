@@ -1,4 +1,4 @@
-var myApp = angular.module("myApp", ['ui.router']);
+var myApp = angular.module("myApp", ['ui.router','myApp.services']);
 
 myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
@@ -53,26 +53,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
             }
         ],
         resolve: {
-            employee : [
-                '$http',
-                '$stateParams',
-                '$q',
-                ($http,$stateParams,$q) => {
-                    const query = {
-                        "employeeId": $stateParams.employeeId
-                    };
-                    const deferred = $q.defer();
-                    $http.post("/api/employee/:employeeId", query)
-                    .then(function (response) {
-                        if (response && response.data) {
-                            deferred.resolve(response.data);
-                        } else {
-                            deferred.resolve();
-                        }
-                    });
-                    return deferred.promise;
-                }
-            ]
+            employee: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.findById("/employee/:employeeId", {"employeeId": $stateParams.employeeId})}]
         }
     })
     .state('delete-employee', {

@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-8 Breadcrumb section'ın oluşturulması">
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-12 employee edit api + frontend oluşturulması">
+      <change afterPath="$PROJECT_DIR$/app/js/services.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/ctrl/employeeDetailController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/ctrl/employeeDetailController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/drct/newEditView/EmployeeDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/newEditView/EmployeeDirective.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/drct/sideBarMenuDirective.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/states.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/states.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/employee-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/employee-detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/employeeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/employeeController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/employeeRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/employeeRoutes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663702192167</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="MAN-12 employee edit api + frontend oluşturulması">
+      <created>1663786962603</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1663786962603</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -104,6 +109,7 @@
     <MESSAGE value="MAN-24 EmployeeDirective oluşturulması" />
     <MESSAGE value="MAN-28 SidebarMenuDirective yapılması" />
     <MESSAGE value="MAN-8 Breadcrumb section'ın oluşturulması" />
-    <option name="LAST_COMMIT_MESSAGE" value="MAN-8 Breadcrumb section'ın oluşturulması" />
+    <MESSAGE value="MAN-12 employee edit api + frontend oluşturulması" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAN-12 employee edit api + frontend oluşturulması" />
   </component>
 </project>
