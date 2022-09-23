@@ -17,7 +17,7 @@ const serviceModuleConf = function ($provide) {
                 return deferred.promise;
 			}
 			function saveEntity (entityAddress, entity) {
-                entityAddress = "/api/" + entityAddress;
+                entityAddress = "/api/" + entityAddress + '/save';
                 const deferred = $q.defer();
                 if (!entity) {
                 	console.error('entity not specified.');
@@ -34,7 +34,7 @@ const serviceModuleConf = function ($provide) {
                 return deferred.promise;
             }
             function deleteEntity (entityAddress, entity) {
-                entityAddress = "/api/" + entityAddress;
+                entityAddress = "/api/" + entityAddress + '/delete';
                 const deferred = $q.defer();
                 if (!entity) {
                 	console.error('entity not specified.');

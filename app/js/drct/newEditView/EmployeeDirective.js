@@ -17,7 +17,7 @@ myApp.directive('employeeDirective', function(){
             'entityService',
             ($scope,$state,$stateParams,$http,$rootScope,entityService) => {
                 $scope.saveEmployee = function (data) {
-                    entityService.saveEntity('employee/save',JSON.stringify(data)).then((data) => {
+                    entityService.saveEntity('employee',JSON.stringify(data)).then((data) => {
                         $scope.employeeId = data._id;
                         $scope.redirectAfterSave();
                     });
@@ -34,7 +34,7 @@ myApp.directive('employeeDirective', function(){
                 	    confirm: { label: 'Arşivle', className: 'btn-danger' }
                     };
                     bootboxOpts.buttons.confirm.callback = function () {
-                        entityService.deleteEntity('employee/delete', JSON.stringify($scope.employee)).then(function (response) {
+                        entityService.deleteEntity('employee', JSON.stringify($scope.employee)).then(function (response) {
                         $state.go('employees', {})
                     });
                     };
