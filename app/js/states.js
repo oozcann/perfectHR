@@ -19,13 +19,14 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
         controller:"employeesListController"
 
     })
-    */   
+    *//*
     .state('employee', {
         url: '/employee/{employeeId}',
         templateUrl: "../view/employee-detail.html",
         controller : "employeeDetailController"
 
     })
+    */
     .state('new-employee', {
         url: '/employee/new',
         template: '<div employee-directive being-edited="beingEdited" is-new="isNew" employee="employee"></div>',
@@ -38,8 +39,8 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
             }
         ]
     })
-    .state('detail-employee', {
-        url: '/employee/{employeeId}/detail',
+    .state('employee', {
+        url: '/employee/{employeeId}',
         template: '<div employee-directive being-edited="beingEdited" is-new="isNew" employee="employee"></div>',
         controller: [
             '$scope',
