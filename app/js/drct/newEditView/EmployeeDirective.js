@@ -16,7 +16,6 @@ myApp.directive('employeeDirective', function(){
             '$rootScope',
             'entityService',
             ($scope,$state,$stateParams,$http,$rootScope,entityService) => {
-                $rootScope.$emit('newEmployeeBreadcrumb');
                 $scope.saveEmployee = function (data) {
                     entityService.saveEntity('employee/save',JSON.stringify(data)).then((data) => {
                         $scope.employeeId = data._id;

@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-12 employee edit api + frontend oluşturulması">
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-36 employee detay ekranı düzenlemeleri">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/ctrl/breadcrumbController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/ctrl/breadcrumbController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/drct/newEditView/EmployeeDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/newEditView/EmployeeDirective.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/states.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/states.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663874569473</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="MAN-36 employee detay ekranı düzenlemeleri">
+      <created>1663954106586</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1663954106587</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,6 +154,7 @@
     <MESSAGE value="MAN-34 employee-save için redirectAfterSave fonksiyonunun oluşturulması" />
     <MESSAGE value="MAN-29 save,update,delete için angularjs service oluşturulması" />
     <MESSAGE value="MAN-12 employee edit api + frontend oluşturulması" />
-    <option name="LAST_COMMIT_MESSAGE" value="MAN-12 employee edit api + frontend oluşturulması" />
+    <MESSAGE value="MAN-36 employee detay ekranı düzenlemeleri" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAN-36 employee detay ekranı düzenlemeleri" />
   </component>
 </project>

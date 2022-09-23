@@ -33,7 +33,9 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
         controller: [
             '$scope',
             '$state',
-            function ($scope, $state) {
+            '$rootScope',
+            function ($scope, $state, $rootScope) {
+                $rootScope.$emit('newEmployeeBreadcrumb');
                 $scope.beingEdited = true;
                 $scope.isNew = true;
             }
@@ -45,8 +47,10 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
         controller: [
             '$scope',
             '$state',
+            '$rootScope',
             'employee',
-            function ($scope, $state, employee) {
+            function ($scope, $state, $rootScope, employee) {
+                $rootScope.$emit('employeeDetailBreadcrumb',{name: employee.name, surname:employee.surname});
                 $scope.beingEdited = false;
                 $scope.isNew = false;
                 $scope.employee = employee;
