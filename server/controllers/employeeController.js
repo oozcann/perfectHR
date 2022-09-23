@@ -18,7 +18,6 @@ const saveEmployee = (req,res,next) => {
     employee.save()
     .then(response => {
         console.log('Employee saved successfully : ' + employee.name + ' ' + employee.surname);
-        //res.redirect('/login');
         res.json(response);
     })
     .catch(err => {
@@ -28,13 +27,27 @@ const saveEmployee = (req,res,next) => {
     })    
 };
 
+//Update Employee
+
+const updateEmployee = (req, res, next) => {
+    let empId = req.body._id;
+    Employee.findByIdAndUpdate(empId, req.body)
+    .then(response => {
+        res.json(response);
+    })
+    .catch(err => {
+        res.json({
+            message: 'An error ocurred while updating employee : ' + req.body.name + ' ' + req.body.surname + err
+        })
+    })
+};
+
 //Get Employees
 
 const getEmployees = (req, res, next) => {
     Employee.find()
     .then(response => {
         res.json(response);
-        //res.redirect('/login');
     })
     .catch(err => {
         res.json({
@@ -49,7 +62,6 @@ const getEmployeeById = (req, res, next) => {
     Employee.findById(empId)
     .then(response => {
         res.json(response);
-        //res.redirect('/login');
     })
     .catch(err => {
         res.json({
@@ -91,4 +103,4 @@ const activateEmployee = (req,res,next) => {
     })
 };
 
-module.exports = {saveEmployee, getEmployees, getEmployeeById, deleteEmployee, activateEmployee};
+module.exports = {saveEmployee, updateEmployee, getEmployees, getEmployeeById, deleteEmployee, activateEmployee};

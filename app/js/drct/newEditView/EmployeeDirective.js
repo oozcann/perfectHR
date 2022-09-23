@@ -17,10 +17,18 @@ myApp.directive('employeeDirective', function(){
             'entityService',
             ($scope,$state,$stateParams,$http,$rootScope,entityService) => {
                 $scope.saveEmployee = function (data) {
-                    entityService.saveEntity('employee',JSON.stringify(data)).then((data) => {
-                        $scope.employeeId = data._id;
-                        $scope.redirectAfterSave();
-                    });
+                    if ($scope.isNew) {
+                        entityService.saveEntity('employee',JSON.stringify(data)).then((data) => {
+                            $scope.employeeId = data._id;
+                            $scope.redirectAfterSave();
+                        });
+                    } else {
+                        entityService.updateEntity('employee', JSON.stringify(data)).then(() => {
+                            $scope.beingEdited = false;
+                        });
+
+                    }
+
                 };
                 $scope.deleteEmployee = function () {
                     const bootboxOpts = {};

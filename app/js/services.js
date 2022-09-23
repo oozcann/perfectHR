@@ -33,6 +33,23 @@ const serviceModuleConf = function ($provide) {
                 });
                 return deferred.promise;
             }
+            function updateEntity (entityAddress, entity) {
+                entityAddress = "/api/" + entityAddress + '/update';
+                const deferred = $q.defer();
+                if (!entity) {
+                	console.error('entity not specified.');
+                    deferred.reject();
+                }
+                $http.post(entityAddress, entity)
+                .then(function (response) {
+                    if (response && response.data) {
+                        deferred.resolve(response.data);
+                    } else {
+                        deferred.resolve();
+                    }
+                });
+                return deferred.promise;
+            }
             function deleteEntity (entityAddress, entity) {
                 entityAddress = "/api/" + entityAddress + '/delete';
                 const deferred = $q.defer();
@@ -70,6 +87,7 @@ const serviceModuleConf = function ($provide) {
 			return {
 				findById: findById,
 				saveEntity: saveEntity,
+				updateEntity: updateEntity,
 				deleteEntity: deleteEntity,
 				activateEntity: activateEntity
 			};
