@@ -41,6 +41,11 @@ myApp.directive('employeeDirective', function(){
                     bootboxOpts.buttons.cancel.callback = function () {};
                     bootbox.dialog(bootboxOpts);
                 };
+                $scope.activateEmployee = function () {
+                    entityService.activateEntity('employee', JSON.stringify($scope.employee)).then(() => {
+                        $state.go($state.current, {}, {reload: true});
+                    });
+                };
                 $scope.editEmployee = function () {
                     $scope.beingEdited = true;
                 };

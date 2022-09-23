@@ -49,11 +49,29 @@ const serviceModuleConf = function ($provide) {
                     }
                 });
                 return deferred.promise;
-                        }
+            }
+            function activateEntity (entityAddress, entity) {
+                entityAddress = "/api/" + entityAddress + '/activate';
+                const deferred = $q.defer();
+                if (!entity) {
+                	console.error('entity not specified.');
+                    deferred.reject();
+                }
+                $http.post(entityAddress, entity)
+                .then(function (response) {
+                    if (response && response.data) {
+                        deferred.resolve(response.data);
+                    } else {
+                        deferred.resolve();
+                    }
+                });
+                return deferred.promise;
+            }
 			return {
 				findById: findById,
 				saveEntity: saveEntity,
-				deleteEntity: deleteEntity
+				deleteEntity: deleteEntity,
+				activateEntity: activateEntity
 			};
 		}
 	]);

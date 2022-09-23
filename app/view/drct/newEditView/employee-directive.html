@@ -1,5 +1,5 @@
 <div employee-card employee="employee" being-edited="beingEdited"></div>
-<form name="newEmployee">
+<form name="newEmployee" ng-if="!employee.archived">
     <h3 class="pt-0 pl-3">Özlük Bilgileri</h3>
     <hr class="m-3" />
     <div class="form-group row">
@@ -58,3 +58,11 @@
         <button ng-click="cancel()" ng-show="beingEdited" class="btn btn-danger btn-square">Vazgeç</button>
     </div>
 </form>
+<div ng-if="employee.archived">
+    <div class="alert alert-warning">
+        <strong>Arşivlenmiş Çalışan Uyarısı!</strong> Bu çalışan arşivlenmiştir. Aktif etmek için lütfen butona tıklayınız.
+    </div>
+    <div class="row m-2 p-3 border" style="background-color:#eee;">
+        <button class="btn btn-success btn-square" ng-click="activateEmployee()">Aktif Et</button>
+    </div>
+</div>
