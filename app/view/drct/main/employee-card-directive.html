@@ -1,0 +1,33 @@
+<div class="row m-2 p-3 border" style="background-color:#eee;" ng-if="!beingEdited">
+    <div class="col-2 p-3 bg-light">
+        <img ng-show="showMaleImg" src="../../../../assets/images/avatar/avatar-male.png"/>
+        <img ng-show="showFemaleImg" src="../../../../assets/images/avatar/avatar-female.png"/>
+    </div>
+    <div class="col-10 p-3 bg-light" style="font-family: 'Open Sans', sans-serif;">
+        <h3 class="m-0 p-0">{{employee.name}} {{employee.surname}}</h3>
+        <div class="w-25 d-inline-block">
+            <span class="emp-detail-label">TC Kimlik:</span>
+            <p class="emp-detail-property">{{employee.uniqueName}}</p>
+            <span class="emp-detail-label">D. Tarihi:</span>
+            <p class="emp-detail-property">{{employee.dateOfBirth}}</p>
+            <span class="emp-detail-label">İşe Başlama Tarihi:</span>
+            <p class="emp-detail-property">{{employee.jobStartDate}}</p>
+        </div>
+        <div class="w-25 d-inline-block">
+            <span class="emp-detail-label">Telefon:</span>
+            <p class="emp-detail-property">{{employee.phone}}</p>
+            <span class="emp-detail-label">Email:</span>
+            <p class="emp-detail-property">{{employee.email}}</p>
+            <span class="emp-detail-label">Cinsiyet:</span>
+            <p class="emp-detail-property">{{employee.gender}}</p>
+        </div>
+        <div class="w-25 d-inline-block">
+            <span class="emp-detail-label">Kullanılan İzin:</span>
+            <p class="emp-detail-property font-weight-bold">{{employee.annualLeaveSpent}}</p>
+            <span style="visibility:hidden" class="emp-detail-label">Kullanılan İzin:</span>
+            <p style="visibility:hidden" class="emp-detail-property">{{employee.annualLeaveSpent}}</p>
+            <span style="visibility:hidden" class="emp-detail-label">Kullanılan İzin:</span>
+            <p style="visibility:hidden" class="emp-detail-property">{{employee.annualLeaveSpent}}</p>
+        </div>
+    </div>
+</div>
