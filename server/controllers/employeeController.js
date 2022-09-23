@@ -103,4 +103,19 @@ const activateEmployee = (req,res,next) => {
     })
 };
 
-module.exports = {saveEmployee, updateEmployee, getEmployees, getEmployeeById, deleteEmployee, activateEmployee};
+//Remove Employee (remove from db)
+
+const removeEmployee = (req,res,next) => {
+    let empId = req.body._id;
+    Employee.findByIdAndDelete(empId)
+    .then(response => {
+        res.json(response);
+    })
+    .catch(err => {
+        res.json({
+            message: 'An error ocurred while removing employee : ' + err
+        })
+    })
+};
+
+module.exports = {saveEmployee, updateEmployee, getEmployees, getEmployeeById, deleteEmployee, activateEmployee, removeEmployee};

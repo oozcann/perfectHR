@@ -84,12 +84,30 @@ const serviceModuleConf = function ($provide) {
                 });
                 return deferred.promise;
             }
+            function removeEntity (entityAddress, entity) {
+                entityAddress = "/api/" + entityAddress + '/remove';
+                const deferred = $q.defer();
+                if (!entity) {
+                	console.error('entity not specified.');
+                    deferred.reject();
+                }
+                $http.post(entityAddress, entity)
+                .then(function (response) {
+                    if (response && response.data) {
+                        deferred.resolve(response.data);
+                    } else {
+                        deferred.resolve();
+                    }
+                });
+                return deferred.promise;
+            }
 			return {
 				findById: findById,
 				saveEntity: saveEntity,
 				updateEntity: updateEntity,
 				deleteEntity: deleteEntity,
-				activateEntity: activateEntity
+				activateEntity: activateEntity,
+				removeEntity: removeEntity
 			};
 		}
 	]);

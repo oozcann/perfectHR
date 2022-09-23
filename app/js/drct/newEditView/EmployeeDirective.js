@@ -38,13 +38,32 @@ myApp.directive('employeeDirective', function(){
                     bootboxOpts.closeButton = false;
 
                     bootboxOpts.buttons = {
-                	    cancel: { label: 'Vazgeç', className: 'btn-success' },
-                	    confirm: { label: 'Arşivle', className: 'btn-danger' }
+                	    cancel: { label: 'Vazgeç', className: 'btn-success btn-square' },
+                	    confirm: { label: 'Arşivle', className: 'btn-danger btn-square' }
                     };
                     bootboxOpts.buttons.confirm.callback = function () {
                         entityService.deleteEntity('employee', JSON.stringify($scope.employee)).then(function (response) {
-                        $state.go('employees', {})
-                    });
+                            $state.go('employees', {});
+                        });
+                    };
+                    bootboxOpts.buttons.cancel.callback = function () {};
+                    bootbox.dialog(bootboxOpts);
+                };
+                $scope.removeEmployee = function () {
+                    const bootboxOpts = {};
+                    bootboxOpts.title = 'Devam etmek için onayınız gerekmektedir';
+                    bootboxOpts.message = 'Çalışanı kalıcı olarak silmek istediğinize emin misiniz? Bu işlem geri alınamaz!';
+                    bootboxOpts.size = 'large'
+                    bootboxOpts.closeButton = false;
+
+                    bootboxOpts.buttons = {
+                        cancel: { label: 'Vazgeç', className: 'btn-success btn-square' },
+                        confirm: { label: 'Kalıcı Olarak Sil', className: 'btn-danger btn-square' }
+                    };
+                    bootboxOpts.buttons.confirm.callback = function () {
+                        entityService.removeEntity('employee', JSON.stringify($scope.employee)).then(() => {
+                            $state.go('employees', {});
+                        });
                     };
                     bootboxOpts.buttons.cancel.callback = function () {};
                     bootbox.dialog(bootboxOpts);
