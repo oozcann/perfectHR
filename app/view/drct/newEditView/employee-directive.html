@@ -33,9 +33,22 @@
         </div>
         <span ng-show="!beingEdited">{{employee.gender}}</span>
     </div>
+    <div class="form-group row">
+        <label class="col-sm-3 control-label">Doğum Tarihi</label>
+        <div class="col-sm-9" ng-show="beingEdited">
+            <input type="date" class="form-control" name="dateOfBirth" ng-model="employee.dateOfBirth"/>
+        </div>
+        <span ng-show="!beingEdited">{{employee.dateOfBirth}}</span>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-3 control-label">Doğum Tarihi</label>
+        <div class="col-sm-9" ng-show="beingEdited">
+            <input type="date" class="form-control" name="jobStartDate" ng-model="employee.jobStartDate"/>
+        </div>
+        <span ng-show="!beingEdited">{{employee.jobStartDate}}</span>
+    </div>
     <h3 class="pt-4 pl-3">İletişim Bilgileri</h3>
     <hr class="m-3" />
-
     <div class="form-group row">
         <label class="col-sm-3 control-label">Telefon</label>
         <div class="col-sm-9" ng-show="beingEdited">
