@@ -79,13 +79,13 @@ myApp.directive('employeeDirective', function(){
                 };
                 $scope.cancel = function () {
                     $scope.beingEdited = false;
+                    $state.go($state.current, {}, {reload: true});
                 };
                 $scope.redirectAfterSave = function () {
                     $state.go('employee', {
                         employeeId: $scope.employeeId
                     })
                 };
-
             }
         ]
     }

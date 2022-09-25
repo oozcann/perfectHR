@@ -32,8 +32,8 @@
                         {{employee.name}} {{employee.surname}}
                     </a>
                 </td>
-                <td id="jobStartDate{{employee.id}}">{{employee.jobStartDate}}</td>
-                <td id="dateOfBirth{{employee.id}}">{{employee.dateOfBirth}}</td>
+                <td id="jobStartDate{{employee.id}}">{{employee.jobStartDate | formatDateToDDMMYYYY}}</td>
+                <td id="dateOfBirth{{employee.id}}">{{employee.dateOfBirth | formatDateToDDMMYYYY}}</td>
                 <td id="gender{{employee.id}}">{{employee.gender}}</td>
                 <td id="phone{{employee.id}}">{{employee.phone}}</td>
                 <td id="email{{employee.id}}">{{employee.email}}</td>
