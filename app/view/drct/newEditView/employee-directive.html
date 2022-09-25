@@ -45,14 +45,14 @@
         <div class="col-sm-9" ng-show="beingEdited">
             <input type="date" class="form-control" name="dateOfBirth" ng-model="employee.dateOfBirth"/>
         </div>
-        <span ng-show="!beingEdited">{{employee.dateOfBirth}}</span>
+        <span ng-if="!beingEdited">{{employee.dateOfBirth | formatDateToDDMMYYYY}}</span>
     </div>
     <div class="form-group row">
         <label class="col-sm-3 control-label">İşe Başlama Tarihi</label>
         <div class="col-sm-9" ng-show="beingEdited">
             <input type="date" class="form-control" name="jobStartDate" ng-model="employee.jobStartDate"/>
         </div>
-        <span ng-show="!beingEdited">{{employee.jobStartDate}}</span>
+        <span ng-if="!beingEdited">{{employee.jobStartDate | formatDateToDDMMYYYY}}</span>
     </div>
     <h3 class="pt-4 pl-3">İletişim Bilgileri</h3>
     <hr class="m-3" />

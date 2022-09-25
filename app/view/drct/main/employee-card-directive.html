@@ -9,9 +9,9 @@
             <span class="emp-detail-label">TC Kimlik:</span>
             <p class="emp-detail-property">{{employee.uniqueName}}</p>
             <span class="emp-detail-label">D. Tarihi:</span>
-            <p class="emp-detail-property">{{employee.dateOfBirth}}</p>
+            <p class="emp-detail-property">{{employee.dateOfBirth | formatDateToDDMMYYYY}}</p>
             <span class="emp-detail-label">İşe Başlama Tarihi:</span>
-            <p class="emp-detail-property">{{employee.jobStartDate}}</p>
+            <p class="emp-detail-property">{{employee.jobStartDate | formatDateToDDMMYYYY}}</p>
         </div>
         <div class="w-25 d-inline-block">
             <span class="emp-detail-label">Telefon:</span>

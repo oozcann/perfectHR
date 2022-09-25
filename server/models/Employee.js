@@ -16,10 +16,10 @@ const employeeSchema = new Schema({
         type: String
     },
     dateOfBirth: {
-        type: String
+        type: Date
     },
     jobStartDate: {
-        type: String
+        type: Date
     },
     annualLeaveSpent: {
         type: Number
