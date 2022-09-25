@@ -1,103 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <title>PerfectHR</title>
-    <!--
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs-3.3.7/jq-2.2.4/jszip-3.1.3/pdfmake-0.1.27/dt-1.10.15/b-1.3.1/b-html5-1.3.1/b-print-1.3.1/r-2.1.1/rg-1.0.0/datatables.min.css" />
+    <head>
+        <meta charset="utf-8" />
+        <title>PerfectHR</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/aeca299997.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-        <script type="text/javascript" src="https://cdn.datatables.net/v/bs-3.3.7/jq-2.2.4/jszip-3.1.3/pdfmake-0.1.27/dt-1.10.15/b-1.3.1/b-html5-1.3.1/b-print-1.3.1/r-2.1.1/rg-1.0.0/datatables.min.js"></script>
-    -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.29/angular-ui-router.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.3/bootbox.min.js" integrity="sha512-U3Q2T60uOxOgtAmm9VEtC3SKGt9ucRbvZ+U3ac/wtvNC+K21Id2dNHzRUC7Z4Rs6dzqgXKr+pCRxx5CyOsnUzg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/aeca299997.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <link href="styles/appStyle.css" rel="stylesheet" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.29/angular-ui-router.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.3/bootbox.min.js" integrity="sha512-U3Q2T60uOxOgtAmm9VEtC3SKGt9ucRbvZ+U3ac/wtvNC+K21Id2dNHzRUC7Z4Rs6dzqgXKr+pCRxx5CyOsnUzg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="module" src="js/drct/goToNewEmployeeDirective.js"></script>
+        <script src="js/states.js"></script>
+        <script src="js/ctrl/breadcrumbController.js"></script>
+        <script src="js/ctrl/employeesListController.js"></script>
 
-    <link href="styles/appStyle.css" rel="stylesheet" />
+        <!-- ************************** DIRECTIVE IMPORT START ******************************************** -->
+        <script src="js/drct/newEditView/EmployeeDirective.js"></script>
+        <script src="js/drct/main/SidebarMenuDirective.js"></script>
+        <script src="js/drct/main/EmployeeCardDirective.js"></script>
+        <!-- ************************** DIRECTIVE IMPORT END ******************************************** -->
 
-    
-    <!--<script type="module" src="js/directives.js"></script>-->
-    <script type="module" src="js/drct/goToNewEmployeeDirective.js"></script>
-    <script src="js/states.js"></script>
-    <script src="js/ctrl/breadcrumbController.js"></script>
-    <script src="js/ctrl/employeesListController.js"></script>
+        <!-- ************************** SERVICES IMPORT START ******************************************** -->
+        <script src="js/services.js"></script>
+        <!-- ************************** SERVICES IMPORT END ******************************************** -->
 
-
-    <!-- ************************** DIRECTIVE IMPORT START ******************************************** -->
-    <script src="js/drct/newEditView/EmployeeDirective.js"></script>
-    <script src="js/drct/main/SidebarMenuDirective.js"></script>
-    <script src="js/drct/main/EmployeeCardDirective.js"></script>
-    <!-- ************************** DIRECTIVE IMPORT END ******************************************** -->
-
-    <!-- ************************** SERVICES IMPORT START ******************************************** -->
-    <script src="js/services.js"></script>
-    <!-- ************************** SERVICES IMPORT END ******************************************** -->
-
-    <!-- ************************** FILTERS IMPORT START ******************************************** -->
-    <script src="js/filters.js"></script>
-    <!-- ************************** FILTERS IMPORT END ******************************************** -->
-
-    <!--
-    <script src="js\dataTable.js"></script>
-    <script src="js\services\calculateAgeOfEmployee.js"></script>
-    <script src="js\controllers\testController.js"></script>
-    <script src="js\directives\testDirective.js"></script>
-    <script src="js\controllers\birthdayController.js"></script>
-    <script src="js\controllers\editEmployeeController.js"></script>
-    <script src="js\controllers\deleteEmployeeController.js"></script>
-    <script src="js\controllers\activateEmployeeController.js"></script>
-	-->
-</head>
-        <body ng-app="myApp">
-
-            <div class="top-menu container-fluid m-0 p-0 text-white">
-
-                <div class="row">
-
-                    <div class="col-sm-4">
-                        LOGO
-                    </div>
-                    <div class="col-sm-8">
-
-                    </div>
+        <!-- ************************** FILTERS IMPORT START ******************************************** -->
+        <script src="js/filters.js"></script>
+        <!-- ************************** FILTERS IMPORT END ******************************************** -->
+    </head>
+    <body ng-app="myApp">
+        <div class="top-menu container-fluid m-0 p-0 text-white">
+            <div class="row">
+                <div class="col-sm-4">
+                    LOGO
                 </div>
-
+                <div class="col-sm-8"></div>
             </div>
-
-
-            <div class="row m-0 p-0 h-100 main-area">
-
-
-                <div class="side-bar-menu col-2" ui-view="sidebar">
-                    <div sidebar-menu></div>
-                </div>
-
-                <div ui-view="header">
-
-                </div>
-                <div class="content-area col-10 p-0">
-                    <div class="pl-2 pr-2 mt-2" ng-controller="breadcrumbController">
-                        <ul class="breadcrumb">
-                            <li ng-repeat="item in breadcrumbItems" class="breadcrumb-item" ng-if="item.link"><a href="{{item.link}}"><i class="{{item.icon}}"></i> {{item.name}}</a></li>
-                            <li ng-repeat="item in breadcrumbItems" class="breadcrumb-item" ng-if="!item.link">{{item.name}}</li>
-                        </ul>
-                    </div>
-                    <div ui-view="">
-
-                    </div>
-
-
-                </div>
-
-
-
+        </div>
+        <div class="row m-0 p-0 h-100 main-area">
+            <div class="side-bar-menu col-2" ui-view="sidebar">
+                <div sidebar-menu></div>
             </div>
-
-		</body>
+            <div ui-view="header"></div>
+            <div class="content-area col-10 p-0">
+                <div class="pl-2 pr-2 mt-2" ng-controller="breadcrumbController">
+                    <ul class="breadcrumb">
+                        <li ng-repeat="item in breadcrumbItems" class="breadcrumb-item" ng-if="item.link"><a href="{{item.link}}"><i class="{{item.icon}}"></i> {{item.name}}</a></li>
+                        <li ng-repeat="item in breadcrumbItems" class="breadcrumb-item" ng-if="!item.link">{{item.name}}</li>
+                    </ul>
+                </div>
+                <div ui-view=""></div>
+            </div>
+            <div style="height:1000px;"></div>
+        </div>
+    </body>
 </html>
