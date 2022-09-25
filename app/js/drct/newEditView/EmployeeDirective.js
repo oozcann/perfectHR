@@ -16,14 +16,15 @@ myApp.directive('employeeDirective', function(){
             '$rootScope',
             'entityService',
             ($scope,$state,$stateParams,$http,$rootScope,entityService) => {
+                $scope.getEntityAddress = 'employee';
                 $scope.saveEmployee = function (data) {
                     if ($scope.isNew) {
-                        entityService.saveEntity('employee',JSON.stringify(data)).then((data) => {
+                        entityService.saveEntity($scope.getEntityAddress ,JSON.stringify(data)).then((data) => {
                             $scope.employeeId = data._id;
                             $scope.redirectAfterSave();
                         });
                     } else {
-                        entityService.updateEntity('employee', JSON.stringify(data)).then(() => {
+                        entityService.updateEntity($scope.getEntityAddress, JSON.stringify(data)).then(() => {
                             $scope.beingEdited = false;
                         });
 
@@ -42,7 +43,7 @@ myApp.directive('employeeDirective', function(){
                 	    confirm: { label: 'Arşivle', className: 'btn-danger btn-square' }
                     };
                     bootboxOpts.buttons.confirm.callback = function () {
-                        entityService.deleteEntity('employee', JSON.stringify($scope.employee)).then(function (response) {
+                        entityService.deleteEntity($scope.getEntityAddress, JSON.stringify($scope.employee)).then(function (response) {
                             $state.go('employees', {});
                         });
                     };
@@ -61,7 +62,7 @@ myApp.directive('employeeDirective', function(){
                         confirm: { label: 'Kalıcı Olarak Sil', className: 'btn-danger btn-square' }
                     };
                     bootboxOpts.buttons.confirm.callback = function () {
-                        entityService.removeEntity('employee', JSON.stringify($scope.employee)).then(() => {
+                        entityService.removeEntity($scope.getEntityAddress, JSON.stringify($scope.employee)).then(() => {
                             $state.go('employees', {});
                         });
                     };
@@ -69,7 +70,7 @@ myApp.directive('employeeDirective', function(){
                     bootbox.dialog(bootboxOpts);
                 };
                 $scope.activateEmployee = function () {
-                    entityService.activateEntity('employee', JSON.stringify($scope.employee)).then(() => {
+                    entityService.activateEntity($scope.getEntityAddress, JSON.stringify($scope.employee)).then(() => {
                         $state.go($state.current, {}, {reload: true});
                     });
                 };
