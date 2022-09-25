@@ -23,6 +23,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
                 $rootScope.$emit('newEmployeeBreadcrumb');
                 $scope.beingEdited = true;
                 $scope.isNew = true;
+                $scope.employee = {};
             }
         ]
     })
