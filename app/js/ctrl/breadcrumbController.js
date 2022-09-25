@@ -5,6 +5,10 @@ myApp.controller('breadcrumbController', ['$scope', '$state', '$stateParams','$h
             $scope.breadcrumbItems = [
                 {name: "Anasayfa", link:"#!/", icon:"fas fa-home"}
             ];
+            $scope.pageHeader = {
+                title: 'Anasayfa',
+                description: 'Raporlar & Genel Bilgiler'
+            }
         });
         $rootScope.$on('newEmployeeBreadcrumb', ()=>{
             $scope.breadcrumbItems = [
@@ -12,12 +16,20 @@ myApp.controller('breadcrumbController', ['$scope', '$state', '$stateParams','$h
                 {name: "Çalışanlar", link:"#!/employees"},
                 {name: "Yeni Çalışan", link:""}
             ];
+            $scope.pageHeader = {
+                title: 'Yeni Çalışan',
+                description: 'Lütfen çalışan detaylarını giriniz.'
+            }
         });
         $rootScope.$on('employees', ()=>{
             $scope.breadcrumbItems = [
                 {name: "Anasayfa", link:"#!/", icon:"fas fa-home"},
                 {name: "Çalışanlar", link:""}
             ];
+            $scope.pageHeader = {
+                title: 'Çalışanlar',
+                description: 'Kayıtlı çalışanlar listesi üzerinden seçim işlemlerini yapabilirsiniz.'
+            }
         });
         $rootScope.$on('employeeDetailBreadcrumb', (name, listener)=>{
             $scope.breadcrumbItems = [
@@ -25,6 +37,10 @@ myApp.controller('breadcrumbController', ['$scope', '$state', '$stateParams','$h
                 {name: "Çalışanlar", link:"#!/employees"},
                 {name: listener.name + ' ' + listener.surname, link:""}
             ];
+            $scope.pageHeader = {
+                title: '',
+                description: ''
+            }
         });
         /*
         if ($location.path() == '/new-employee') {

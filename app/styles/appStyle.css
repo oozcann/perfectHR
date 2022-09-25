@@ -191,3 +191,18 @@ h3 {
 button:focus, button, .btn, .btn:focus {
     box-shadow: none !important;
 }
+.page-header {
+    margin-bottom:15px;
+}
+.page-title {
+    font-size: 30px;
+    font-weight:lighter;
+    color: #666;
+    letter-spacing: -1;
+}
+.page-description {
+    color: #888;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0;
+}

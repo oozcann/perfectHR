@@ -50,6 +50,11 @@
             <div ui-view="header"></div>
             <div class="content-area col-10 p-0">
                 <div class="pl-2 pr-2 mt-2" ng-controller="breadcrumbController">
+                    <div class="page-header">
+                        <span class="page-title">{{pageHeader.title}}</span>
+                        <span class="page-description">{{pageHeader.description}}</span>
+                    </div>
+
                     <ul class="breadcrumb">
                         <li ng-repeat="item in breadcrumbItems" class="breadcrumb-item" ng-if="item.link"><a href="{{item.link}}"><i class="{{item.icon}}"></i> {{item.name}}</a></li>
                         <li ng-repeat="item in breadcrumbItems" class="breadcrumb-item" ng-if="!item.link">{{item.name}}</li>
