@@ -12,6 +12,9 @@ const employeeSchema = new Schema({
     uniqueName: {
         type: String
     },
+    internalUniqueName: {
+        type: String
+    },
     dateOfBirth: {
         type: String
     },

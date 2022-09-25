@@ -24,6 +24,13 @@
         <span ng-show="!beingEdited">{{employee.uniqueName}}</span>
     </div>
     <div class="form-group row">
+        <label class="col-sm-3 control-label">Sicil No</label>
+        <div class="col-sm-9" ng-show="beingEdited">
+            <input type="text" class="form-control" name="internalUniqueName" ng-model="employee.internalUniqueName"/>
+        </div>
+        <span ng-show="!beingEdited">{{employee.internalUniqueName}}</span>
+    </div>
+    <div class="form-group row">
         <label class="col-sm-3 control-label">Cinsiyet</label>
         <div class="col-sm-9" ng-show="beingEdited">
             <select style="font-size:14px" class="{{employee.gender ? '' : 'red-border'}} form-control" name="gender" ng-model="employee.gender" ng-required="true">
@@ -41,7 +48,7 @@
         <span ng-show="!beingEdited">{{employee.dateOfBirth}}</span>
     </div>
     <div class="form-group row">
-        <label class="col-sm-3 control-label">Doğum Tarihi</label>
+        <label class="col-sm-3 control-label">İşe Başlama Tarihi</label>
         <div class="col-sm-9" ng-show="beingEdited">
             <input type="date" class="form-control" name="jobStartDate" ng-model="employee.jobStartDate"/>
         </div>
