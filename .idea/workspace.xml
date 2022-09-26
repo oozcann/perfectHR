@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-47 ui-select'in projeye dahil edilmesi">
-      <change afterPath="$PROJECT_DIR$/server/models/Company.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/companyRoutes.js" afterDir="false" />
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-48 company için backend'in oluşturulması">
+      <change afterPath="$PROJECT_DIR$/app/js/drct/newEditView/CompanyDirective.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/view/drct/newEditView/company-directive.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/companyController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/ctrl/breadcrumbController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/ctrl/breadcrumbController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/states.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/states.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/drct/main/sidebar-menu-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/main/sidebar-menu-directive.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664218969984</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="MAN-48 company için backend'in oluşturulması">
+      <created>1664220002848</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1664220002848</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -288,6 +297,7 @@
     <MESSAGE value="MAN-46 employee-list ekran düzenlemeleri" />
     <MESSAGE value="Kullanılmayan dosyalar silindi." />
     <MESSAGE value="MAN-47 ui-select'in projeye dahil edilmesi" />
-    <option name="LAST_COMMIT_MESSAGE" value="MAN-47 ui-select'in projeye dahil edilmesi" />
+    <MESSAGE value="MAN-48 company için backend'in oluşturulması" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAN-48 company için backend'in oluşturulması" />
   </component>
 </project>

@@ -64,24 +64,21 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
             employees: ['entityService', (entityService) => {return entityService.getList("employee", {"archived": false})}]
         }
     })
-    .state('employeesBackup', {
-        url: '/employees',
-        templateUrl: "../view/employees.html",
-        controller : "employeesListController"
-
-    })
-    .state('birthday', {
-        url: '/birthday',
-        templateUrl: "html/birthday.html",
-        controller : "birthdayController"
-
-    })
-    .state('test', {
-        url: '/test',
-        templateUrl: "html/test.html",
-        controller : "testController"
-
-    }); 
+    .state('new-company', {
+        url: '/company/new',
+        template: '<div company-directive being-edited="beingEdited" is-new="isNew" company="company"></div>',
+        controller: [
+            '$scope',
+            '$state',
+            '$rootScope',
+            function ($scope, $state, $rootScope) {
+                $rootScope.$emit('newCompanyBreadcrumb');
+                $scope.beingEdited = true;
+                $scope.isNew = true;
+                $scope.company = {};
+            }
+        ]
+    });
 
     $urlRouterProvider.otherwise("/");
 

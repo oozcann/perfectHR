@@ -42,6 +42,17 @@ myApp.controller('breadcrumbController', ['$scope', '$state', '$stateParams','$h
                 description: ''
             }
         });
+        $rootScope.$on('newCompanyBreadcrumb', ()=>{
+            $scope.breadcrumbItems = [
+                {name: "Anasayfa", link:"#!/", icon:"fas fa-home"},
+                {name: "Firmalar", link:"#!/companies"},
+                {name: "Yeni Firma", link:""}
+            ];
+            $scope.pageHeader = {
+                title: 'Yeni Firma',
+                description: 'Lütfen firma detaylarını giriniz.'
+            }
+        });
     }
 ]);
 
