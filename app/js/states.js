@@ -48,6 +48,24 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
     })
     .state('employees', {
         url: '/employees',
+        template: '<div employees-list employees="employees"></div>',
+        controller: [
+            '$scope',
+            '$state',
+            '$rootScope',
+            'entityService',
+            'employees',
+            function ($scope,$state,$rootScope,entityService,employees) {
+                $rootScope.$emit('employeesBreadcrumb');
+                $scope.employees = employees;
+            }
+        ],
+        resolve: {
+            employees: ['entityService', (entityService) => {return entityService.getList("employee", {"archived": false})}]
+        }
+    })
+    .state('employeesBackup', {
+        url: '/employees',
         templateUrl: "../view/employees.html",
         controller : "employeesListController"
 

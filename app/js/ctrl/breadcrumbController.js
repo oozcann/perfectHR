@@ -21,7 +21,7 @@ myApp.controller('breadcrumbController', ['$scope', '$state', '$stateParams','$h
                 description: 'Lütfen çalışan detaylarını giriniz.'
             }
         });
-        $rootScope.$on('employees', ()=>{
+        $rootScope.$on('employeesBreadcrumb', ()=>{
             $scope.breadcrumbItems = [
                 {name: "Anasayfa", link:"#!/", icon:"fas fa-home"},
                 {name: "Çalışanlar", link:""}
@@ -42,20 +42,7 @@ myApp.controller('breadcrumbController', ['$scope', '$state', '$stateParams','$h
                 description: ''
             }
         });
-        /*
-        if ($location.path() == '/new-employee') {
-            $scope.breadcrumbItems = [
-                {name: "Anasayfa", link:"#!/", icon:"fas fa-home"},
-                {name: "Çalışanlar", link:"#!/employees"},
-                {name: "Yeni Çalışan", link:""}
-            ];
-        } else {
-            $scope.breadcrumbItems = [
-                {name: "Anasayfa", link:"#!/", icon:"fas fa-home"}
-            ];
-        }
-        */
-        //console.log("AAAA : " + $location.path());
-}]);
+    }
+]);
 
 

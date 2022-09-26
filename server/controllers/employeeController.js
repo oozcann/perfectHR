@@ -45,7 +45,8 @@ const updateEmployee = (req, res, next) => {
 //Get Employees
 
 const getEmployees = (req, res, next) => {
-    Employee.find()
+    const query = req.body;
+    Employee.find(query)
     .then(response => {
         res.json(response);
     })

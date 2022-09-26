@@ -3,6 +3,19 @@ const serviceModuleConf = function ($provide) {
 		'$q',
 		'$http',
 		function ($q,$http) {
+			function getList (entityAddress, query) {
+			    entityAddress = "/api/" + entityAddress + "/list";
+			    const deferred = $q.defer();
+                $http.post(entityAddress, query)
+                .then(function (response) {
+                    if (response && response.data) {
+                        deferred.resolve(response.data);
+                    } else {
+                        deferred.resolve();
+                    }
+                });
+                return deferred.promise;
+			}
 			function findById (entityAddress, query) {
 			    entityAddress = "/api/" + entityAddress;
 			    const deferred = $q.defer();
@@ -102,6 +115,7 @@ const serviceModuleConf = function ($provide) {
                 return deferred.promise;
             }
 			return {
+			    getList: getList,
 				findById: findById,
 				saveEntity: saveEntity,
 				updateEntity: updateEntity,

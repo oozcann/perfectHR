@@ -18,11 +18,9 @@
                 <th>Telefon</th>
                 <th>E-mail</th>
                 <th>Yaş</th>
-
             </tr>
         </thead>
         <tbody ng-repeat="employee in employees  | filter : {name : search} | orderBy : 'name'">
-
             <tr>
                 <td id="uniqueName{{employee.id}}">{{employee.uniqueName}}</td>
                 <td id="name{{employee.id}}">
@@ -38,13 +36,7 @@
                 <td id="phone{{employee.id}}">{{employee.phone}}</td>
                 <td id="email{{employee.id}}">{{employee.email}}</td>
                 <td id="age{{employee.id}}">{{employee.age}}</td>
-
-            </tr>            
-
-
+            </tr>
         </tbody>
-
-
     </table>
-
 </div>
