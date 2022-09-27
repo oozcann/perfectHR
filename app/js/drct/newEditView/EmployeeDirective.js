@@ -78,8 +78,12 @@ myApp.directive('employeeDirective', function(){
                     $scope.beingEdited = true;
                 };
                 $scope.cancel = function () {
-                    $scope.beingEdited = false;
-                    $state.go($state.current, {}, {reload: true});
+                    if ($scope.isNew) {
+                        $state.go('employees');
+                    } else {
+                        $scope.beingEdited = false;
+                        $state.go($state.current, {}, {reload: true});
+                    }
                 };
                 $scope.redirectAfterSave = function () {
                     $state.go('employee', {
