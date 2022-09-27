@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-49 company-directive oluşturulması">
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-51 yeni çalışan sayfasındaki vazgeç butonu çalışmamaktadır">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/states.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/states.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/companyController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/companyController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/companyRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/companyRoutes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664221006265</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="MAN-51 yeni çalışan sayfasındaki vazgeç butonu çalışmamaktadır">
+      <created>1664298008414</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1664298008414</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -300,6 +310,7 @@
     <MESSAGE value="MAN-47 ui-select'in projeye dahil edilmesi" />
     <MESSAGE value="MAN-48 company için backend'in oluşturulması" />
     <MESSAGE value="MAN-49 company-directive oluşturulması" />
-    <option name="LAST_COMMIT_MESSAGE" value="MAN-49 company-directive oluşturulması" />
+    <MESSAGE value="MAN-51 yeni çalışan sayfasındaki vazgeç butonu çalışmamaktadır" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAN-51 yeni çalışan sayfasındaki vazgeç butonu çalışmamaktadır" />
   </component>
 </project>

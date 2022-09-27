@@ -78,6 +78,25 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
                 $scope.company = {};
             }
         ]
+    })
+    .state('company', {
+        url: '/company/:companyId',
+        template: '<div company-directive being-edited="beingEdited" is-new="isNew" company="company"></div>',
+        controller: [
+            '$scope',
+            '$state',
+            '$rootScope',
+            'company',
+            function ($scope,$state,$rootScope,company) {
+                $rootScope.$emit('companyDetailBreadcrumb');
+                $scope.beingEdited = false;
+                $scope.isNew = false;
+                $scope.company = company;
+            }
+        ],
+        resolve: {
+            company: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.findById("company/:companyId", {"companyId": $stateParams.companyId})}]
+        }
     });
 
     $urlRouterProvider.otherwise("/");
