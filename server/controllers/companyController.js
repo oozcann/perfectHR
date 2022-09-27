@@ -26,11 +26,24 @@ const saveCompany = (req,res,next) => {
 
 //Get Companies
 
+const getCompanies = (req, res, next) => {
+    const query = req.body;
+    Company.find(query)
+    .then(response => {
+        res.json(response);
+    })
+    .catch(err => {
+        res.json({
+            message: 'An error ocurred while getting companies : ' + err
+        })
+    })
+};
+
 //Get Company By ID
 
 const getCompanyById = (req, res, next) => {
     let compId = req.body.companyId;
-    Employee.findById(compId)
+    Company.findById(compId)
     .then(response => {
         res.json(response);
     })
@@ -49,4 +62,4 @@ const getCompanyById = (req, res, next) => {
 //Remove Company (remove from db)
 
 
-module.exports = {saveCompany,getCompanyById};
+module.exports = {saveCompany,getCompanies,getCompanyById};

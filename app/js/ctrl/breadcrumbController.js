@@ -31,11 +31,11 @@ myApp.controller('breadcrumbController', ['$scope', '$state', '$stateParams','$h
                 description: 'Kayıtlı çalışanlar listesi üzerinden seçim işlemlerini yapabilirsiniz.'
             }
         });
-        $rootScope.$on('employeeDetailBreadcrumb', (name, listener)=>{
+        $rootScope.$on('employeeDetailBreadcrumb', (event, data)=>{
             $scope.breadcrumbItems = [
                 {name: "Anasayfa", link:"#!/", icon:"fas fa-home"},
                 {name: "Çalışanlar", link:"#!/employees"},
-                {name: listener.name + ' ' + listener.surname, link:""}
+                {name: data.name + ' ' + data.surname, link:""}
             ];
             $scope.pageHeader = {
                 title: '',
@@ -51,6 +51,27 @@ myApp.controller('breadcrumbController', ['$scope', '$state', '$stateParams','$h
             $scope.pageHeader = {
                 title: 'Yeni Firma',
                 description: 'Lütfen firma detaylarını giriniz.'
+            }
+        });
+        $rootScope.$on('companiesBreadcrumb', ()=>{
+            $scope.breadcrumbItems = [
+                {name: "Anasayfa", link:"#!/", icon:"fas fa-home"},
+                {name: "Firmalar", link:""}
+            ];
+            $scope.pageHeader = {
+                title: 'Firmalar',
+                description: 'Kayıtlı firmalar listesi üzerinden seçim işlemlerini yapabilirsiniz.'
+            }
+        });
+        $rootScope.$on('companyDetailBreadcrumb', (event, data)=>{
+            $scope.breadcrumbItems = [
+                {name: "Anasayfa", link:"#!/", icon:"fas fa-home"},
+                {name: "Firmalar", link:"#!/companies"},
+                {name: data.name, link:""}
+            ];
+            $scope.pageHeader = {
+                title: '',
+                description: ''
             }
         });
     }

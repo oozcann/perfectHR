@@ -88,7 +88,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
             '$rootScope',
             'company',
             function ($scope,$state,$rootScope,company) {
-                $rootScope.$emit('companyDetailBreadcrumb');
+                $rootScope.$emit('companyDetailBreadcrumb',{name:company.name});
                 $scope.beingEdited = false;
                 $scope.isNew = false;
                 $scope.company = company;
@@ -96,6 +96,24 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
         ],
         resolve: {
             company: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.findById("company/:companyId", {"companyId": $stateParams.companyId})}]
+        }
+    })
+    .state('companies', {
+        url: '/companies',
+        template: '<div companies-list companies="companies"></div>',
+        controller: [
+            '$scope',
+            '$state',
+            '$rootScope',
+            'entityService',
+            'companies',
+            function ($scope,$state,$rootScope,entityService,companies) {
+                $rootScope.$emit('companiesBreadcrumb');
+                $scope.companies = companies;
+            }
+        ],
+        resolve: {
+            companies: ['entityService', (entityService) => {return entityService.getList("company", {"archived": false})}]
         }
     });
 

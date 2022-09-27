@@ -100,22 +100,22 @@ h3 {
 }
 
 
-#employeesList {
+.list-table {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
 
-    #employeesList td, #employeesList th {
+    .list-table td, .list-table th {
         border: 1px solid #ddd;
         padding: 6px;
     }
 
-    #employeesList tr{
+    .list-table tr{
         background-color: #f2f2f2;
     }
     
-    #employeesList th {
+    .list-table th {
         padding-top: 8px;
         padding-bottom: 8px;
         text-align: left;
@@ -125,10 +125,10 @@ h3 {
         font-weight:bold;
     }
 
-    #employeesList tr:hover {
+    .list-table tr:hover {
         background-color: #ddd;
     }
-    #employeesList tbody tr td a {
+    .list-table tbody tr td a {
         font-size:14px;
     }
 
