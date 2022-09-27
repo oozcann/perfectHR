@@ -5,17 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-50 company - update,delete vb. yapılarının oluşturulması">
-      <change afterPath="$PROJECT_DIR$/app/js/drct/list/CompaniesListDirective.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/view/drct/list/companies-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/js/drct/core/NewCompanyButtonDirective.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/js/drct/core/NewEmployeeButtonDirective.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/view/drct/core/new-company-button-directive.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/view/drct/core/new-employee-button-directive.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/ctrl/breadcrumbController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/ctrl/breadcrumbController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/states.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/states.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/appStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/appStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/list/employees-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/list/employees-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/main/sidebar-menu-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/main/sidebar-menu-directive.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/companyController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/companyController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/companyRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/companyRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/drct/list/companies-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/list/companies-list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664298658352</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="MAN-50 company - update,delete vb. yapılarının oluşturulması">
+      <created>1664305154059</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1664305154059</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
