@@ -14,18 +14,23 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
     })
     .state('new-employee', {
         url: '/employee/new',
-        template: '<div employee-directive being-edited="beingEdited" is-new="isNew" employee="employee"></div>',
+        template: '<div employee-directive being-edited="beingEdited" is-new="isNew" employee="employee" companies="companies"></div>',
         controller: [
             '$scope',
             '$state',
             '$rootScope',
-            function ($scope, $state, $rootScope) {
+            'companies',
+            function ($scope, $state, $rootScope,companies) {
                 $rootScope.$emit('newEmployeeBreadcrumb');
                 $scope.beingEdited = true;
                 $scope.isNew = true;
+                $scope.companies = companies;
                 $scope.employee = {};
             }
-        ]
+        ],
+        resolve: {
+            companies: ['entityService', (entityService) => {return entityService.getList("company", {"archived": false})}]
+        }
     })
     .state('employee', {
         url: '/employee/{employeeId}?justSaved',

@@ -6,7 +6,8 @@ myApp.directive('employeeDirective', function(){
             beingEdited: '=',
             isNew: '=',
             justSaved: '=',
-            employee: '='
+            employee: '=',
+            companies: '='
         },
         templateUrl: '../../../view/drct/newEditView/employee-directive.html',
         controller: [
