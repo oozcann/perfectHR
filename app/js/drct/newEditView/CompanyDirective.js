@@ -5,6 +5,7 @@ myApp.directive('companyDirective', function(){
         scope: {
             beingEdited: '=',
             isNew: '=',
+            justSaved: '=',
             company: '='
         },
         templateUrl: '../../../view/drct/newEditView/company-directive.html',
@@ -87,7 +88,10 @@ myApp.directive('companyDirective', function(){
                     }
                 };
                 $scope.redirectAfterSave = function () {
-                    $state.go('companies');
+                    $state.go('company', {
+                        companyId: $scope.companyId,
+                        justSaved: true
+                    })
                 };
             }
         ]

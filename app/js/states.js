@@ -28,17 +28,19 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
         ]
     })
     .state('employee', {
-        url: '/employee/{employeeId}',
-        template: '<div employee-directive being-edited="beingEdited" is-new="isNew" employee="employee"></div>',
+        url: '/employee/{employeeId}?justSaved',
+        template: '<div employee-directive being-edited="beingEdited" is-new="isNew" employee="employee" just-saved="justSaved"></div>',
         controller: [
             '$scope',
             '$state',
+            '$stateParams',
             '$rootScope',
             'employee',
-            function ($scope, $state, $rootScope, employee) {
+            function ($scope,$state,$stateParams,$rootScope,employee) {
                 $rootScope.$emit('employeeDetailBreadcrumb',{name: employee.name, surname:employee.surname});
                 $scope.beingEdited = false;
                 $scope.isNew = false;
+                $scope.justSaved = $stateParams.justSaved;
                 $scope.employee = employee;
             }
         ],
@@ -80,17 +82,19 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
         ]
     })
     .state('company', {
-        url: '/company/:companyId',
-        template: '<div company-directive being-edited="beingEdited" is-new="isNew" company="company"></div>',
+        url: '/company/:companyId?justSaved',
+        template: '<div company-directive being-edited="beingEdited" is-new="isNew" just-saved="justSaved" company="company"></div>',
         controller: [
             '$scope',
             '$state',
+            '$stateParams',
             '$rootScope',
             'company',
-            function ($scope,$state,$rootScope,company) {
+            function ($scope,$state,$stateParams,$rootScope,company) {
                 $rootScope.$emit('companyDetailBreadcrumb',{name:company.name});
                 $scope.beingEdited = false;
                 $scope.isNew = false;
+                $scope.justSaved = $stateParams.justSaved;
                 $scope.company = company;
             }
         ],

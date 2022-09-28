@@ -5,6 +5,7 @@ myApp.directive('employeeDirective', function(){
         scope: {
             beingEdited: '=',
             isNew: '=',
+            justSaved: '=',
             employee: '='
         },
         templateUrl: '../../../view/drct/newEditView/employee-directive.html',
@@ -88,7 +89,8 @@ myApp.directive('employeeDirective', function(){
                 };
                 $scope.redirectAfterSave = function () {
                     $state.go('employee', {
-                        employeeId: $scope.employeeId
+                        employeeId: $scope.employeeId,
+                        justSaved: true
                     })
                 };
             }
