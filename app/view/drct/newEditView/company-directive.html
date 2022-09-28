@@ -4,7 +4,7 @@
     <div class="form-group row">
         <label class="col-sm-3 control-label">Ad</label>
         <div class="col-sm-9" ng-show="beingEdited">
-            <input class="{{employee.name ? '' : 'red-border'}} form-control" type="text" name="name" ng-model="company.name" ng-required="true"/>
+            <input class="{{company.name ? '' : 'red-border'}} form-control" type="text" name="name" ng-model="company.name" ng-required="true"/>
         </div>
         <span ng-show="!beingEdited">{{company.name}}</span>
     </div>
@@ -34,17 +34,17 @@
 
     <div class="sticky-button">
         <button class="btn btn-success btn-square" ng-show="beingEdited" ng-disabled="newCompany.$invalid" ng-click="saveCompany(company)">Kaydet</button>
-        <button ng-click="" ng-show="!beingEdited" class="btn btn-success btn-square">Düzenle</button>
-        <button ng-click="" ng-show="!beingEdited" class="btn btn-danger btn-square">Sil</button>
+        <button ng-click="edit()" ng-show="!beingEdited" class="btn btn-success btn-square">Düzenle</button>
+        <button ng-click="deleteCompany()" ng-show="!beingEdited" class="btn btn-danger btn-square">Sil</button>
         <button ng-click="cancel()" ng-show="beingEdited" class="btn btn-danger btn-square">Vazgeç</button>
     </div>
 </form>
 <div ng-if="company.archived">
     <div class="alert alert-warning">
-        <strong>Arşivlenmiş Çalışan Uyarısı!</strong> Bu çalışan arşivlenmiştir. Aktif etmek için lütfen butona tıklayınız.
+        <strong>Arşivlenmiş Firma Uyarısı!</strong> Bu firma arşivlenmiştir. Aktif etmek için lütfen butona tıklayınız.
     </div>
     <div class="row m-2 p-3 border" style="background-color:#eee;">
-        <button class="btn btn-success btn-square" ng-click="">Aktif Et</button>
-        <button class="btn btn-danger btn-square" ng-click="">Kalıcı Olarak Sil</button>
+        <button class="btn btn-success btn-square" ng-click="activateCompany()">Aktif Et</button>
+        <button class="btn btn-danger btn-square" ng-click="removeCompany()">Kalıcı Olarak Sil</button>
     </div>
 </div>
