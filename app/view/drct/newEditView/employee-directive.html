@@ -38,7 +38,12 @@
                 <option value=""></option>
             </select>
         </div>
-        <span ng-show="!beingEdited">{{employee.companyRef.name}}</span>
+        <span ng-show="!beingEdited">
+            <a href="#!/company/{{employee.companyRef._id}}" class="text-danger">
+                <i class="fas fa-industry"></i>
+                {{employee.companyRef.name}}
+            </a>
+        </span>
     </div>
     <div class="form-group row">
         <label class="col-sm-3 control-label">Cinsiyet</label>

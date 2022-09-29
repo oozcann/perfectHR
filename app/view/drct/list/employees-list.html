@@ -22,20 +22,20 @@
         </thead>
         <tbody ng-repeat="employee in employees  | filter : {name : search} | orderBy : 'name'">
             <tr>
-                <td id="uniqueName{{employee.id}}">{{employee.uniqueName}}</td>
-                <td id="name{{employee.id}}">
+                <td>{{employee.uniqueName}}</td>
+                <td>
                     <a href="#!/employee/{{employee._id}}" class="text-danger">
                         <i ng-if="employee.gender == 'E'" class="fas fa-male"></i>
                         <i ng-if="employee.gender == 'K'" class="fas fa-female"></i>
-                        {{employee.name}} {{employee.surname}}
+                        {{employee.fullName}}
                     </a>
                 </td>
-                <td id="jobStartDate{{employee.id}}">{{employee.jobStartDate | formatDateToDDMMYYYY}}</td>
-                <td id="dateOfBirth{{employee.id}}">{{employee.dateOfBirth | formatDateToDDMMYYYY}}</td>
-                <td id="gender{{employee.id}}">{{employee.gender}}</td>
-                <td id="phone{{employee.id}}">{{employee.phone}}</td>
-                <td id="email{{employee.id}}">{{employee.email}}</td>
-                <td id="age{{employee.id}}">{{employee.age}}</td>
+                <td>{{employee.jobStartDate | formatDateToDDMMYYYY}}</td>
+                <td>{{employee.dateOfBirth | formatDateToDDMMYYYY}}</td>
+                <td>{{employee.gender}}</td>
+                <td>{{employee.phone}}</td>
+                <td>{{employee.email}}</td>
+                <td>{{employee.age}}</td>
             </tr>
         </tbody>
     </table>
