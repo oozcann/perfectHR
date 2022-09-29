@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-56 Çalışan detay sayfasındaki firma adının tıklanabilir olması">
-      <change afterPath="$PROJECT_DIR$/app/styles/appColors.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/list/employees-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/list/employees-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/employeeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/employeeController.js" afterDir="false" />
-    </list>
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-57 Çalışan liste ekranına çalışan firma bilgisinin eklenmesi" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -344,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664475465045</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="MAN-57 Çalışan liste ekranına çalışan firma bilgisinin eklenmesi">
+      <created>1664476354111</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1664476354111</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -359,7 +359,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="MAN-29 save,update,delete için angularjs service oluşturulması" />
     <MESSAGE value="MAN-30 Çalışan düzenleme sayfası breadcrumb'ında çalışan adının yazılması" />
     <MESSAGE value="MAN-27 Çalışan detay sayfasındaki çalışan kartının directive yapılması" />
     <MESSAGE value="MAN-36 employee detay ekranı düzenlemeleri" />
@@ -384,6 +383,7 @@
     <MESSAGE value="MAN-53 yeni kayıtlar için just saved mekanizmasının oluşturulması" />
     <MESSAGE value="MAN-54 Çalışanların firma ile ilişkilendirilebilmesi" />
     <MESSAGE value="MAN-56 Çalışan detay sayfasındaki firma adının tıklanabilir olması" />
-    <option name="LAST_COMMIT_MESSAGE" value="MAN-56 Çalışan detay sayfasındaki firma adının tıklanabilir olması" />
+    <MESSAGE value="MAN-57 Çalışan liste ekranına çalışan firma bilgisinin eklenmesi" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAN-57 Çalışan liste ekranına çalışan firma bilgisinin eklenmesi" />
   </component>
 </project>
