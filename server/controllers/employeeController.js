@@ -13,6 +13,11 @@ const saveEmployee = (req,res,next) => {
         gender: req.body.gender,
         email: req.body.email,
         phone: req.body.phone,
+        companyRef: {
+            _id: req.body.companyRef._id,
+            name: req.body.companyRef.name,
+            class: req.body.companyRef.class,
+        },
         archived: false
     });
     employee.save()

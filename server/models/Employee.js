@@ -33,6 +33,9 @@ const employeeSchema = new Schema({
     phone:{
         type: String
     },
+    companyRef:{
+        type: Object
+    },
     archived: {
         type: Boolean
     }
