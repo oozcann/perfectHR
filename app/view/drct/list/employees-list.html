@@ -12,6 +12,7 @@
             <tr>
                 <th>TC Kimlik</th>
                 <th>Çalışan</th>
+                <th>Firma</th>
                 <th>İşe Başlama Tarihi</th>
                 <th>Doğum Tarihi</th>
                 <th>Cinsiyet</th>
@@ -28,6 +29,12 @@
                         <i ng-if="employee.gender == 'E'" class="fas fa-male"></i>
                         <i ng-if="employee.gender == 'K'" class="fas fa-female"></i>
                         {{employee.fullName}}
+                    </a>
+                </td>
+                <td>
+                    <a href="#!/company/{{employee.companyRef._id}}" class="text-success">
+                        <i class="fas fa-industry"></i>
+                        {{employee.companyRef.name}}
                     </a>
                 </td>
                 <td>{{employee.jobStartDate | formatDateToDDMMYYYY}}</td>

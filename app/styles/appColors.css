@@ -1,0 +1,8 @@
+.green {
+    color: green;
+    opacity:0.8;
+}
+.green:hover: {
+    color: green !important;
+    opacity:1;
+}
