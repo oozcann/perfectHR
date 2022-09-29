@@ -20,6 +20,9 @@ myApp.directive('employeeDirective', function(){
             ($scope,$state,$stateParams,$http,$rootScope,entityService) => {
                 $scope.getEntityAddress = 'employee';
                 $scope.entity = $scope.employee;
+                if (!$scope.isNew) {
+                    $scope.employeeCompanyRef = $scope.employee.companyRef._id;
+                }
                 $scope.createCompanyRef = function (companyRefId) {
                     entityService.findById('company/:companyId', {"companyId": companyRefId}).then((data) => {
                         $scope.employee.companyRef = {

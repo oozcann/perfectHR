@@ -3,6 +3,9 @@ const Schema = mongoose.Schema;
 
 const employeeSchema = new Schema({
 
+    fullName: {
+        type: String
+    },
     name: {
         type: String
     },

@@ -34,23 +34,26 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
     })
     .state('employee', {
         url: '/employee/{employeeId}?justSaved',
-        template: '<div employee-directive being-edited="beingEdited" is-new="isNew" employee="employee" just-saved="justSaved"></div>',
+        template: '<div employee-directive being-edited="beingEdited" is-new="isNew" employee="employee" companies="companies" just-saved="justSaved"></div>',
         controller: [
             '$scope',
             '$state',
             '$stateParams',
             '$rootScope',
             'employee',
-            function ($scope,$state,$stateParams,$rootScope,employee) {
+            'companies',
+            function ($scope,$state,$stateParams,$rootScope,employee,companies) {
                 $rootScope.$emit('employeeDetailBreadcrumb',{name: employee.name, surname:employee.surname});
                 $scope.beingEdited = false;
                 $scope.isNew = false;
                 $scope.justSaved = $stateParams.justSaved;
                 $scope.employee = employee;
+                $scope.companies = companies;
             }
         ],
         resolve: {
-            employee: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.findById("employee/:employeeId", {"employeeId": $stateParams.employeeId})}]
+            employee: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.findById("employee/:employeeId", {"employeeId": $stateParams.employeeId})}],
+            companies: ['entityService', (entityService) => {return entityService.getList("company", {"archived": false})}]
         }
     })
     .state('employees', {
