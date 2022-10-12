@@ -1,1 +1,32 @@
-TEST
+<div ng-if="justSaved" call-to-action entity="Hatırlatıcı"></div>
+<form name="newReminder">
+    <h3 class="pt-0 pl-3">Genel Bilgileri</h3>
+    <hr class="m-3" />
+    <div class="form-group row">
+        <label class="col-sm-3 control-label">Hatırlatıcı Adı</label>
+        <div class="col-sm-9" ng-show="beingEdited">
+            <input class="{{reminder.name ? '' : 'red-border'}} form-control" type="text" name="name" ng-model="reminder.name" ng-required="true"/>
+        </div>
+        <span ng-show="!beingEdited">{{reminder.name}}</span>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-3 control-label">Açıklama</label>
+        <div class="col-sm-9" ng-show="beingEdited">
+            <input type="text" class="form-control" name="description" ng-model="reminder.description"/>
+        </div>
+        <span ng-show="!beingEdited">{{reminder.description}}</span>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-3 control-label">Hatırlatma Tarihi</label>
+        <div class="col-sm-9" ng-show="beingEdited">
+            <input type="date" class="form-control" name="reminderDate" ng-model="reminder.reminderDate"/>
+        </div>
+        <span ng-if="!beingEdited">{{reminder.reminderDate | formatDateToDDMMYYYY}}</span>
+    </div>
+    <div class="sticky-button">
+        <button class="btn btn-success btn-square" ng-show="beingEdited" ng-disabled="newReminder.$invalid" ng-click="saveReminder(reminder)">Kaydet</button>
+        <button ng-click="editReminder()" ng-show="!beingEdited" class="btn btn-success btn-square">Düzenle</button>
+        <button ng-click="deleteReminder()" ng-show="!beingEdited" class="btn btn-danger btn-square">Sil</button>
+        <button ng-click="cancel()" ng-show="beingEdited" class="btn btn-danger btn-square">Vazgeç</button>
+    </div>
+</form>

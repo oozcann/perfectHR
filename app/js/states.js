@@ -24,7 +24,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
     })
     .state('new-reminder', {
         url: '/reminder/new',
-        template: '<div reminder-directive></div>',
+        template: '<div reminder-directive being-edited="beingEdited" is-new="isNew"></div>',
         controller: [
             '$scope',
             '$state',
@@ -34,10 +34,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
                 $scope.beingEdited = true;
                 $scope.isNew = true;
             }
-        ],
-        resolve: {
-
-        }
+        ]
     })
     .state('new-employee', {
         url: '/employee/new',
