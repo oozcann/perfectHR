@@ -1,7 +1,30 @@
 <ul>
-    <li><a href="#!/"><i class="fas fa-home"></i>Anasayfa</a></li>
-    <li><a href="#!/employees"><i class="fas fa-user"></i>Çalışanlar</a></li>
-    <li><a href="#!/employee/new"><i class="fas fa-user-plus"></i>Yeni Çalışan</a></li>
-    <li><a href="#!/companies"><i class="fas fa-industry"></i>Firma/Tesisler</a></li>
-    <li><a href="#!/company/new"><i class="fas fa-industry"></i>Yeni Firma/Tesis</a></li>
+    <li class="parent"><a href="#!/"><i class="fas fa-home"></i>Anasayfa</a></li>
+    <li class="parent"><a href="#!/reminder"><i class="fas fa-bell"></i>Hatırlatıcılar</a></li>
+    <li class="parent" ng-click="showEmployeeItems=!showEmployeeItems">
+        <a href=""><i class="fas fa-user"></i>Çalışan
+            <i class="fa fa-caret-down"></i>
+        </a>
+        <ul class="children" ng-show="showEmployeeItems">
+            <li><a href="#!/employees"><i class="fas fa-user"></i>Çalışanlar</a></li>
+            <li><a href="#!/employee/new"><i class="fas fa-user-plus"></i>Yeni Çalışan</a></li>
+        </ul>
+    </li>
+    <li class="parent" ng-click="showCompanyItems=!showCompanyItems">
+        <a href=""><i class="fas fa-industry"></i>Tesis
+            <i class="fa fa-caret-down"></i>
+        </a>
+        <ul class="children" ng-show="showCompanyItems">
+            <li><a href="#!/companies"><i class="fas fa-industry"></i>Firma/Tesisler</a></li>
+            <li><a href="#!/company/new"><i class="fas fa-industry"></i>Yeni Firma/Tesis</a></li>
+        </ul>
+    </li>
+    <li class="parent" ng-click="showHrItems=!showHrItems">
+        <a href=""><i class="fas fa-users"></i>İnsan Kaynakları
+            <i class="fa fa-caret-down"></i>
+        </a>
+        <ul class="children" ng-show="showHrItems">
+            <li><a href="#!/"><i class="fas fa-procedures"></i>İzinler</a></li>
+        </ul>
+    </li>
 </ul>

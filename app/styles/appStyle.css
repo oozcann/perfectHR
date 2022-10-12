@@ -24,48 +24,6 @@ h3 {
     background-color: #fefefe;
 }
 
-.side-bar-menu {
-    background-color: #333;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-    .side-bar-menu ul {
-        list-style: none !important;
-        text-decoration: none;
-        margin: 0;
-        padding: 0;
-    }
-
-        .side-bar-menu ul li {
-            list-style: none !important;
-            text-align: left;
-            background-color: #333;
-            border-bottom: 1px solid gray;
-        }
-
-
-            .side-bar-menu ul li a {
-                list-style: none !important;
-                color: #ffffff;
-                display: block;
-                text-decoration: none;
-                padding-top: 5px;
-                padding-bottom: 5px;
-                padding-left: 30px;
-            }
-            .side-bar-menu ul li a i {
-                width:25px;
-                padding-right:10px;
-            }
-
-            .side-bar-menu ul li:hover {
-                background-color: #444;
-                opacity: 0.8;
-                text-decoration: none;
-            }
-
 .col-sm-9 > input.form-control, .col-sm-9 > select.form-control {
     width: 100% !important;
     height: 34px !important;
