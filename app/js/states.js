@@ -12,7 +12,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
              }
         ]
     })
-    $stateProvider.state('reminder', {
+    $stateProvider.state('reminders', {
         url: '/list/reminder',
         template: '<div reminder-list></div>',
         controller: [

@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const UserRoute = require('./server/routes/userRoutes');
 const EmployeeRoute = require('./server/routes/employeeRoutes');
 const CompanyRoute = require('./server/routes/companyRoutes');
+const ReminderRoute = require('./server/routes/reminderRoutes');
 const path = require('path');
 mongoose.connect('mongodb://localhost:27017/application',{useNewUrlParser:true, useUnifiedTopology:true});
 const db = mongoose.connection;
@@ -37,3 +38,4 @@ app.listen(3000, () => {
 app.use('/api/user', UserRoute);
 app.use('/api/employee', EmployeeRoute);
 app.use('/api/company', CompanyRoute);
+app.use('/api/reminder', ReminderRoute);
