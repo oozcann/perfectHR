@@ -15,6 +15,9 @@ myApp.directive('newEntityButton', function(){
                 $scope.goToNewEmployeePage = function () {
                     $state.go('new-employee',{});
                 };
+                $scope.goToNewReminderPage = function () {
+                    $state.go('new-reminder',{});
+                };
             }
         ]
     }

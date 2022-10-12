@@ -1,0 +1,22 @@
+<div class="pl-3 pr-3 mb-1">
+    <div class="btn-group ">
+        <span new-entity-button entity="reminder"></span>
+        <button ng-click="exportData()" class="btn btn-square" style="color:#333; border:1px solid #cecece; width:70px!important;">EXCEL</button>
+    </div>
+    <input ng-model="search" type="search" class="form-control emp-search-input" placeholder="Bir isim yazınız" />
+</div>
+<div class="pl-3 pr-3" style="max-height:400px; overflow:auto;">
+    <table id="reminderList" class="table list-table" style="width:100%;">
+        <thead>
+        <tr>
+            <th>Hatırlatıcı Adı</th>
+            <th>Açıklama</th>
+            <th>Hatırlatma Tarihi</th>
+            <th>Oluşturulma Tarihi</th>
+        </tr>
+        </thead>
+        <tbody ng-repeat="reminder in reminders  | filter : {name : search} | orderBy : 'name'">
+
+        </tbody>
+    </table>
+</div>

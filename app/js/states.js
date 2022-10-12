@@ -12,6 +12,33 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
              }
         ]
     })
+    $stateProvider.state('reminder', {
+        url: '/list/reminder',
+        template: '<div reminder-list></div>',
+        controller: [
+             '$rootScope',
+             function ($rootScope) {
+                 $rootScope.$emit('reminderListBreadcrumb');
+             }
+        ]
+    })
+    .state('new-reminder', {
+        url: '/reminder/new',
+        template: '<div reminder-directive></div>',
+        controller: [
+            '$scope',
+            '$state',
+            '$rootScope',
+            function ($scope, $state, $rootScope) {
+                $rootScope.$emit('newReminderBreadcrumb');
+                $scope.beingEdited = true;
+                $scope.isNew = true;
+            }
+        ],
+        resolve: {
+
+        }
+    })
     .state('new-employee', {
         url: '/employee/new',
         template: '<div employee-directive being-edited="beingEdited" is-new="isNew" employee="employee" companies="companies"></div>',
