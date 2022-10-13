@@ -14,13 +14,19 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
     })
     $stateProvider.state('reminders', {
         url: '/list/reminder',
-        template: '<div reminder-list></div>',
+        template: '<div reminder-list reminders="reminders"></div>',
         controller: [
              '$rootScope',
-             function ($rootScope) {
+             '$scope',
+             'reminders',
+             function ($rootScope,$scope,reminders) {
                  $rootScope.$emit('reminderListBreadcrumb');
+                 $scope.reminders = reminders;
              }
-        ]
+        ],
+        resolve: {
+            reminders: ['entityService', (entityService) => {return entityService.getList("reminder", {"archived": false})}]
+        }
     })
     .state('new-reminder', {
         url: '/reminder/new',

@@ -8,15 +8,25 @@
 <div class="pl-3 pr-3" style="max-height:400px; overflow:auto;">
     <table id="reminderList" class="table list-table" style="width:100%;">
         <thead>
-        <tr>
-            <th>Hatırlatıcı Adı</th>
-            <th>Açıklama</th>
-            <th>Hatırlatma Tarihi</th>
-            <th>Oluşturulma Tarihi</th>
-        </tr>
+            <tr>
+                <th>Hatırlatıcı Adı</th>
+                <th>Açıklama</th>
+                <th>Hatırlatma Tarihi</th>
+                <th>Oluşturulma Tarihi</th>
+            </tr>
         </thead>
         <tbody ng-repeat="reminder in reminders  | filter : {name : search} | orderBy : 'name'">
-
+            <tr>
+                <td>
+                    <a href="#!/reminder/{{reminder._id}}" class="text-danger">
+                        <i class="fas fa-bell"></i>
+                        {{reminder.name}}
+                    </a>
+                </td>
+                <td>{{reminder.description}}</td>
+                <td>{{reminder.reminderDate | formatDateToDDMMYYYY}}</td>
+                <td>{{reminder.createdAt | formatDateToDDMMYYYY}}</td>
+            </tr>
         </tbody>
     </table>
 </div>

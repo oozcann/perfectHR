@@ -3,7 +3,7 @@ myApp.directive('reminderList', function(){
     return {
         restrict : "A",
         scope: {
-
+            reminders: '='
         },
         templateUrl: '../../../view/drct/list/reminder-list.html',
         controller: [
