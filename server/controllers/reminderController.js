@@ -82,8 +82,4 @@ const deleteReminder = (req,res,next) => {
     })
 };
 
-//Activate Employee (archived: true)
-
-//Remove Employee (remove from db)
-
 module.exports = {saveReminder, updateReminder, getReminders, getReminderById, deleteReminder};

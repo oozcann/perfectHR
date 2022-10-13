@@ -19,6 +19,7 @@ myApp.directive('reminderDirective', function(){
             'entityService',
             ($scope,$state,$stateParams,$http,$rootScope,entityService) => {
                 $scope.getEntityAddress = 'reminder';
+                $scope.entity = $scope.reminder;
                 $scope.saveReminder = function (data) {
                     if ($scope.isNew) {
                         entityService.saveEntity($scope.getEntityAddress ,JSON.stringify(data)).then((data) => {
@@ -35,7 +36,7 @@ myApp.directive('reminderDirective', function(){
                 $scope.deleteReminder = function () {
                     const bootboxOpts = {};
                     bootboxOpts.title = 'Devam etmek için onayınız gerekmektedir';
-                    bootboxOpts.message = 'Hatırlatıcıyı arşivlemek istediğinize emin misiniz?';
+                    bootboxOpts.message = 'Hatırlatıcıyı silmek istediğinize emin misiniz?';
                     bootboxOpts.size = 'large'
                     bootboxOpts.closeButton = false;
 
