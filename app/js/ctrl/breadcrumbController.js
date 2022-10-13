@@ -31,6 +31,17 @@ myApp.controller('breadcrumbController', ['$scope', '$state', '$stateParams','$h
                 description: 'Lütfen detaylarını giriniz.'
             }
         });
+        $rootScope.$on('reminderDetailBreadcrumb', (event, data)=>{
+            $scope.breadcrumbItems = [
+                {name: "Anasayfa", link:"#!/", icon:"fas fa-home"},
+                {name: "Hatırlatıcılar", link:"#!/list/reminder"},
+                {name: data.name}
+            ];
+            $scope.pageHeader = {
+                title: '',
+                description: ''
+            }
+        });
         $rootScope.$on('newEmployeeBreadcrumb', ()=>{
             $scope.breadcrumbItems = [
                 {name: "Anasayfa", link:"#!/", icon:"fas fa-home"},

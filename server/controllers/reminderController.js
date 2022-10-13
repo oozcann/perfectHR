@@ -21,9 +21,22 @@ const saveReminder = (req,res,next) => {
     })
 };
 
-//Update Employee
+//Update Reminder
 
-//Get Employees
+const updateReminder = (req, res, next) => {
+    let reminderId = req.body._id;
+    Reminder.findByIdAndUpdate(reminderId, req.body)
+    .then(response => {
+        res.json(response);
+    })
+    .catch(err => {
+        res.json({
+            message: 'An error ocurred while updating reminder : ' + req.body.name + err
+        })
+    })
+};
+
+//Get Reminders
 
 const getReminders = (req, res, next) => {
     const query = req.body;
@@ -38,12 +51,39 @@ const getReminders = (req, res, next) => {
     })
 };
 
-//Get Employee By ID
+//Get Reminder By ID
 
-//Delete Employee (archived: true)
+const getReminderById = (req, res, next) => {
+    let reminderId = req.body.reminderId;
+    Reminder.findById(reminderId)
+    .then(response => {
+        res.json(response);
+    })
+    .catch(err => {
+        res.json({
+            message: 'An error ocurred while getting reminder by id : ' + err
+        })
+    })
+};
+
+//Delete Reminder (archived: true)
+
+const deleteReminder = (req,res,next) => {
+    let reminderId = req.body._id;
+    Reminder.findByIdAndUpdate(reminderId,{archived:true})
+    .then(response => {
+        res.json(response);
+        //res.redirect('/login');
+    })
+    .catch(err => {
+        res.json({
+            message: 'An error ocurred while deleting reminder : ' + err
+        })
+    })
+};
 
 //Activate Employee (archived: true)
 
 //Remove Employee (remove from db)
 
-module.exports = {saveReminder, getReminders};
+module.exports = {saveReminder, updateReminder, getReminders, getReminderById, deleteReminder};

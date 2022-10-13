@@ -21,6 +21,9 @@ myApp.directive('callToAction', function(){
                     if (entity == 'Firma') {
                         $scope.stateToRedirect = 'new-company';
                     }
+                    if (entity == 'Hatırlatıcı') {
+                        $scope.stateToRedirect = 'new-reminder';
+                    }
                     $state.go($scope.stateToRedirect);
                 }
             }

@@ -30,7 +30,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
     })
     .state('new-reminder', {
         url: '/reminder/new',
-        template: '<div reminder-directive being-edited="beingEdited" is-new="isNew"></div>',
+        template: '<div reminder-directive being-edited="beingEdited" is-new="isNew" reminder="reminder"></div>',
         controller: [
             '$scope',
             '$state',
@@ -39,8 +39,33 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
                 $rootScope.$emit('newReminderBreadcrumb');
                 $scope.beingEdited = true;
                 $scope.isNew = true;
+                $scope.reminder = {};
             }
         ]
+    })
+    .state('reminder', {
+        url: '/reminder/{reminderId}?justSaved',
+        template: '<div reminder-directive being-edited="beingEdited" is-new="isNew" reminder="reminder" companies="companies" just-saved="justSaved"></div>',
+        controller: [
+            '$scope',
+            '$state',
+            '$stateParams',
+            '$rootScope',
+            'reminder',
+            'companies',
+            function ($scope,$state,$stateParams,$rootScope,reminder,companies) {
+                $rootScope.$emit('reminderDetailBreadcrumb',{name: reminder.name});
+                $scope.beingEdited = false;
+                $scope.isNew = false;
+                $scope.justSaved = $stateParams.justSaved;
+                $scope.reminder = reminder;
+                $scope.companies = companies;
+            }
+        ],
+        resolve: {
+            reminder: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.findById("reminder/:reminderId", {"reminderId": $stateParams.reminderId})}],
+            companies: ['entityService', (entityService) => {return entityService.getList("company", {"archived": false})}]
+        }
     })
     .state('new-employee', {
         url: '/employee/new',
