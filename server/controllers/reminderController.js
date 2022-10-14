@@ -4,6 +4,7 @@ const Reminder = require('../models/Reminder');
 
 const saveReminder = (req,res,next) => {
     let reminder = new Reminder ({
+        _class: 'reminder',
         name: req.body.name,
         description: req.body.description,
         reminderDate: req.body.reminderDate,

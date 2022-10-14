@@ -39,7 +39,9 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
                 $rootScope.$emit('newReminderBreadcrumb');
                 $scope.beingEdited = true;
                 $scope.isNew = true;
-                $scope.reminder = {};
+                $scope.reminder = {
+                    _class: 'reminder'
+                };
             }
         ]
     })
