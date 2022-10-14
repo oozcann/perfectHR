@@ -4,6 +4,7 @@ const Employee = require('../models/Employee');
 
 const saveEmployee = (req,res,next) => {
     let employee = new Employee ({
+        _class: 'employee',
         fullName: req.body.name + ' ' + req.body.surname,
         name: req.body.name,
         surname: req.body.surname,

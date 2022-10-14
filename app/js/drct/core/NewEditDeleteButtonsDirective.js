@@ -34,6 +34,9 @@ myApp.directive('newEditDeleteButtons', function(){
                         $scope.redirectInCancelClicked = 'companies';
                         queryToRedirectAfterSave.companyId = entity._id;
                     }
+                    else if (entity._class == 'employee') {
+                        queryToRedirectAfterSave.employeeId = entity._id;
+                    }
                     else {
                         console.error('_class for entity not specified');
                     }
