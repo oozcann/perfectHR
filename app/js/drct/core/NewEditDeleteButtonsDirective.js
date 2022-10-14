@@ -18,12 +18,30 @@ myApp.directive('newEditDeleteButtons', function(){
             'entityService',
             ($scope,$state,$stateParams,$http,$rootScope,entityService) => {
                 $scope.getEntityAddress = $scope.entity._class;
-                console.log($scope.disableOpts);
-                const queryKey = $scope.entity._class + 'Id';
+                if ($scope.getEntityAddress == 'company') {
+                    $scope.redirectInCancelClicked = 'companies';
+                } else {
+                    $scope.redirectInCancelClicked = $scope.getEntityAddress + 's';
+                }
+                const queryToRedirectAfterSave = {
+                    justSaved: true
+                };
+                $scope.specifyQueryForRedirection = function (entity) {
+                    if (entity._class == 'reminder') {
+                        queryToRedirectAfterSave.reminderId = entity._id;
+                    }
+                    else if (entity._class == 'company') {
+                        $scope.redirectInCancelClicked = 'companies';
+                        queryToRedirectAfterSave.companyId = entity._id;
+                    }
+                    else {
+                        console.error('_class for entity not specified');
+                    }
+                };
                 $scope.save = function (data) {
                     if ($scope.isNew) {
                         entityService.saveEntity($scope.getEntityAddress ,JSON.stringify(data)).then((data) => {
-                            $scope.entityId = data._id;
+                            $scope.specifyQueryForRedirection(data);
                             $scope.redirectAfterSave();
                         });
                     } else {
@@ -33,23 +51,43 @@ myApp.directive('newEditDeleteButtons', function(){
 
                     }
                 };
+                $scope.deleteEntity = function () {
+                    const bootboxOpts = {};
+                    bootboxOpts.title = 'Devam etmek için onayınız gerekmektedir';
+                    bootboxOpts.message = 'Veriyi silmek istediğinize emin misiniz?';
+                    bootboxOpts.size = 'large'
+                    bootboxOpts.closeButton = false;
+
+                    bootboxOpts.buttons = {
+                        cancel: { label: 'Vazgeç', className: 'btn-success btn-square' },
+                        confirm: { label: 'Sil', className: 'btn-danger btn-square' }
+                    };
+                    bootboxOpts.buttons.confirm.callback = function () {
+                        entityService.deleteEntity($scope.getEntityAddress, JSON.stringify($scope.entity)).then(function (response) {
+                            $state.go($scope.redirectInCancelClicked);
+                        });
+                    };
+                    bootboxOpts.buttons.cancel.callback = function () {};
+                    bootbox.dialog(bootboxOpts);
+                };
                 $scope.edit = function () {
                     $scope.beingEdited = true;
-                    console.log($scope.entity);
                 };
                 $scope.cancel = function () {
                     if ($scope.isNew) {
-                        $state.go('reminders');
+                        if ($scope.redirectInCancelClicked) {
+                            $state.go($scope.redirectInCancelClicked);
+                        } else {
+                            console.error('redirectInCancelClicked not found.');
+                        }
+
                     } else {
                         $scope.beingEdited = false;
                         $state.go($state.current, {}, {reload: true});
                     }
                 };
                 $scope.redirectAfterSave = function () {
-                    $state.go($scope.getEntityAddress, {
-                        reminderId: $scope.entityId,
-                        justSaved: true
-                    })
+                    $state.go($scope.getEntityAddress, queryToRedirectAfterSave)
                 };
             }
         ]

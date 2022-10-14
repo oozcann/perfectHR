@@ -82,7 +82,9 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
                 $scope.beingEdited = true;
                 $scope.isNew = true;
                 $scope.companies = companies;
-                $scope.employee = {};
+                $scope.employee = {
+                    _class: 'employee'
+                };
             }
         ],
         resolve: {
@@ -142,7 +144,9 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
                 $rootScope.$emit('newCompanyBreadcrumb');
                 $scope.beingEdited = true;
                 $scope.isNew = true;
-                $scope.company = {};
+                $scope.company = {
+                    _class: 'company'
+                };
             }
         ]
     })

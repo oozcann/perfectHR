@@ -4,6 +4,7 @@ const Company = require('../models/Company');
 
 const saveCompany = (req,res,next) => {
     let company = new Company ({
+        _class: 'company',
         name: req.body.name,
         uniqueName: req.body.uniqueName,
         address: req.body.address,

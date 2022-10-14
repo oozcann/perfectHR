@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-61 Hatırlatıcılar adında bir modül oluşturulması">
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-33 save,update,delete işlemlerinin tek bir directive üzerinden yapılması (abstractNewEditView)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/drct/core/NewEditDeleteButtonsDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/core/NewEditDeleteButtonsDirective.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/states.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/states.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/drct/core/new-edit-delete-buttons-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/core/new-edit-delete-buttons-directive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/company-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/company-directive.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/reminder-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/reminder-directive.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/reminderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/reminderController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/Reminder.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/Reminder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/companyController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/companyController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/Company.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/Company.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,13 +59,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663614753979</updated>
-    </task>
-    <task id="LOCAL-00002" summary="MAN-24 EmployeeDirective oluşturulması">
-      <created>1663700674890</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1663700674890</updated>
     </task>
     <task id="LOCAL-00003" summary="MAN-24 EmployeeDirective oluşturulması">
       <created>1663700685655</created>
@@ -402,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665677685213</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="MAN-33 save,update,delete işlemlerinin tek bir directive üzerinden yapılması (abstractNewEditView)">
+      <created>1665767935703</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1665767935704</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -426,7 +427,6 @@
     <MESSAGE value="MAN-37 Employee için sicil no bilgisinin eklenmesi" />
     <MESSAGE value="MAN-15 Tarih gösterimleri için filter oluşturulması" />
     <MESSAGE value="MAN-43 İletişim bilgileri butonların altında görünmemektedir" />
-    <MESSAGE value="MAN-33 save,update,delete işlemlerinin tek bir directive üzerinden yapılması (abstractNewEditView)" />
     <MESSAGE value="MAN-46 employee-list ekran düzenlemeleri" />
     <MESSAGE value="Kullanılmayan dosyalar silindi." />
     <MESSAGE value="MAN-47 ui-select'in projeye dahil edilmesi" />
@@ -442,6 +442,7 @@
     <MESSAGE value="MAN-57 Çalışan liste ekranına çalışan firma bilgisinin eklenmesi" />
     <MESSAGE value="MAN-62 sidebar menünün çeşitlendirilmesi" />
     <MESSAGE value="MAN-61 Hatırlatıcılar adında bir modül oluşturulması" />
-    <option name="LAST_COMMIT_MESSAGE" value="MAN-61 Hatırlatıcılar adında bir modül oluşturulması" />
+    <MESSAGE value="MAN-33 save,update,delete işlemlerinin tek bir directive üzerinden yapılması (abstractNewEditView)" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAN-33 save,update,delete işlemlerinin tek bir directive üzerinden yapılması (abstractNewEditView)" />
   </component>
 </project>
