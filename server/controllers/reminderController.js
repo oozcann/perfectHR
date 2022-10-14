@@ -7,6 +7,11 @@ const saveReminder = (req,res,next) => {
         _class: 'reminder',
         name: req.body.name,
         description: req.body.description,
+        companyRef: {
+            _id: req.body.companyRef._id,
+            name: req.body.companyRef.name,
+            class: req.body.companyRef.class,
+        },
         reminderDate: req.body.reminderDate,
         archived: false
     });

@@ -11,6 +11,7 @@
             <tr>
                 <th>Hatırlatıcı Adı</th>
                 <th>Açıklama</th>
+                <th>İlişkili Tesis</th>
                 <th>Hatırlatma Tarihi</th>
                 <th>Oluşturulma Tarihi</th>
             </tr>
@@ -24,6 +25,12 @@
                     </a>
                 </td>
                 <td>{{reminder.description}}</td>
+                <td>
+                    <a href="#!/company/{{reminder.companyRef._id}}" class="text-success">
+                        <i class="fas fa-industry"></i>
+                        {{reminder.companyRef.name}}
+                    </a>
+                </td>
                 <td>{{reminder.reminderDate | formatDateToDDMMYYYY}}</td>
                 <td>{{reminder.createdAt | formatDateToDDMMYYYY}}</td>
             </tr>

@@ -11,6 +11,9 @@ const reminderSchema = new Schema({
     description: {
         type: String
     },
+    companyRef: {
+        type: Object
+    },
     reminderDate: {
         type: Date
     },

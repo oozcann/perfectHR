@@ -30,20 +30,25 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
     })
     .state('new-reminder', {
         url: '/reminder/new',
-        template: '<div reminder-directive being-edited="beingEdited" is-new="isNew" reminder="reminder"></div>',
+        template: '<div reminder-directive being-edited="beingEdited" is-new="isNew" reminder="reminder" companies="companies"></div>',
         controller: [
             '$scope',
             '$state',
             '$rootScope',
-            function ($scope, $state, $rootScope) {
+            'companies',
+            function ($scope,$state,$rootScope,companies) {
                 $rootScope.$emit('newReminderBreadcrumb');
                 $scope.beingEdited = true;
                 $scope.isNew = true;
+                $scope.companies = companies;
                 $scope.reminder = {
                     _class: 'reminder'
                 };
             }
-        ]
+        ],
+        resolve: {
+            companies: ['entityService', (entityService) => {return entityService.getList("company", {"archived": false})}]
+        }
     })
     .state('reminder', {
         url: '/reminder/{reminderId}?justSaved',
