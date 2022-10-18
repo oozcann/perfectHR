@@ -15,3 +15,7 @@ myApp.directive('entityListMain', function(){
         ]
     }
 });
+/*
+TAM OLARAK SONUÇLANMADI BU. İLERİDE BELKİ KULLANILABİLİR YA DA ÖZELLEŞTİRİLEBİLİR.
+ŞU AN İÇİN KULLANIM DIŞI.
+*/
