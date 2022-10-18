@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-60 entityRef için service oluşturulması">
-      <change beforePath="$PROJECT_DIR$/app/view/drct/main/sidebar-menu-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/main/sidebar-menu-directive.html" afterDir="false" />
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-65 Çalışana prim verilmesi ile ilgili modül oluşturulması">
+      <change afterPath="$PROJECT_DIR$/app/js/drct/list/EntityListMainDirective.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/view/drct/list/entity-list-main-directive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/drct/list/EmployeesListDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/list/EmployeesListDirective.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/drct/list/employees-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/list/employees-list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

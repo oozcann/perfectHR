@@ -32,6 +32,7 @@ myApp.directive('employeesList', function(){
                         $scope.employees= data;
                     });
                 };
+                $scope.headerItems = ['TC Kimlik','Çalışan','Firma','İşe Başlama Tarihi','Doğum Tarihi','Cinsiyet','Telefon','E-mail','Yaş'];
             }
         ]
     }
