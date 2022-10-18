@@ -17,19 +17,16 @@ myApp.directive('employeeDirective', function(){
             '$http',
             '$rootScope',
             'entityService',
-            ($scope,$state,$stateParams,$http,$rootScope,entityService) => {
+            'referenceService',
+            ($scope,$state,$stateParams,$http,$rootScope,entityService,referenceService) => {
                 $scope.getEntityAddress = 'employee';
                 $scope.entity = $scope.employee;
                 if (!$scope.isNew) {
                     $scope.employeeCompanyRef = $scope.employee.companyRef._id;
                 }
                 $scope.createCompanyRef = function (companyRefId) {
-                    entityService.findById('company/:companyId', {"companyId": companyRefId}).then((data) => {
-                        $scope.employee.companyRef = {
-                            _id: data._id,
-                            name: data.name,
-                            class: 'COMPANY'
-                        };
+                    referenceService.createEntityRef('company', companyRefId).then((data) => {
+                        $scope.employee.companyRef = data;
                     });
                 };
                 $scope.removeEmployee = function () {

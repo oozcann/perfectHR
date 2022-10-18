@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-33 save,update,delete işlemlerinin tek bir directive üzerinden yapılması (abstractNewEditView)">
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-64 Hatırlatıcılara companyRef ilişkisi kurulması">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/drct/newEditView/ReminderDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/newEditView/ReminderDirective.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/states.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/states.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/list/reminder-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/list/reminder-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/reminder-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/reminder-directive.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/reminderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/reminderController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/Reminder.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/Reminder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/drct/newEditView/EmployeeDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/newEditView/EmployeeDirective.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/services.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,13 +54,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663614753979</updated>
-    </task>
-    <task id="LOCAL-00006" summary="MAN-12 employee edit api + frontend oluşturulması">
-      <created>1663786962603</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1663786962603</updated>
     </task>
     <task id="LOCAL-00007" summary="MAN-31 entityService oluşturulması ve findById methodu eklenmesi">
       <created>1663870334392</created>
@@ -402,7 +391,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665771892383</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="MAN-64 Hatırlatıcılara companyRef ilişkisi kurulması">
+      <created>1665773065427</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1665773065427</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -417,7 +413,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="MAN-36 employee detay ekranı düzenlemeleri" />
     <MESSAGE value="MAN-38 services içindeki entityAddress iyileştirmeleri" />
     <MESSAGE value="MAN-39 kullanılmayan state'lerin kaldırılması" />
     <MESSAGE value="MAN-12 employee edit api + frontend oluşturulması" />
@@ -442,6 +437,7 @@
     <MESSAGE value="MAN-62 sidebar menünün çeşitlendirilmesi" />
     <MESSAGE value="MAN-61 Hatırlatıcılar adında bir modül oluşturulması" />
     <MESSAGE value="MAN-33 save,update,delete işlemlerinin tek bir directive üzerinden yapılması (abstractNewEditView)" />
-    <option name="LAST_COMMIT_MESSAGE" value="MAN-33 save,update,delete işlemlerinin tek bir directive üzerinden yapılması (abstractNewEditView)" />
+    <MESSAGE value="MAN-64 Hatırlatıcılara companyRef ilişkisi kurulması" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAN-64 Hatırlatıcılara companyRef ilişkisi kurulması" />
   </component>
 </project>

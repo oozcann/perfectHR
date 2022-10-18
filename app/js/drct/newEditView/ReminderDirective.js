@@ -12,20 +12,16 @@ myApp.directive('reminderDirective', function(){
         templateUrl: '../../../view/drct/newEditView/reminder-directive.html',
         controller: [
             '$scope',
-            'entityService',
-            ($scope,entityService) => {
+            'referenceService',
+            ($scope,referenceService) => {
                 $scope.getEntityAddress = 'reminder';
                 $scope.entity = $scope.reminder;
                 if (!$scope.isNew) {
                     $scope.reminderCompanyRef = $scope.reminder.companyRef._id;
                 }
                 $scope.createCompanyRef = function (companyRefId) {
-                    entityService.findById('company/:companyId', {"companyId": companyRefId}).then((data) => {
-                        $scope.reminder.companyRef = {
-                            _id: data._id,
-                            name: data.name,
-                            class: 'COMPANY'
-                        };
+                    referenceService.createEntityRef('company', companyRefId).then((data) => {
+                        $scope.reminder.companyRef = data;
                     });
                 };
             }

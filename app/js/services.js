@@ -125,6 +125,34 @@ const serviceModuleConf = function ($provide) {
 			};
 		}
 	]);
+	$provide.factory('referenceService', [
+		'$q',
+		'$http',
+		'entityService',
+		function ($q,$http,entityService) {
+            function createEntityRef (entityAddress, entityRefId) {
+                const entityQuery = {};
+                if(entityAddress == 'company') {
+                    entityQuery.companyId = entityRefId;
+                }
+                entityAddress = entityAddress + '/:' + entityAddress + "Id";
+                let reference = {};
+                const deferred = $q.defer();
+                entityService.findById(entityAddress, entityQuery).then((data) => {
+                     reference = {
+                        _id: data._id,
+                        name: data.name,
+                        class: data._class
+                     };
+                     deferred.resolve(reference);
+                });
+                return deferred.promise;
+            }
+			return {
+				createEntityRef: createEntityRef
+			};
+		}
+	]);
 };
 serviceModuleConf.$inject = ['$provide'];
 angular.module('myApp.services', [], serviceModuleConf);
