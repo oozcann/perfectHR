@@ -83,16 +83,9 @@
         </div>
         <script>
             $(window).on('load', function (){
-                const myTimeout = setTimeout(myGreeting, 2000);
-                function myGreeting() {
-                    //$('.loader').css('display' , 'none');
-                    //$('.content').css('display' , 'block');
-                    $('.loader').css('display' , 'none');
-                    $('.content').css('display' , 'block');
-                }
-                function myStopFunction() {
-                    clearTimeout(myTimeout);
-                }
+                const myTimeout = setTimeout(function(){
+                    $('.loader').hide();
+                },2000);
             });
         </script>
     </body>
