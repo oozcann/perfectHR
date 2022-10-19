@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-21 Çalışan tablosunda yaş bilgisinin gösterilmesi">
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="datepicker installation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/filters.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,13 +53,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663614753979</updated>
-    </task>
-    <task id="LOCAL-00011" summary="MAN-12 employee edit api + frontend oluşturulması">
-      <created>1663874569473</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1663874569473</updated>
     </task>
     <task id="LOCAL-00012" summary="MAN-36 employee detay ekranı düzenlemeleri">
       <created>1663954106586</created>
@@ -399,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666204503830</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="datepicker installation">
+      <created>1666206960515</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1666206960515</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -414,7 +412,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="MAN-12 employee edit api + frontend oluşturulması" />
     <MESSAGE value="MAN-41 entityAddress bilgisinin değişken üzerinden sağlanması" />
     <MESSAGE value="MAN-42 employee için doğum tarihi ve işe başlama tarihi inputlarının eklenmesi" />
     <MESSAGE value="MAN-37 Employee için sicil no bilgisinin eklenmesi" />
@@ -439,6 +436,7 @@
     <MESSAGE value="MAN-64 Hatırlatıcılara companyRef ilişkisi kurulması" />
     <MESSAGE value="MAN-60 entityRef için service oluşturulması" />
     <MESSAGE value="MAN-66 Kayıt yapılırken loading olduğunu gösteren bir mekanizmanın kurulması" />
-    <option name="LAST_COMMIT_MESSAGE" value="MAN-66 Kayıt yapılırken loading olduğunu gösteren bir mekanizmanın kurulması" />
+    <MESSAGE value="datepicker installation" />
+    <option name="LAST_COMMIT_MESSAGE" value="datepicker installation" />
   </component>
 </project>
