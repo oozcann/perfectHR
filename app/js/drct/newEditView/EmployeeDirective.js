@@ -29,6 +29,12 @@ myApp.directive('employeeDirective', function(){
                         $scope.employee.companyRef = data;
                     });
                 };
+                if (!$scope.isNew && $scope.employee.dateOfBirth) {
+                    $scope.employee.dateOfBirth = new Date($scope.employee.dateOfBirth);
+                }
+                if (!$scope.isNew && $scope.employee.jobStartDate) {
+                    $scope.employee.jobStartDate = new Date($scope.employee.jobStartDate);
+                }
                 $scope.removeEmployee = function () {
                     const bootboxOpts = {};
                     bootboxOpts.title = 'Devam etmek için onayınız gerekmektedir';
