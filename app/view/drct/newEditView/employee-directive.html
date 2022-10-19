@@ -53,7 +53,7 @@
                 <option value="E">Erkek</option>
             </select>
         </div>
-        <span ng-show="!beingEdited">{{employee.gender}}</span>
+        <span ng-show="!beingEdited">{{employee.gender | gender}}</span>
     </div>
     <div class="form-group row">
         <label class="col-sm-3 control-label">Doğum Tarihi</label>

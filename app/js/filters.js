@@ -21,4 +21,18 @@ angular.module('myApp.filters', [])
 		}
 		return moment().diff(birthday, 'years');
 	}
+])
+.filter('gender', [
+	() => (gender) => {
+    	if (!gender) {
+			return 'Belirtilmemiş';
+		}
+		if (gender == 'E') {
+			return 'Erkek';
+		} else if (gender == 'K') {
+		    return 'Kadın';
+		} else {
+		    return 'Belirtilmemiş';
+		}
+	}
 ]);
