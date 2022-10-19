@@ -8,4 +8,16 @@ angular.module('myApp.filters', [])
     } else {
         return '';
     }
-});
+})
+.filter('age', [
+	() => (dateValue) => {
+    	if (!dateValue) {
+			return 'Belirtilmemiş';
+		}
+		let birthday = moment(dateValue);
+		if (!birthday.isValid()) {
+			birthday = moment(dateValue, 'DD/MM/YYYY');
+		}
+		return moment().diff(birthday, 'years');
+	}
+]);

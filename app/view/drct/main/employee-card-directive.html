@@ -8,6 +8,12 @@
         <div class="w-25 d-inline-block">
             <span class="emp-detail-label">TC Kimlik:</span>
             <p class="emp-detail-property">{{employee.uniqueName}}</p>
+            <span class="emp-detail-label">D. Tarihi:</span>
+            <p class="emp-detail-property">{{employee.dateOfBirth | formatDateToDDMMYYYY}}</p>
+            <span class="emp-detail-label">Yaş:</span>
+            <p class="emp-detail-property">{{employee.dateOfBirth | age}}</p>
+        </div>
+        <div class="w-25 d-inline-block">
             <span class="emp-detail-label">Firma/Tesis:</span>
             <p class="emp-detail-property">
                 <a href="#!/company/{{employee.companyRef._id}}" class="text-success">
@@ -15,24 +21,18 @@
                     {{employee.companyRef.name}}
                 </a>
             </p>
-            <span class="emp-detail-label">D. Tarihi:</span>
-            <p class="emp-detail-property">{{employee.dateOfBirth | formatDateToDDMMYYYY}}</p>
-        </div>
-        <div class="w-25 d-inline-block">
             <span class="emp-detail-label">Telefon:</span>
             <p class="emp-detail-property">{{employee.phone}}</p>
             <span class="emp-detail-label">Email:</span>
             <p class="emp-detail-property">{{employee.email}}</p>
-            <span class="emp-detail-label">Cinsiyet:</span>
-            <p class="emp-detail-property">{{employee.gender}}</p>
         </div>
         <div class="w-25 d-inline-block">
+            <span class="emp-detail-label">Cinsiyet:</span>
+            <p class="emp-detail-property">{{employee.gender}}</p>
             <span class="emp-detail-label">İşe Başlama Tarihi:</span>
             <p class="emp-detail-property">{{employee.jobStartDate | formatDateToDDMMYYYY}}</p>
             <span class="emp-detail-label">Kullanılan İzin:</span>
             <p class="emp-detail-property font-weight-bold">{{employee.annualLeaveSpent}}</p>
-            <span style="visibility:hidden" class="emp-detail-label">Kullanılan İzin:</span>
-            <p style="visibility:hidden" class="emp-detail-property">{{employee.annualLeaveSpent}}</p>
         </div>
     </div>
 </div>
