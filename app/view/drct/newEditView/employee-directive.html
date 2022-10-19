@@ -51,6 +51,7 @@
             <select style="font-size:14px" class="{{employee.gender ? '' : 'red-border'}} form-control" name="gender" ng-model="employee.gender" ng-required="true">
                 <option value="K">Kadın</option>
                 <option value="E">Erkek</option>
+                <option value="U">Belirtilmemiş</option>
             </select>
         </div>
         <span ng-show="!beingEdited">{{employee.gender | gender}}</span>

@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-59 Çalışan detay ekranında düzenle kaydet denince tarihler boş kaydedilmektedir">
-      <change beforePath="$PROJECT_DIR$/app/js/filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/filters.js" afterDir="false" />
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-67 Cinsiyet gösterimi için filter oluşturulması">
       <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,13 +52,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663614753979</updated>
-    </task>
-    <task id="LOCAL-00014" summary="MAN-27 Çalışan detay sayfasındaki çalışan kartının directive yapılması">
-      <created>1663956369584</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1663956369584</updated>
     </task>
     <task id="LOCAL-00015" summary="MAN-36 employee detay ekranı düzenlemeleri">
       <created>1663957205182</created>
@@ -397,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666208929430</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="MAN-67 Cinsiyet gösterimi için filter oluşturulması">
+      <created>1666209498935</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1666209498935</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -412,7 +411,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="MAN-37 Employee için sicil no bilgisinin eklenmesi" />
     <MESSAGE value="MAN-15 Tarih gösterimleri için filter oluşturulması" />
     <MESSAGE value="MAN-43 İletişim bilgileri butonların altında görünmemektedir" />
     <MESSAGE value="MAN-46 employee-list ekran düzenlemeleri" />
@@ -437,6 +435,7 @@
     <MESSAGE value="datepicker installation" />
     <MESSAGE value="MAN-44 Çalışan detay ekranında düzenle kaydet yaptıktan sonra sayfa yenilenmeden tarihler gözükmemektedir" />
     <MESSAGE value="MAN-59 Çalışan detay ekranında düzenle kaydet denince tarihler boş kaydedilmektedir" />
-    <option name="LAST_COMMIT_MESSAGE" value="MAN-59 Çalışan detay ekranında düzenle kaydet denince tarihler boş kaydedilmektedir" />
+    <MESSAGE value="MAN-67 Cinsiyet gösterimi için filter oluşturulması" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAN-67 Cinsiyet gösterimi için filter oluşturulması" />
   </component>
 </project>
