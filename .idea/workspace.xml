@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-67 Cinsiyet gösterimi için filter oluşturulması">
-      <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/js/drct/core/htmlFormElementDirective.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/view/drct/core/html-form-element.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/styles/appStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/appStyle.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,13 +56,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663614753979</updated>
-    </task>
-    <task id="LOCAL-00015" summary="MAN-36 employee detay ekranı düzenlemeleri">
-      <created>1663957205182</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1663957205182</updated>
     </task>
     <task id="LOCAL-00016" summary="MAN-38 services içindeki entityAddress iyileştirmeleri">
       <created>1663957401280</created>
@@ -396,7 +393,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666209498935</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="MAN-67 Cinsiyet gösterimi için filter oluşturulması">
+      <created>1666209710575</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1666209710575</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

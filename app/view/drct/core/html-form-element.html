@@ -1,0 +1,13 @@
+<div class="form-group row">
+    <label class="col-sm-3 control-label" ng-show="label" ng-class="{'has-error': (ngRequired && (ngModel==null || ngModel==undefined || ngModel==''))}">{{label}}</label>
+    <div ng-if="beingEdited" ng-switch="" on="htmlFormElement" class="col-sm-9" ng-class="{'has-error': (ngRequired && (ngModel==null || ngModel==undefined || ngModel==''))}">
+        <div ng-switch-when="text">
+            <input class="form-control" type="text" name="{{name}}" ng-model="$parent.$parent.ngModel" ng-required="$parent.$parent.ngRequired" placeholder="{{placeholder}}" ng-change="ngChange()"/>
+        </div>
+    </div>
+    <span ng-if="!beingEdited" ng-switch="" on="htmlFormElement" class="col-sm-9">
+        <div ng-switch-when="text">
+            <span>{{$parent.$parent.ngModel}}</span>
+        </div>
+    </span>
+</div>
