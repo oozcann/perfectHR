@@ -1,0 +1,9 @@
+<div ng-if="entity.archived">
+    <div class="alert alert-warning">
+        <strong>Arşivlenmiş {{entityTypeName}} Uyarısı!</strong> Bu {{entityTypeName}} arşivlenmiştir. Aktif etmek için lütfen butona tıklayınız.
+    </div>
+    <div class="row m-2 p-3 border" style="background-color:#eee;">
+        <button class="btn btn-success btn-square" ng-click="activateEntity()">Aktif Et</button>
+        <button class="btn btn-danger btn-square" ng-click="removeEntity()">Kalıcı Olarak Sil</button>
+    </div>
+</div>

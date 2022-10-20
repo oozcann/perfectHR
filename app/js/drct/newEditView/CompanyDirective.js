@@ -11,38 +11,9 @@ myApp.directive('companyDirective', function(){
         templateUrl: '../../../view/drct/newEditView/company-directive.html',
         controller: [
             '$scope',
-            '$state',
-            '$stateParams',
-            '$http',
-            '$rootScope',
-            'entityService',
-            ($scope,$state,$stateParams,$http,$rootScope,entityService) => {
+            ($scope) => {
                 $scope.getEntityAddress = 'company';
                 $scope.entity = $scope.company;
-                $scope.removeCompany = function () {
-                    const bootboxOpts = {};
-                    bootboxOpts.title = 'Devam etmek için onayınız gerekmektedir';
-                    bootboxOpts.message = 'Firmayı kalıcı olarak silmek istediğinize emin misiniz? Bu işlem geri alınamaz!';
-                    bootboxOpts.size = 'large'
-                    bootboxOpts.closeButton = false;
-
-                    bootboxOpts.buttons = {
-                        cancel: { label: 'Vazgeç', className: 'btn-success btn-square' },
-                        confirm: { label: 'Kalıcı Olarak Sil', className: 'btn-danger btn-square' }
-                    };
-                    bootboxOpts.buttons.confirm.callback = function () {
-                        entityService.removeEntity($scope.getEntityAddress, JSON.stringify($scope.entity)).then(() => {
-                            $state.go('companies', {});
-                        });
-                    };
-                    bootboxOpts.buttons.cancel.callback = function () {};
-                    bootbox.dialog(bootboxOpts);
-                };
-                $scope.activateCompany = function () {
-                    entityService.activateEntity($scope.getEntityAddress, JSON.stringify($scope.entity)).then(() => {
-                        $state.go($state.current, {}, {reload: true});
-                    });
-                };
             }
         ]
     }

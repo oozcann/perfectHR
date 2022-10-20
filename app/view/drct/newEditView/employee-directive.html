@@ -58,12 +58,4 @@
         <div new-edit-delete-buttons entity="employee" being-edited="beingEdited" is-new="isNew" disable-opts="newEmployee"></div>
     </div>
 </form>
-<div ng-if="employee.archived">
-    <div class="alert alert-warning">
-        <strong>Arşivlenmiş Çalışan Uyarısı!</strong> Bu çalışan arşivlenmiştir. Aktif etmek için lütfen butona tıklayınız.
-    </div>
-    <div class="row m-2 p-3 border" style="background-color:#eee;">
-        <button class="btn btn-success btn-square" ng-click="activateEmployee()">Aktif Et</button>
-        <button class="btn btn-danger btn-square" ng-click="removeEmployee()">Kalıcı Olarak Sil</button>
-    </div>
-</div>
+<div archive-button entity="employee"></div>

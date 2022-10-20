@@ -12,12 +12,4 @@
         <div new-edit-delete-buttons entity="company" being-edited="beingEdited" is-new="isNew" disable-opts="newCompany"></div>
     </div>
 </form>
-<div ng-if="company.archived">
-    <div class="alert alert-warning">
-        <strong>Arşivlenmiş Firma Uyarısı!</strong> Bu firma arşivlenmiştir. Aktif etmek için lütfen butona tıklayınız.
-    </div>
-    <div class="row m-2 p-3 border" style="background-color:#eee;">
-        <button class="btn btn-success btn-square" ng-click="activateCompany()">Aktif Et</button>
-        <button class="btn btn-danger btn-square" ng-click="removeCompany()">Kalıcı Olarak Sil</button>
-    </div>
-</div>
+<div archive-button entity="company"></div>

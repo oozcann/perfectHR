@@ -12,13 +12,8 @@ myApp.directive('employeeDirective', function(){
         templateUrl: '../../../view/drct/newEditView/employee-directive.html',
         controller: [
             '$scope',
-            '$state',
-            '$stateParams',
-            '$http',
-            '$rootScope',
-            'entityService',
             'referenceService',
-            ($scope,$state,$stateParams,$http,$rootScope,entityService,referenceService) => {
+            ($scope,referenceService) => {
                 $scope.getEntityAddress = 'employee';
                 $scope.entity = $scope.employee;
                 if (!$scope.isNew) {
@@ -35,30 +30,6 @@ myApp.directive('employeeDirective', function(){
                 if (!$scope.isNew && $scope.employee.jobStartDate) {
                     $scope.employee.jobStartDate = new Date($scope.employee.jobStartDate);
                 }
-                $scope.removeEmployee = function () {
-                    const bootboxOpts = {};
-                    bootboxOpts.title = 'Devam etmek için onayınız gerekmektedir';
-                    bootboxOpts.message = 'Çalışanı kalıcı olarak silmek istediğinize emin misiniz? Bu işlem geri alınamaz!';
-                    bootboxOpts.size = 'large'
-                    bootboxOpts.closeButton = false;
-
-                    bootboxOpts.buttons = {
-                        cancel: { label: 'Vazgeç', className: 'btn-success btn-square' },
-                        confirm: { label: 'Kalıcı Olarak Sil', className: 'btn-danger btn-square' }
-                    };
-                    bootboxOpts.buttons.confirm.callback = function () {
-                        entityService.removeEntity($scope.getEntityAddress, JSON.stringify($scope.entity)).then(() => {
-                            $state.go('employees', {});
-                        });
-                    };
-                    bootboxOpts.buttons.cancel.callback = function () {};
-                    bootbox.dialog(bootboxOpts);
-                };
-                $scope.activateEmployee = function () {
-                    entityService.activateEntity($scope.getEntityAddress, JSON.stringify($scope.entity)).then(() => {
-                        $state.go($state.current, {}, {reload: true});
-                    });
-                };
             }
         ]
     }
