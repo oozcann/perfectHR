@@ -3,34 +3,10 @@
 <form name="newEmployee" ng-if="!employee.archived">
     <h3 class="pt-0 pl-3">Özlük Bilgileri</h3>
     <hr class="m-3" />
-    <div class="form-group row">
-        <label class="col-sm-3 control-label">Ad</label>
-        <div class="col-sm-9" ng-show="beingEdited">
-            <input class="{{employee.name ? '' : 'red-border'}} form-control" type="text" name="name" ng-model="employee.name" ng-required="true"/>
-        </div>
-        <span ng-show="!beingEdited">{{employee.name}}</span>
-    </div>
-    <div class="form-group row">
-        <label class="col-sm-3 control-label">Soyad</label>
-        <div class="col-sm-9" ng-show="beingEdited">
-            <input type="text" class="{{employee.surname ? '' : 'red-border'}} form-control" name="surname" ng-model="employee.surname" ng-required="true"/>
-        </div>
-        <span ng-show="!beingEdited">{{employee.surname}}</span>
-    </div>
-    <div class="form-group row">
-        <label class="col-sm-3 control-label">TC Kimlik No</label>
-        <div class="col-sm-9" ng-show="beingEdited">
-            <input type="text" minlength="11" maxlength="11" class="{{employee.uniqueName ? '' : 'red-border'}} form-control" name="uniqueName" ng-model="employee.uniqueName" ng-required="true"/>
-        </div>
-        <span ng-show="!beingEdited">{{employee.uniqueName}}</span>
-    </div>
-    <div class="form-group row">
-        <label class="col-sm-3 control-label">Sicil No</label>
-        <div class="col-sm-9" ng-show="beingEdited">
-            <input type="text" class="form-control" name="internalUniqueName" ng-model="employee.internalUniqueName"/>
-        </div>
-        <span ng-show="!beingEdited">{{employee.internalUniqueName}}</span>
-    </div>
+    <div html-form-element="text" being-edited="beingEdited" ng-model="employee.name" ng-required="true" label="Ad"></div>
+    <div html-form-element="text" being-edited="beingEdited" ng-model="employee.surname" ng-required="true" label="Soyad"></div>
+    <div html-form-element="text" being-edited="beingEdited" ng-model="employee.uniqueName" ng-required="true" label="TC Kimlik No" ng-minlength="11" ng-maxlength="11"></div>
+    <div html-form-element="text" being-edited="beingEdited" ng-model="employee.internalUniqueName" label="Sicil No"></div>
     <div class="form-group row">
         <label class="col-sm-3 control-label">Firma</label>
         <div class="col-sm-9" ng-show="beingEdited">

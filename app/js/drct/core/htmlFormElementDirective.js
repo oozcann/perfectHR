@@ -10,7 +10,9 @@ myApp.directive('htmlFormElement', function(){
             ngChange: '&',
             label: '@',
             name: '@',
-            placeholder: '@'
+            placeholder: '@',
+            ngMaxlength: '@',
+            ngMinlength: '@'
         },
         templateUrl: '../../../view/drct/core/html-form-element.html',
         controller: [

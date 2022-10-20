@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-67 Cinsiyet gösterimi için filter oluşturulması">
-      <change afterPath="$PROJECT_DIR$/app/js/drct/core/htmlFormElementDirective.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/view/drct/core/html-form-element.html" afterDir="false" />
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-26 inputlar için html-form-element directive yapısının oluşturulması">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/appStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/appStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/drct/core/htmlFormElementDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/core/htmlFormElementDirective.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/drct/core/html-form-element.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/core/html-form-element.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,13 +55,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663614753979</updated>
-    </task>
-    <task id="LOCAL-00016" summary="MAN-38 services içindeki entityAddress iyileştirmeleri">
-      <created>1663957401280</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1663957401280</updated>
     </task>
     <task id="LOCAL-00017" summary="MAN-39 kullanılmayan state'lerin kaldırılması">
       <created>1663957650474</created>
@@ -400,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666209710575</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="MAN-26 inputlar için html-form-element directive yapısının oluşturulması">
+      <created>1666287507277</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1666287507277</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -415,7 +414,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="MAN-15 Tarih gösterimleri için filter oluşturulması" />
     <MESSAGE value="MAN-43 İletişim bilgileri butonların altında görünmemektedir" />
     <MESSAGE value="MAN-46 employee-list ekran düzenlemeleri" />
     <MESSAGE value="Kullanılmayan dosyalar silindi." />
@@ -440,6 +438,7 @@
     <MESSAGE value="MAN-44 Çalışan detay ekranında düzenle kaydet yaptıktan sonra sayfa yenilenmeden tarihler gözükmemektedir" />
     <MESSAGE value="MAN-59 Çalışan detay ekranında düzenle kaydet denince tarihler boş kaydedilmektedir" />
     <MESSAGE value="MAN-67 Cinsiyet gösterimi için filter oluşturulması" />
-    <option name="LAST_COMMIT_MESSAGE" value="MAN-67 Cinsiyet gösterimi için filter oluşturulması" />
+    <MESSAGE value="MAN-26 inputlar için html-form-element directive yapısının oluşturulması" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAN-26 inputlar için html-form-element directive yapısının oluşturulması" />
   </component>
 </project>
