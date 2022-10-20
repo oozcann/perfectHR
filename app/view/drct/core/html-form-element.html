@@ -7,12 +7,24 @@
         <div ng-switch-when="textarea">
             <textarea class="form-control" name="{{name}}" ng-model="$parent.$parent.ngModel" ng-required="$parent.$parent.ngRequired" placeholder="{{placeholder}}" maxlength="{{$parent.$parent.ngMaxlength}}"></textarea>
         </div>
+        <div ng-switch-when="phone">
+            <input type="tel" class="form-control" name="{{name}}" ng-model="$parent.$parent.ngModel" ng-required="$parent.$parent.ngRequired" placeholder="{{placeholder}}" maxlength="{{$parent.$parent.ngMaxlength}}"/>
+        </div>
+        <div ng-switch-when="email">
+            <input type="email" class="form-control" name="{{name}}" ng-model="$parent.$parent.ngModel" ng-required="$parent.$parent.ngRequired" placeholder="{{placeholder}}"/>
+        </div>
     </div>
     <span ng-if="!beingEdited" ng-switch="" on="htmlFormElement" class="col-sm-9">
         <div ng-switch-when="text">
             <span>{{$parent.$parent.ngModel}}</span>
         </div>
         <div ng-switch-when="textarea">
+            <span>{{$parent.$parent.ngModel}}</span>
+        </div>
+        <div ng-switch-when="phone">
+            <span>{{$parent.$parent.ngModel}}</span>
+        </div>
+        <div ng-switch-when="email">
             <span>{{$parent.$parent.ngModel}}</span>
         </div>
     </span>

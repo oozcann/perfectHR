@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-26 inputlar için html-form-element directive yapısının oluşturulması">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/drct/core/htmlFormElementDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/core/htmlFormElementDirective.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/appStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/appStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/drct/core/html-form-element.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/core/html-form-element.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/company-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/company-directive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,13 +54,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663614753979</updated>
-    </task>
-    <task id="LOCAL-00018" summary="MAN-12 employee edit api + frontend oluşturulması">
-      <created>1663959056161</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1663959056161</updated>
     </task>
     <task id="LOCAL-00019" summary="MAN-41 entityAddress bilgisinin değişken üzerinden sağlanması">
       <created>1664111480702</created>
@@ -400,7 +391,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666288514121</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="MAN-26 inputlar için html-form-element directive yapısının oluşturulması">
+      <created>1666289976110</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1666289976110</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

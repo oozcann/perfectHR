@@ -6,13 +6,7 @@
     <div html-form-element="text" being-edited="beingEdited" ng-model="company.uniqueName" ng-required="true" label="Sicil No"></div>
     <h3 class="pt-4 pl-3">İletişim Bilgileri</h3>
     <hr class="m-3" />
-    <div class="form-group row">
-        <label class="col-sm-3 control-label">Telefon</label>
-        <div class="col-sm-9" ng-show="beingEdited">
-            <input type="tel" placeholder="___-_______" class="form-control" name="phone" ng-model="company.phone" />
-        </div>
-        <span ng-show="!beingEdited">{{company.phone}}</span>
-    </div>
+    <div html-form-element="phone" being-edited="beingEdited" ng-model="company.phone" label="Telefon" placeholder="___-_______"></div>
     <div html-form-element="textarea" being-edited="beingEdited" ng-model="company.address" label="Adres"></div>
     <div class="sticky-button">
         <div new-edit-delete-buttons entity="company" being-edited="beingEdited" is-new="isNew" disable-opts="newCompany"></div>
