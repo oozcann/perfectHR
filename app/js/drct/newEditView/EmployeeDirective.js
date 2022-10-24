@@ -12,8 +12,9 @@ myApp.directive('employeeDirective', function(){
         templateUrl: '../../../view/drct/newEditView/employee-directive.html',
         controller: [
             '$scope',
+            'entityService',
             'referenceService',
-            ($scope,referenceService) => {
+            ($scope,entityService,referenceService) => {
                 $scope.getEntityAddress = 'employee';
                 $scope.entity = $scope.employee;
                 if (!$scope.isNew) {
@@ -30,6 +31,27 @@ myApp.directive('employeeDirective', function(){
                 if (!$scope.isNew && $scope.employee.jobStartDate) {
                     $scope.employee.jobStartDate = new Date($scope.employee.jobStartDate);
                 }
+                $scope.transferableCompanies = $scope.companies;
+                if ($scope.employee && $scope.employee.companyRef && $scope.employee.companyRef._id) {
+                    for (let i = 0; i < $scope.companies.length; i++) {
+                        if ($scope.companies[i]._id == $scope.employee.companyRef._id) {
+                            $scope.transferableCompanies.splice(i,1);
+                        }
+                    };
+                }
+                $scope.openTransferEmployee = false;
+                $scope.showHideTransferEmployee = function () {
+                    $scope.openTransferEmployee = !$scope.openTransferEmployee;
+                }
+                $scope.transferEmployee = function (toCompanyId) {
+                    referenceService.createEntityRef('company', toCompanyId).then((data) => {
+                        $scope.employee.companyRef = data;
+                        entityService.updateEntity($scope.getEntityAddress, JSON.stringify($scope.entity)).then(() => {
+                            $scope.openTransferEmployee = !$scope.openTransferEmployee;
+                        });
+                    });
+
+                };
             }
         ]
     }

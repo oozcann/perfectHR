@@ -9,6 +9,7 @@ myApp.directive('newEditDeleteButtons', function(){
             disableOpts: '='
         },
         templateUrl: '../../../view/drct/core/new-edit-delete-buttons-directive.html',
+        transclude: true,
         controller: [
             '$scope',
             '$state',

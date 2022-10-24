@@ -1,14 +1,22 @@
 <div ng-if="justSaved" call-to-action entity="entity" label="Çalışan"></div>
 <div employee-card employee="employee" being-edited="beingEdited"></div>
-<form name="newEmployee" ng-if="!employee.archived">
-    <h3 class="pt-0 pl-3">Özlük Bilgileri</h3>
+<div class="form-group row mt-5" ng-if="openTransferEmployee">
+    <label class="col-sm-3 control-label">Transfer Edilecek Tesis : </label>
+    <div class="col-sm-9">
+        <select class="{{toCompany ? '' : 'red-border'}} form-control" name="company" ng-required="true" ng-model="toCompany" ng-options="company._id as company.name for company in transferableCompanies"></select>
+        <button class="btn yellow btn-square mt-1" ng-disabled="!toCompany" ng-click="transferEmployee(toCompany)">Transfer Et</button>
+        <button class="btn btn-danger btn-square mt-1" ng-click="showHideTransferEmployee()">Vazgeç</button>
+    </div>
+</div>
+<form name="newEmployee" ng-if="!employee.archived && !openTransferEmployee">
+    <h3 class="pt-2 pl-3">Özlük Bilgileri</h3>
     <hr class="m-3" />
     <div html-form-element="text" being-edited="beingEdited" ng-model="employee.name" ng-required="true" label="Ad"></div>
     <div html-form-element="text" being-edited="beingEdited" ng-model="employee.surname" ng-required="true" label="Soyad"></div>
     <div html-form-element="text" being-edited="beingEdited" ng-model="employee.uniqueName" ng-required="true" label="TC Kimlik No" ng-minlength="11" ng-maxlength="11"></div>
     <div html-form-element="text" being-edited="beingEdited" ng-model="employee.internalUniqueName" label="Sicil No"></div>
     <div class="form-group row">
-        <label class="col-sm-3 control-label">Firma</label>
+        <label class="col-sm-3 control-label">Tesis</label>
         <div class="col-sm-9" ng-show="beingEdited">
             <select class="{{employeeCompanyRef ? '' : 'red-border'}} form-control" name="company" ng-required="true" ng-model="employeeCompanyRef" ng-change="createCompanyRef(employeeCompanyRef)" ng-options="company._id as company.name for company in companies">
                 <option value=""></option>
@@ -54,8 +62,10 @@
     <hr class="m-3" />
     <div html-form-element="phone" being-edited="beingEdited" ng-model="employee.phone" label="Telefon" placeholder="___-_______"></div>
     <div html-form-element="email" being-edited="beingEdited" ng-model="employee.email" label="E-mail"></div>
-    <div class="sticky-button">
-        <div new-edit-delete-buttons entity="employee" being-edited="beingEdited" is-new="isNew" disable-opts="newEmployee"></div>
+    <div class="sticky-button" ng-show="!openTransferEmployee">
+        <div new-edit-delete-buttons entity="employee" being-edited="beingEdited" is-new="isNew" disable-opts="newEmployee">
+            <button ng-if="!openTransferEmployee && !isNew" ng-click="showHideTransferEmployee()" class="btn yellow btn-square">Transfer Et</button>
+        </div>
     </div>
 </form>
 <div archive-button entity="employee"></div>
