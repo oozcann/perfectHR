@@ -19,6 +19,7 @@
 .side-bar-menu ul li a {
     list-style: none !important;
     color: #ffffff;
+    opacity: 0.7;
     display: block;
     text-decoration: none;
     padding-top: 5px;
@@ -29,8 +30,8 @@
     width:25px;
     padding-right:10px;
 }
-.side-bar-menu ul li:not(.parent):hover {
-    opacity: 0.7;
+.side-bar-menu ul li a:hover {
+    opacity: 1;
     text-decoration: none;
 }
 .fa-caret-down {

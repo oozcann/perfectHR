@@ -103,36 +103,36 @@ h3 {
     width: 100%;
 }
 
-    .list-table td, .list-table th {
-        border: 1px solid #ddd;
-        padding: 6px;
-    }
+.list-table td, .list-table th {
+    border: 1px solid #ddd;
+    padding: 6px;
+}
 
-    .list-table tr{
-        background-color: #f2f2f2;
-    }
-    
-    .list-table th {
-        padding-top: 8px;
-        padding-bottom: 8px;
-        text-align: left;
-        background-color: #fff;
-        color: black;
-        font-size:16px;
-        font-weight:bold;
-    }
+.list-table tr{
+    background-color: #f2f2f2;
+}
 
-    .list-table tr:hover {
-        background-color: #ddd;
-    }
-    .list-table tbody tr td a {
-        font-size:14px;
-    }
+.list-table th {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: left;
+    background-color: #fff;
+    color: black;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.list-table tr:hover {
+    background-color: #ddd;
+}
+.list-table tbody tr td a {
+    font-size:14px;
+}
 
 
-    .btn-square{
-        border-radius:0;
-    }
+.btn-square{
+    border-radius:0;
+}
 
 .breadcrumb {
     border-radius:0;

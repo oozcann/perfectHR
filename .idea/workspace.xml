@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-73 Bazı methodların basitleştirilmesi (clean code)">
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-71 Çalışanların firmalar arası transfer edilebilmesi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/drct/core/NewEditDeleteButtonsDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/core/NewEditDeleteButtonsDirective.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/drct/newEditView/EmployeeDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/newEditView/EmployeeDirective.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/appColors.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/appColors.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/core/new-edit-delete-buttons-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/core/new-edit-delete-buttons-directive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/styles/appStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/appStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/styles/sidebarmenu.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/sidebarmenu.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/drct/main/sidebar-menu-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/main/sidebar-menu-directive.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,13 +55,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663614753979</updated>
-    </task>
-    <task id="LOCAL-00022" summary="MAN-15 Tarih gösterimleri için filter oluşturulması">
-      <created>1664116725083</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1664116725083</updated>
     </task>
     <task id="LOCAL-00023" summary="MAN-15 Tarih gösterimleri için filter oluşturulması">
       <created>1664117519132</created>
@@ -402,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666632538030</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="MAN-71 Çalışanların firmalar arası transfer edilebilmesi">
+      <created>1666639237795</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1666639237795</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -417,7 +414,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Kullanılmayan dosyalar silindi." />
     <MESSAGE value="MAN-47 ui-select'in projeye dahil edilmesi" />
     <MESSAGE value="MAN-48 company için backend'in oluşturulması" />
     <MESSAGE value="MAN-49 company-directive oluşturulması" />
@@ -442,6 +438,7 @@
     <MESSAGE value="MAN-26 inputlar için html-form-element directive yapısının oluşturulması" />
     <MESSAGE value="MAN-69 archived butonları için directive yapılması" />
     <MESSAGE value="MAN-73 Bazı methodların basitleştirilmesi (clean code)" />
-    <option name="LAST_COMMIT_MESSAGE" value="MAN-73 Bazı methodların basitleştirilmesi (clean code)" />
+    <MESSAGE value="MAN-71 Çalışanların firmalar arası transfer edilebilmesi" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAN-71 Çalışanların firmalar arası transfer edilebilmesi" />
   </component>
 </project>
