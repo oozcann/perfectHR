@@ -26,25 +26,10 @@ myApp.directive('newEditDeleteButtons', function(){
                 const queryToRedirectAfterSave = {
                     justSaved: true
                 };
-                $scope.specifyQueryForRedirection = function (entity) {
-                    if (entity._class == 'reminder') {
-                        queryToRedirectAfterSave.reminderId = entity._id;
-                    }
-                    else if (entity._class == 'company') {
-                        $scope.redirectInCancelClicked = 'companies';
-                        queryToRedirectAfterSave.companyId = entity._id;
-                    }
-                    else if (entity._class == 'employee') {
-                        queryToRedirectAfterSave.employeeId = entity._id;
-                    }
-                    else {
-                        console.error('_class for entity not specified');
-                    }
-                };
                 $scope.save = function (data) {
                     if ($scope.isNew) {
                         entityService.saveEntity($scope.getEntityAddress ,JSON.stringify(data)).then((data) => {
-                            $scope.specifyQueryForRedirection(data);
+                            queryToRedirectAfterSave[$scope.getEntityAddress + 'Id'] = data._id;
                             $scope.redirectAfterSave();
                         });
                     } else {
