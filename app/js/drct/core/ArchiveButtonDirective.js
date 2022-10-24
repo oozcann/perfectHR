@@ -14,11 +14,11 @@ myApp.directive('archiveButton', function(){
             'entityService',
             ($scope,$state,entityService) => {
                 $scope.getEntityAddress = $scope.entity._class;
-                if ($scope.entity._class == 'employee') {
+                if ($scope.getEntityAddress == 'employee') {
                     $scope.entityTypeName = 'Çalışan';
                     $scope.redirectToState = 'employees';
                 }
-                else if ($scope.entity._class == 'company') {
+                else if ($scope.getEntityAddress == 'company') {
                     $scope.entityTypeName = 'Tesis';
                     $scope.redirectToState = 'companies';
                 } else {
