@@ -64,7 +64,7 @@
     <div html-form-element="email" being-edited="beingEdited" ng-model="employee.email" label="E-mail"></div>
     <div class="sticky-button" ng-show="!openTransferEmployee">
         <div new-edit-delete-buttons entity="employee" being-edited="beingEdited" is-new="isNew" disable-opts="newEmployee">
-            <button ng-if="!openTransferEmployee && !isNew" ng-click="showHideTransferEmployee()" class="btn yellow btn-square">Transfer Et</button>
+            <button ng-if="!openTransferEmployee && !isNew && !beingEdited" ng-click="showHideTransferEmployee()" class="btn yellow btn-square">Transfer Et</button>
         </div>
     </div>
 </form>
