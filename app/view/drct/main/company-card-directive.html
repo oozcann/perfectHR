@@ -1,0 +1,16 @@
+<div class="row m-2 p-3 border" style="background-color:#eee;" ng-if="!beingEdited">
+    <div class="col-1 p-3 bg-light" style="text-align:center;">
+        <i class="fa fa-building fa-8x"></i>
+    </div>
+    <div class="col-11 pt-3 pl-5 bg-light" style="font-family: 'Open Sans', sans-serif;">
+        <h3 class="m-0 p-0">{{company.name}}</h3>
+        <div class="w-25 d-inline-block">
+            <span class="emp-detail-label">SGK Sicil No :</span>
+            <p class="emp-detail-property">{{company.uniqueName}}</p>
+            <span class="emp-detail-label">Adres :</span>
+            <p class="emp-detail-property">{{company.address}}</p>
+            <span class="emp-detail-label">Telefon :</span>
+            <p class="emp-detail-property">{{company.phone}}</p>
+        </div>
+    </div>
+</div>

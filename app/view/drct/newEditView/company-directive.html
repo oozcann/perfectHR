@@ -1,6 +1,7 @@
 <div ng-if="justSaved" call-to-action entity="entity" label="Tesis"></div>
+<div company-card company="company" being-edited="beingEdited"></div>
 <form name="newCompany" ng-if="!company.archived">
-    <h3 class="pt-0 pl-3">Firma/Tesis Bilgileri</h3>
+    <h3 class="pt-2 pl-3">Firma/Tesis Bilgileri</h3>
     <hr class="m-3" />
     <div html-form-element="text" being-edited="beingEdited" ng-model="company.name" ng-required="true" label="Tesis Adı"></div>
     <div html-form-element="text" being-edited="beingEdited" ng-model="company.uniqueName" ng-required="true" label="Sicil No"></div>
