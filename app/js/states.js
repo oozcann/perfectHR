@@ -70,7 +70,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
             }
         ],
         resolve: {
-            reminder: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.findById("reminder/:reminderId", {"reminderId": $stateParams.reminderId})}],
+            reminder: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.findById("reminder/:reminderId", {"reminderId": $stateParams.reminderId,"_class":"reminder"})}],
             companies: ['entityService', (entityService) => {return entityService.getList("company", {"archived": false})}]
         }
     })
@@ -116,7 +116,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
             }
         ],
         resolve: {
-            employee: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.findById("employee/:employeeId", {"employeeId": $stateParams.employeeId})}],
+            employee: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.findById("employee/:employeeId", {"employeeId": $stateParams.employeeId,"_class":"employee"})}],
             companies: ['entityService', (entityService) => {return entityService.getList("company", {"archived": false})}]
         }
     })
@@ -173,7 +173,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
             }
         ],
         resolve: {
-            company: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.findById("company/:companyId", {"companyId": $stateParams.companyId})}]
+            company: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.findById("company/:companyId", {"companyId": $stateParams.companyId, '_class':'company'})}]
         }
     })
     .state('companies', {

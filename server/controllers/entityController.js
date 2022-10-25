@@ -114,8 +114,9 @@ const getEntities = (req, res, next) => {
 //Get Entity By ID
 
 const getEntityById = (req, res, next) => {
-    let compId = req.body.companyId;
-    Company.findById(compId)
+    let entityId = req.body.entityId;
+    let entityToBeUpdated = specifyEntityToBeUpdated(req);
+    entityToBeUpdated.findById(entityId)
     .then(response => {
         res.json(response);
     })

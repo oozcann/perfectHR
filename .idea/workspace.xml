@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-71 Çalışanların firmalar arası transfer edilebilmesi">
-      <change afterPath="$PROJECT_DIR$/server/controllers/entityController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/entityRoutes.js" afterDir="false" />
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-85 save, update vs. işlemlerin backend üzerinde tek bir controller üzerinden yapılması">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/employeeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/employeeController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/states.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/states.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/entityController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/entityController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,13 +54,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663614753979</updated>
-    </task>
-    <task id="LOCAL-00023" summary="MAN-15 Tarih gösterimleri için filter oluşturulması">
-      <created>1664117519132</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1664117519132</updated>
     </task>
     <task id="LOCAL-00024" summary="MAN-43 İletişim bilgileri butonların altında görünmemektedir">
       <created>1664117991576</created>
@@ -400,7 +391,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666639237795</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="MAN-85 save, update vs. işlemlerin backend üzerinde tek bir controller üzerinden yapılması">
+      <created>1666720081117</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1666720081118</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -415,7 +413,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="MAN-47 ui-select'in projeye dahil edilmesi" />
     <MESSAGE value="MAN-48 company için backend'in oluşturulması" />
     <MESSAGE value="MAN-49 company-directive oluşturulması" />
     <MESSAGE value="MAN-51 yeni çalışan sayfasındaki vazgeç butonu çalışmamaktadır" />
@@ -440,6 +437,7 @@
     <MESSAGE value="MAN-69 archived butonları için directive yapılması" />
     <MESSAGE value="MAN-73 Bazı methodların basitleştirilmesi (clean code)" />
     <MESSAGE value="MAN-71 Çalışanların firmalar arası transfer edilebilmesi" />
-    <option name="LAST_COMMIT_MESSAGE" value="MAN-71 Çalışanların firmalar arası transfer edilebilmesi" />
+    <MESSAGE value="MAN-85 save, update vs. işlemlerin backend üzerinde tek bir controller üzerinden yapılması" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAN-85 save, update vs. işlemlerin backend üzerinde tek bir controller üzerinden yapılması" />
   </component>
 </project>
