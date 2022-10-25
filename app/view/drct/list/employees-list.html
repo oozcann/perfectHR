@@ -19,6 +19,7 @@
                 <th>Telefon</th>
                 <th>E-mail</th>
                 <th>Yaş</th>
+                <th></th>
             </tr>
         </thead>
         <tbody ng-repeat="employee in employees  | filter : {name : search} | orderBy : 'name'">
@@ -43,6 +44,9 @@
                 <td>{{employee.phone}}</td>
                 <td>{{employee.email}}</td>
                 <td>{{employee.dateOfBirth | age}}</td>
+                <td>
+                    <div new-edit-delete-buttons entity="employee" being-edited="beingEdited" is-new="isNew" show-list-buttons="true"></div>
+                </td>
             </tr>
         </tbody>
     </table>

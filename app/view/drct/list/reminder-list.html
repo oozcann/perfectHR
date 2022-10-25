@@ -14,6 +14,7 @@
                 <th>İlişkili Tesis</th>
                 <th>Hatırlatma Tarihi</th>
                 <th>Oluşturulma Tarihi</th>
+                <th></th>
             </tr>
         </thead>
         <tbody ng-repeat="reminder in reminders  | filter : {name : search} | orderBy : 'name'">
@@ -33,6 +34,9 @@
                 </td>
                 <td>{{reminder.reminderDate | formatDateToDDMMYYYY}}</td>
                 <td>{{reminder.createdAt | formatDateToDDMMYYYY}}</td>
+                <td>
+                    <div new-edit-delete-buttons entity="reminder" being-edited="beingEdited" is-new="isNew" show-list-buttons="true"></div>
+                </td>
             </tr>
         </tbody>
     </table>

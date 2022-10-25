@@ -6,7 +6,8 @@ myApp.directive('newEditDeleteButtons', function(){
             beingEdited: '=',
             isNew: '=',
             entity: '=',
-            disableOpts: '='
+            disableOpts: '=',
+            showListButtons: '='
         },
         templateUrl: '../../../view/drct/core/new-edit-delete-buttons-directive.html',
         transclude: true,
@@ -40,7 +41,7 @@ myApp.directive('newEditDeleteButtons', function(){
 
                     }
                 };
-                $scope.deleteEntity = function () {
+                $scope.deleteEntity = function (entity,currentStateRefreshNeeded) {
                     const bootboxOpts = {};
                     bootboxOpts.title = 'Devam etmek için onayınız gerekmektedir';
                     bootboxOpts.message = 'Veriyi silmek istediğinize emin misiniz?';
@@ -53,7 +54,11 @@ myApp.directive('newEditDeleteButtons', function(){
                     };
                     bootboxOpts.buttons.confirm.callback = function () {
                         entityService.deleteEntity($scope.getEntityAddress, JSON.stringify($scope.entity)).then(function (response) {
-                            $state.go($scope.redirectInCancelClicked);
+                            if (currentStateRefreshNeeded) {
+                                $state.go($state.current, {}, {reload: true});
+                            } else {
+                                $state.go($scope.redirectInCancelClicked);
+                            }
                         });
                     };
                     bootboxOpts.buttons.cancel.callback = function () {};
