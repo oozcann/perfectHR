@@ -45,6 +45,7 @@ html, body {
 h3 {
     font-family: 'Open Sans', sans-serif !important;
     font-weight:lighter !important;
+    color: #666;
 }
 .top-menu {
     height: 40px;
