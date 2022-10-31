@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-68 TC kimlik no için pattern eklenmesi">
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-70 Bir firma silinirken ilgili çalışanların da silinmesi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/companyController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/companyController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/drct/newEditView/EmployeeDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/newEditView/EmployeeDirective.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/services.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,13 +54,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663614753979</updated>
-    </task>
-    <task id="LOCAL-00026" summary="MAN-46 employee-list ekran düzenlemeleri">
-      <created>1664217585221</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1664217585221</updated>
     </task>
     <task id="LOCAL-00027" summary="Kullanılmayan dosyalar silindi.">
       <created>1664217715627</created>
@@ -397,7 +391,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667238163281</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="MAN-70 Bir firma silinirken ilgili çalışanların da silinmesi">
+      <created>1667239498023</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1667239498023</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -412,7 +413,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="MAN-51 yeni çalışan sayfasındaki vazgeç butonu çalışmamaktadır" />
     <MESSAGE value="MAN-52 new-company-directive oluşturulması" />
     <MESSAGE value="MAN-55 Employee liste ekranında Yeni çalışan butonu görünmemektedir" />
     <MESSAGE value="MAN-50 company - update,delete vb. yapılarının oluşturulması" />
@@ -437,6 +437,7 @@
     <MESSAGE value="MAN-85 save, update vs. işlemlerin backend üzerinde tek bir controller üzerinden yapılması" />
     <MESSAGE value="MAN-79 companyCardDirective oluşturulması" />
     <MESSAGE value="MAN-68 TC kimlik no için pattern eklenmesi" />
-    <option name="LAST_COMMIT_MESSAGE" value="MAN-68 TC kimlik no için pattern eklenmesi" />
+    <MESSAGE value="MAN-70 Bir firma silinirken ilgili çalışanların da silinmesi" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAN-70 Bir firma silinirken ilgili çalışanların da silinmesi" />
   </component>
 </project>

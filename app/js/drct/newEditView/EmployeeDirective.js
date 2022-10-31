@@ -14,7 +14,8 @@ myApp.directive('employeeDirective', function(){
             '$scope',
             'entityService',
             'referenceService',
-            ($scope,entityService,referenceService) => {
+            'rendererService',
+            ($scope,entityService,referenceService,rendererService) => {
                 $scope.getEntityAddress = 'employee';
                 $scope.entity = $scope.employee;
                 if (!$scope.isNew) {

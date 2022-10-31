@@ -153,6 +153,31 @@ const serviceModuleConf = function ($provide) {
 			};
 		}
 	]);
+	$provide.factory('rendererService', [
+		function () {
+            function getTypeInfo (className) {
+                let href = "";
+                let name = "";
+                let icon = "";
+                let clazz = "";
+                if(className == 'company') {
+                    href = '#!/';
+                    name = 'name';
+                    icon = "fa fa-user";
+                    clazz = "text-success";
+                }
+                return {
+                    href: href,
+                    name: name,
+                    icon: icon,
+                    clazz: clazz
+                };
+            }
+			return {
+				getTypeInfo: getTypeInfo
+			};
+		}
+	]);
 };
 serviceModuleConf.$inject = ['$provide'];
 angular.module('myApp.services', [], serviceModuleConf);
