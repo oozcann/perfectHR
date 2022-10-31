@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-79 companyCardDirective oluşturulması">
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-84 Liste ekranlarına Sil butonunun konulması">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/drct/core/NewEditDeleteButtonsDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/core/NewEditDeleteButtonsDirective.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/drct/list/EmployeesListDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/list/EmployeesListDirective.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/core/new-edit-delete-buttons-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/core/new-edit-delete-buttons-directive.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/list/companies-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/list/companies-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/list/employees-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/list/employees-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/list/reminder-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/list/reminder-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/drct/core/htmlFormElementDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/core/htmlFormElementDirective.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/drct/core/html-form-element.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/core/html-form-element.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
