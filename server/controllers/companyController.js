@@ -1,4 +1,5 @@
 const Company = require('../models/Company');
+const Employee = require('../models/Employee');
 
 //Save Company
 
@@ -73,6 +74,10 @@ const getCompanyById = (req, res, next) => {
 
 const deleteCompany = (req,res,next) => {
     let compId = req.body._id;
+    Employee.updateMany({"companyRef._id":compId},{archived:true})
+    .then(response => {
+        console.log(response);
+    });
     Company.findByIdAndUpdate(compId,{archived:true})
     .then(response => {
         res.json(response);
@@ -89,6 +94,10 @@ const deleteCompany = (req,res,next) => {
 
 const activateCompany = (req,res,next) => {
     let compId = req.body._id;
+    Employee.updateMany({"companyRef._id":compId},{archived:false})
+    .then(response => {
+        console.log(response);
+    });
     Company.findByIdAndUpdate(compId,{archived:false})
     .then(response => {
         res.json(response);

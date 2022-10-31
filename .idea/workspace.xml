@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-84 Liste ekranlarına Sil butonunun konulması">
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-68 TC kimlik no için pattern eklenmesi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/drct/core/htmlFormElementDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/core/htmlFormElementDirective.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/core/html-form-element.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/core/html-form-element.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/companyController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/companyController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,13 +53,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663614753979</updated>
-    </task>
-    <task id="LOCAL-00025" summary="MAN-33 save,update,delete işlemlerinin tek bir directive üzerinden yapılması (abstractNewEditView)">
-      <created>1664131544625</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1664131544625</updated>
     </task>
     <task id="LOCAL-00026" summary="MAN-46 employee-list ekran düzenlemeleri">
       <created>1664217585221</created>
@@ -399,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666727131452</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="MAN-68 TC kimlik no için pattern eklenmesi">
+      <created>1667238163280</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1667238163281</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -414,7 +412,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="MAN-49 company-directive oluşturulması" />
     <MESSAGE value="MAN-51 yeni çalışan sayfasındaki vazgeç butonu çalışmamaktadır" />
     <MESSAGE value="MAN-52 new-company-directive oluşturulması" />
     <MESSAGE value="MAN-55 Employee liste ekranında Yeni çalışan butonu görünmemektedir" />
@@ -439,6 +436,7 @@
     <MESSAGE value="MAN-71 Çalışanların firmalar arası transfer edilebilmesi" />
     <MESSAGE value="MAN-85 save, update vs. işlemlerin backend üzerinde tek bir controller üzerinden yapılması" />
     <MESSAGE value="MAN-79 companyCardDirective oluşturulması" />
-    <option name="LAST_COMMIT_MESSAGE" value="MAN-79 companyCardDirective oluşturulması" />
+    <MESSAGE value="MAN-68 TC kimlik no için pattern eklenmesi" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAN-68 TC kimlik no için pattern eklenmesi" />
   </component>
 </project>
