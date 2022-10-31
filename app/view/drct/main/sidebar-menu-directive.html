@@ -20,6 +20,15 @@
             <li><a href="#!/company/new"><i class="fas fa-industry"></i>Yeni Firma/Tesis</a></li>
         </ul>
     </li>
+    <li class="parent" ng-click="showRealEstateItems=!showRealEstateItems">
+        <a href=""><i class="fas fa-newspaper"></i>Taşınmazlar
+            <i class="fa fa-caret-down"></i>
+        </a>
+        <ul class="children" ng-show="showRealEstateItems">
+            <li><a href="#!/"><i class="fas fa-newspaper"></i>Taşınmazlar</a></li>
+            <li><a href="#!/"><i class="fas fa-newspaper"></i>Yeni Taşınmaz</a></li>
+        </ul>
+    </li>
     <li class="parent" ng-click="showHrItems=!showHrItems">
         <a href=""><i class="fas fa-users"></i>İnsan Kaynakları
             <i class="fa fa-caret-down"></i>
@@ -28,6 +37,9 @@
             <li><a href="#!/"><i class="fas fa-procedures"></i>İzinler</a></li>
             <li><a href="#!/"><i class="fa fa-hand-holding-usd"></i>Primler</a></li>
             <li><a href="#!/"><i class="fa fa-child"></i>İş Görüşmeleri</a></li>
+            <li><a href="#!/"><i class="fa fa-hand-holding-usd"></i>Tazminat Hakları</a></li>
+            <li><a href="#!/"><i class="fa fa-weight"></i>İhbar Süreleri</a></li>
+            <li><a href="#!/"><i class="fa fa-tag"></i>Taşınmaz Zimmetleri</a></li>
         </ul>
     </li>
 </ul>

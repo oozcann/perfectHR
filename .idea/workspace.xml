@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-86 renderer.js oluşturulması ve ilgili yerlerin değiştirilmesi">
-      <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" afterDir="false" />
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="h3 style değişikliği">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/drct/main/sidebar-menu-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/main/sidebar-menu-directive.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,20 +53,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663614753979</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Kullanılmayan dosyalar silindi.">
-      <created>1664217775356</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1664217775356</updated>
-    </task>
-    <task id="LOCAL-00029" summary="MAN-47 ui-select'in projeye dahil edilmesi">
-      <created>1664218969984</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1664218969984</updated>
     </task>
     <task id="LOCAL-00030" summary="MAN-48 company için backend'in oluşturulması">
       <created>1664220002848</created>
@@ -396,7 +383,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667241040933</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="h3 style değişikliği">
+      <created>1667241478459</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1667241478459</updated>
+    </task>
+    <task id="LOCAL-00078" summary="h3 style değişikliği">
+      <created>1667241594940</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1667241594940</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -411,7 +412,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="MAN-55 Employee liste ekranında Yeni çalışan butonu görünmemektedir" />
     <MESSAGE value="MAN-50 company - update,delete vb. yapılarının oluşturulması" />
     <MESSAGE value="MAN-53 yeni kayıtlar için just saved mekanizmasının oluşturulması" />
     <MESSAGE value="MAN-54 Çalışanların firma ile ilişkilendirilebilmesi" />
@@ -436,6 +436,7 @@
     <MESSAGE value="MAN-68 TC kimlik no için pattern eklenmesi" />
     <MESSAGE value="MAN-70 Bir firma silinirken ilgili çalışanların da silinmesi" />
     <MESSAGE value="MAN-86 renderer.js oluşturulması ve ilgili yerlerin değiştirilmesi" />
-    <option name="LAST_COMMIT_MESSAGE" value="MAN-86 renderer.js oluşturulması ve ilgili yerlerin değiştirilmesi" />
+    <MESSAGE value="h3 style değişikliği" />
+    <option name="LAST_COMMIT_MESSAGE" value="h3 style değişikliği" />
   </component>
 </project>
