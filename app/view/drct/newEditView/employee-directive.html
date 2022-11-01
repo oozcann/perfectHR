@@ -8,6 +8,7 @@
         <button class="btn btn-danger btn-square mt-1" ng-click="showHideTransferEmployee()">Vazgeç</button>
     </div>
 </div>
+
 <form name="newEmployee" ng-if="!employee.archived && !openTransferEmployee">
     <h3 class="pt-2 pl-3">Özlük Bilgileri</h3>
     <hr class="m-3" />
@@ -15,20 +16,7 @@
     <div html-form-element="text" being-edited="beingEdited" ng-model="employee.surname" ng-required="true" label="Soyad"></div>
     <div html-form-element="tckimlik" being-edited="beingEdited" ng-model="employee.uniqueName" ng-required="true" label="TC Kimlik No" ng-minlength="11" ng-maxlength="11"></div>
     <div html-form-element="text" being-edited="beingEdited" ng-model="employee.internalUniqueName" label="Sicil No"></div>
-    <div class="form-group row">
-        <label class="col-sm-3 control-label">Tesis</label>
-        <div class="col-sm-9" ng-show="beingEdited">
-            <select class="{{employeeCompanyRef ? '' : 'red-border'}} form-control" name="company" ng-required="true" ng-model="employeeCompanyRef" ng-change="createCompanyRef(employeeCompanyRef)" ng-options="company._id as company.name for company in companies">
-                <option value=""></option>
-            </select>
-        </div>
-        <span ng-show="!beingEdited">
-            <a href="#!/company/{{employee.companyRef._id}}" class="text-success">
-                <i class="fas fa-industry"></i>
-                {{employee.companyRef.name}}
-            </a>
-        </span>
-    </div>
+    <div company-select being-edited="beingEdited" is-new="isNew" entity="entity" ng-model="employeeCompanyRef"></div>
     <div html-form-element="gender" being-edited="beingEdited" ng-model="employee.gender" ng-required="true" label="Cinsiyet"></div>
     <div html-form-element="date" being-edited="beingEdited" ng-model="employee.dateOfBirth" label="Doğum Tarihi"></div>
     <div html-form-element="age" ng-show="!beingEdited" being-edited="beingEdited" ng-model="employee.dateOfBirth" label="Yaş"></div>

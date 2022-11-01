@@ -18,14 +18,6 @@ myApp.directive('employeeDirective', function(){
             ($scope,entityService,referenceService,rendererService) => {
                 $scope.getEntityAddress = 'employee';
                 $scope.entity = $scope.employee;
-                if (!$scope.isNew) {
-                    $scope.employeeCompanyRef = $scope.employee.companyRef._id;
-                }
-                $scope.createCompanyRef = function (companyRefId) {
-                    referenceService.createEntityRef('company', companyRefId).then((data) => {
-                        $scope.employee.companyRef = data;
-                    });
-                };
                 if (!$scope.isNew && $scope.employee.dateOfBirth) {
                     $scope.employee.dateOfBirth = new Date($scope.employee.dateOfBirth);
                 }

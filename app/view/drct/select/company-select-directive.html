@@ -1,0 +1,19 @@
+<div class="form-group row">
+    <label class="col-sm-3 control-label {{ngModel ? '' : 'has-error'}}">Tesis</label>
+    <div class="col-sm-9" ng-show="beingEdited">
+        <select class="{{ngModel ? '' : 'red-border'}} form-control"
+                name="company"
+                ng-required="ngRequired"
+                ng-model="ngModel"
+                ng-change="createCompanyRef(ngModel)"
+                ng-options="company._id as company.name for company in companies">
+            <option value=""></option>
+        </select>
+    </div>
+    <span ng-show="!beingEdited">
+        <a href="#!/company/{{entity.companyRef._id}}" class="text-success">
+            <i class="fas fa-industry"></i>
+            {{entity.companyRef.name}}
+        </a>
+    </span>
+</div>
