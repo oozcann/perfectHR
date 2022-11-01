@@ -23,6 +23,9 @@
                 <option value="U">Belirtilmemiş</option>
             </select>
         </div>
+        <div ng-switch-when="date">
+            <input type="date" class="form-control" name="{{name}}" ng-model="$parent.$parent.ngModel" ng-required="$parent.$parent.ngRequired"/>
+        </div>
     </div>
     <span ng-if="!beingEdited" ng-switch="" on="htmlFormElement" class="col-sm-9">
         <div ng-switch-when="text">
@@ -45,6 +48,9 @@
         </div>
         <div ng-switch-when="age">
             <span>{{$parent.$parent.ngModel | age}}</span>
+        </div>
+        <div ng-switch-when="date">
+            <span>{{$parent.$parent.ngModel | formatDateToDDMMYYYY}}</span>
         </div>
     </span>
 </div>

@@ -54,13 +54,6 @@
       <option name="presentableId" value="Default" />
       <updated>1663614753979</updated>
     </task>
-    <task id="LOCAL-00034" summary="MAN-50 company - update,delete vb. yapılarının oluşturulması">
-      <created>1664305154059</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1664305154059</updated>
-    </task>
     <task id="LOCAL-00035" summary="MAN-52 new-company-directive oluşturulması">
       <created>1664305795409</created>
       <option name="number" value="00035" />
@@ -397,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667322702935</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="MAN-89 html-form-element eklemeleri">
+      <created>1667323116498</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1667323116498</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
