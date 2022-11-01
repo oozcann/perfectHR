@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-89 html-form-element eklemeleri">
-      <change afterPath="$PROJECT_DIR$/app/js/drct/select/CompanySelectDirective.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/view/drct/select/company-select-directive.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/drct/newEditView/EmployeeDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/newEditView/EmployeeDirective.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" afterDir="false" />
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-90 companySelectDirective oluşturulması">
+      <change beforePath="$PROJECT_DIR$/app/js/drct/newEditView/ReminderDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/newEditView/ReminderDirective.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/reminder-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/reminder-directive.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -4,27 +4,8 @@
     <hr class="m-3" />
     <div html-form-element="text" being-edited="beingEdited" ng-model="reminder.name" ng-required="true" label="Hatırlatıcı Adı"></div>
     <div html-form-element="textarea" being-edited="beingEdited" ng-model="reminder.description" label="Açıklama"></div>
-    <div class="form-group row">
-        <label class="col-sm-3 control-label">İlişkili Tesis</label>
-        <div class="col-sm-9" ng-show="beingEdited">
-            <select class="{{reminderCompanyRef ? '' : 'red-border'}} form-control" name="company" ng-required="true" ng-model="reminderCompanyRef" ng-change="createCompanyRef(reminderCompanyRef)" ng-options="company._id as company.name for company in companies">
-                <option value=""></option>
-            </select>
-        </div>
-        <span ng-show="!beingEdited">
-            <a href="#!/company/{{reminder.companyRef._id}}" class="text-success">
-                <i class="fas fa-industry"></i>
-                {{reminder.companyRef.name}}
-            </a>
-        </span>
-    </div>
-    <div class="form-group row">
-        <label class="col-sm-3 control-label">Hatırlatma Tarihi</label>
-        <div class="col-sm-9" ng-show="beingEdited">
-            <input type="date" class="form-control" name="reminderDate" ng-model="reminder.reminderDate"/>
-        </div>
-        <span ng-if="!beingEdited">{{reminder.reminderDate | formatDateToDDMMYYYY}}</span>
-    </div>
+    <div company-select being-edited="beingEdited" is-new="isNew" entity="entity" ng-model="reminderCompanyRef"></div>
+    <div html-form-element="date" being-edited="beingEdited" ng-model="reminder.reminderDate" label="Hatırlatma Tarihi"></div>
     <div class="sticky-button">
         <div new-edit-delete-buttons entity="reminder" being-edited="beingEdited" is-new="isNew" disable-opts="newReminder"></div>
     </div>
