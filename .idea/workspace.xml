@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="sidebarmenu eklemeleri">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/appStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/appStyle.css" afterDir="false" />
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-89 html-form-element eklemeleri">
       <change beforePath="$PROJECT_DIR$/app/view/drct/core/html-form-element.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/core/html-form-element.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" afterDir="false" />
     </list>
@@ -55,13 +53,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663614753979</updated>
-    </task>
-    <task id="LOCAL-00033" summary="MAN-50 company - update,delete vb. yapılarının oluşturulması">
-      <created>1664298658352</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1664298658352</updated>
     </task>
     <task id="LOCAL-00034" summary="MAN-50 company - update,delete vb. yapılarının oluşturulması">
       <created>1664305154059</created>
@@ -399,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667243750279</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="MAN-89 html-form-element eklemeleri">
+      <created>1667322702935</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1667322702935</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -414,7 +412,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="MAN-53 yeni kayıtlar için just saved mekanizmasının oluşturulması" />
     <MESSAGE value="MAN-54 Çalışanların firma ile ilişkilendirilebilmesi" />
     <MESSAGE value="MAN-56 Çalışan detay sayfasındaki firma adının tıklanabilir olması" />
     <MESSAGE value="MAN-57 Çalışan liste ekranına çalışan firma bilgisinin eklenmesi" />
@@ -439,6 +436,7 @@
     <MESSAGE value="MAN-86 renderer.js oluşturulması ve ilgili yerlerin değiştirilmesi" />
     <MESSAGE value="h3 style değişikliği" />
     <MESSAGE value="sidebarmenu eklemeleri" />
-    <option name="LAST_COMMIT_MESSAGE" value="sidebarmenu eklemeleri" />
+    <MESSAGE value="MAN-89 html-form-element eklemeleri" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAN-89 html-form-element eklemeleri" />
   </component>
 </project>
