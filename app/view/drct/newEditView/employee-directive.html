@@ -29,17 +29,7 @@
             </a>
         </span>
     </div>
-    <div class="form-group row">
-        <label class="col-sm-3 control-label">Cinsiyet</label>
-        <div class="col-sm-9" ng-show="beingEdited">
-            <select style="font-size:14px" class="{{employee.gender ? '' : 'red-border'}} form-control" name="gender" ng-model="employee.gender" ng-required="true">
-                <option value="K">Kadın</option>
-                <option value="E">Erkek</option>
-                <option value="U">Belirtilmemiş</option>
-            </select>
-        </div>
-        <span ng-show="!beingEdited">{{employee.gender | gender}}</span>
-    </div>
+    <div html-form-element="gender" being-edited="beingEdited" ng-model="employee.gender" ng-required="true" label="Cinsiyet"></div>
     <div class="form-group row">
         <label class="col-sm-3 control-label">Doğum Tarihi</label>
         <div class="col-sm-9" ng-show="beingEdited">

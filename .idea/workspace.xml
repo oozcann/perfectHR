@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="h3 style değişikliği">
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="sidebarmenu eklemeleri">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/main/sidebar-menu-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/main/sidebar-menu-directive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/styles/appStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/appStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/drct/core/html-form-element.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/core/html-form-element.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,27 +55,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663614753979</updated>
-    </task>
-    <task id="LOCAL-00030" summary="MAN-48 company için backend'in oluşturulması">
-      <created>1664220002848</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1664220002848</updated>
-    </task>
-    <task id="LOCAL-00031" summary="MAN-49 company-directive oluşturulması">
-      <created>1664221006265</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1664221006265</updated>
-    </task>
-    <task id="LOCAL-00032" summary="MAN-51 yeni çalışan sayfasındaki vazgeç butonu çalışmamaktadır">
-      <created>1664298008414</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1664298008414</updated>
     </task>
     <task id="LOCAL-00033" summary="MAN-50 company - update,delete vb. yapılarının oluşturulması">
       <created>1664298658352</created>
@@ -397,7 +378,28 @@
       <option name="project" value="LOCAL" />
       <updated>1667241594940</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="sidebarmenu eklemeleri">
+      <created>1667243507573</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1667243507573</updated>
+    </task>
+    <task id="LOCAL-00080" summary="sidebarmenu eklemeleri">
+      <created>1667243641149</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1667243641149</updated>
+    </task>
+    <task id="LOCAL-00081" summary="sidebarmenu eklemeleri">
+      <created>1667243750279</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1667243750279</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -412,7 +414,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="MAN-50 company - update,delete vb. yapılarının oluşturulması" />
     <MESSAGE value="MAN-53 yeni kayıtlar için just saved mekanizmasının oluşturulması" />
     <MESSAGE value="MAN-54 Çalışanların firma ile ilişkilendirilebilmesi" />
     <MESSAGE value="MAN-56 Çalışan detay sayfasındaki firma adının tıklanabilir olması" />
@@ -437,6 +438,7 @@
     <MESSAGE value="MAN-70 Bir firma silinirken ilgili çalışanların da silinmesi" />
     <MESSAGE value="MAN-86 renderer.js oluşturulması ve ilgili yerlerin değiştirilmesi" />
     <MESSAGE value="h3 style değişikliği" />
-    <option name="LAST_COMMIT_MESSAGE" value="h3 style değişikliği" />
+    <MESSAGE value="sidebarmenu eklemeleri" />
+    <option name="LAST_COMMIT_MESSAGE" value="sidebarmenu eklemeleri" />
   </component>
 </project>

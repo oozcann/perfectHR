@@ -16,6 +16,13 @@
         <div ng-switch-when="tckimlik">
             <input class="form-control" type="text" name="{{name}}" ng-model="$parent.$parent.ngModel" ng-pattern="/^[0-9]*$/" ng-required="$parent.$parent.ngRequired" placeholder="{{placeholder}}" ng-change="ngChange()" minlength="{{$parent.$parent.ngMinlength}}" maxlength="{{$parent.$parent.ngMaxlength}}"/>
         </div>
+        <div ng-switch-when="gender">
+            <select style="font-size:14px" class="{{$parent.$parent.ngModel ? '' : 'red-border'}} form-control" name="{{name}}" ng-model="$parent.$parent.ngModel" ng-required="$parent.$parent.ngRequired">
+                <option value="K">Kadın</option>
+                <option value="E">Erkek</option>
+                <option value="U">Belirtilmemiş</option>
+            </select>
+        </div>
     </div>
     <span ng-if="!beingEdited" ng-switch="" on="htmlFormElement" class="col-sm-9">
         <div ng-switch-when="text">
@@ -32,6 +39,9 @@
         </div>
         <div ng-switch-when="tckimlik">
             <span>{{$parent.$parent.ngModel}}</span>
+        </div>
+        <div ng-switch-when="gender">
+            <span>{{$parent.$parent.ngModel | gender}}</span>
         </div>
     </span>
 </div>
