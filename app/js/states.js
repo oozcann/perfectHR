@@ -157,7 +157,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
     })
     .state('company', {
         url: '/company/:companyId?justSaved',
-        template: '<div company-directive being-edited="beingEdited" is-new="isNew" just-saved="justSaved" company="company" employees="employees"></div>',
+        template: '<div company-directive being-edited="beingEdited" is-new="isNew" just-saved="justSaved" company="company" employees="employees" reminders="reminders"></div>',
         controller: [
             '$scope',
             '$state',
@@ -165,18 +165,21 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
             '$rootScope',
             'company',
             'employees',
-            function ($scope,$state,$stateParams,$rootScope,company,employees) {
+            'reminders',
+            function ($scope,$state,$stateParams,$rootScope,company,employees,reminders) {
                 $rootScope.$emit('companyDetailBreadcrumb',{name:company.name});
                 $scope.beingEdited = false;
                 $scope.isNew = false;
                 $scope.justSaved = $stateParams.justSaved;
                 $scope.company = company;
                 $scope.employees = employees;
+                $scope.reminders = reminders;
             }
         ],
         resolve: {
             company: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.findById("company/:companyId", {"companyId": $stateParams.companyId, '_class':'company'})}],
-            employees: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.getList("employee", {"archived": false,"companyRef._id":$stateParams.companyId})}]
+            employees: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.getList("employee", {"archived": false,"companyRef._id":$stateParams.companyId})}],
+            reminders: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.getList("reminder", {"archived": false,"companyRef._id":$stateParams.companyId})}]
         }
     })
     .state('companies', {

@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-89 html-form-element eklemeleri">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/drct/list/EmployeesListDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/list/EmployeesListDirective.js" afterDir="false" />
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-91 company sayfasında çalışan listesinin gösterilmesi">
       <change beforePath="$PROJECT_DIR$/app/js/drct/newEditView/CompanyDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/newEditView/CompanyDirective.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/states.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/states.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/list/employees-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/list/employees-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/drct/list/reminder-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/list/reminder-list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/company-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/company-directive.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/reminder-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/reminder-directive.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,13 +55,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663614753979</updated>
-    </task>
-    <task id="LOCAL-00037" summary="MAN-50 company - update,delete vb. yapılarının oluşturulması">
-      <created>1664387891611</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1664387891611</updated>
     </task>
     <task id="LOCAL-00038" summary="MAN-53 yeni kayıtlar için just saved mekanizmasının oluşturulması">
       <created>1664390882837</created>
@@ -402,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667327122736</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="MAN-91 company sayfasında çalışan listesinin gösterilmesi">
+      <created>1667329402653</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1667329402653</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -417,7 +414,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="MAN-54 Çalışanların firma ile ilişkilendirilebilmesi" />
     <MESSAGE value="MAN-56 Çalışan detay sayfasındaki firma adının tıklanabilir olması" />
     <MESSAGE value="MAN-57 Çalışan liste ekranına çalışan firma bilgisinin eklenmesi" />
     <MESSAGE value="MAN-62 sidebar menünün çeşitlendirilmesi" />
@@ -442,6 +438,7 @@
     <MESSAGE value="h3 style değişikliği" />
     <MESSAGE value="sidebarmenu eklemeleri" />
     <MESSAGE value="MAN-89 html-form-element eklemeleri" />
-    <option name="LAST_COMMIT_MESSAGE" value="MAN-89 html-form-element eklemeleri" />
+    <MESSAGE value="MAN-91 company sayfasında çalışan listesinin gösterilmesi" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAN-91 company sayfasında çalışan listesinin gösterilmesi" />
   </component>
 </project>

@@ -17,5 +17,10 @@
         <hr class="m-3" />
         <div employees-list employees="employees" hide-archived-data-button="true"></div>
     </div>
+    <div ng-show="!beingEdited">
+        <h3 class="pt-4 pl-3">Firma/Tesis Hatırlatıcıları</h3>
+        <hr class="m-3" />
+        <div reminder-list reminders="reminders"></div>
+    </div>
 </form>
 <div archive-button entity="company"></div>
