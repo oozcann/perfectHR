@@ -3,7 +3,8 @@ myApp.directive('employeesList', function(){
     return {
         restrict : "A",
         scope: {
-            employees: '='
+            employees: '=',
+            hideArchivedDataButton: '@'
         },
         templateUrl: '../../../view/drct/list/employees-list.html',
         controller: [

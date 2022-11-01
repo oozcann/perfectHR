@@ -12,5 +12,10 @@
     <div class="sticky-button">
         <div new-edit-delete-buttons entity="company" being-edited="beingEdited" is-new="isNew" disable-opts="newCompany"></div>
     </div>
+    <div ng-show="!beingEdited">
+        <h3 class="pt-4 pl-3">Firma/Tesis Çalışanları</h3>
+        <hr class="m-3" />
+        <div employees-list employees="employees" hide-archived-data-button="true"></div>
+    </div>
 </form>
 <div archive-button entity="company"></div>
