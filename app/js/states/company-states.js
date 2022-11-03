@@ -1,3 +1,4 @@
+/*
 var myApp = angular.module("myApp", ['ui.router','myApp.services','myApp.filters','ui.select']);
 
 myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
@@ -96,8 +97,8 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
             companies: ['entityService', (entityService) => {return entityService.getList("company", {"archived": false})}]
         }
     })
-    .state('employee.main', {
-        url: '?justSaved',
+    .state('employee', {
+        url: '/employee/{employeeId}?justSaved',
         template: '<div employee-directive being-edited="beingEdited" is-new="isNew" employee="employee" companies="companies" just-saved="justSaved"></div>',
         controller: [
             '$scope',
@@ -200,23 +201,15 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
             companies: ['entityService', (entityService) => {return entityService.getList("company", {"archived": false})}]
         }
     })
-    .state('employee', {
-        //parent: 'root',
-        abstract: true,
-        url: '/employee/:employeeId',
-        params: {
-            employeeId: null
-        },
-        template: '<div ui-view></div>'
-    })
-    .state('employee.bonus', {
+    .state('new-bonus', {
         url: '/bonus/new',
-        template: '<div bonus-directive></div>',
+        template: '<div bonus-directive being-edited="beingEdited" is-new="isNew"></div>',
         controller: [
             '$scope',
             '$state',
             '$rootScope',
-            function ($scope, $state, $rootScope) {
+            'companies',
+            function ($scope, $state, $rootScope,companies) {
                 $rootScope.$emit('newBonusBreadcrumb');
                 $scope.beingEdited = true;
                 $scope.isNew = true;
@@ -225,7 +218,10 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
                     _class: 'bonus'
                 };
             }
-        ]
+        ],
+        resolve: {
+            companies: ['entityService', (entityService) => {return entityService.getList("company", {"archived": false})}]
+        }
     });
     $urlRouterProvider.otherwise("/");
 

@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-91 company sayfasında çalışan listesinin gösterilmesi">
-      <change beforePath="$PROJECT_DIR$/app/js/drct/newEditView/CompanyDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/newEditView/CompanyDirective.js" afterDir="false" />
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-92 company sayfasında hatırlatıcı listesinin gösterilmesi">
+      <change afterPath="$PROJECT_DIR$/app/js/drct/newEditView/BonusDirective.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/js/states/company-states.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/js/states/employee-states.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/view/drct/newEditView/bonus-directive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/ctrl/breadcrumbController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/ctrl/breadcrumbController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/directives.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/directives.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/states.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/states.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/list/reminder-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/list/reminder-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/company-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/company-directive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/drct/main/sidebar-menu-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/main/sidebar-menu-directive.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
