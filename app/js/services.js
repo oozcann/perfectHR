@@ -134,6 +134,8 @@ const serviceModuleConf = function ($provide) {
                 const entityQuery = {};
                 if(entityAddress == 'company') {
                     entityQuery.companyId = entityRefId;
+                } else if(entityAddress == 'employee') {
+                    entityQuery.employeeId = entityRefId;
                 }
                 entityAddress = entityAddress + '/:' + entityAddress + "Id";
                 let reference = {};

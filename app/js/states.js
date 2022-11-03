@@ -207,37 +207,45 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
         params: {
             employeeId: null
         },
-        template: '<div ui-view></div>'
+        template: '<div ui-view></div>',
+        controller: [
+            '$scope',
+            'employee',
+            'employeeRef',
+            'referenceService',
+            '$stateParams',
+            function ($scope,employee,employeeRef,referenceService,$stateParams) {
+                $scope.employee = employee;
+                $scope.employeeRef = employeeRef;
+            }
+        ],
+        resolve: {
+            employee: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.findById("employee/:employeeId", {"employeeId": $stateParams.employeeId,"_class":"employee"})}],
+            employeeRef: ['referenceService','$stateParams', (referenceService,$stateParams) => {return referenceService.createEntityRef('employee', $stateParams.employeeId)}],
+        }
     })
     .state('employee.bonus', {
         url: '/bonus/new',
-        template: '<div bonus-directive></div>',
+        template: '<div bonus-directive being-edited="beingEdited" is-new="isNew"></div>',
         controller: [
             '$scope',
             '$state',
             '$rootScope',
-            function ($scope, $state, $rootScope) {
+            '$stateParams',
+            'referenceService',
+            function ($scope, $state, $rootScope,$stateParams,referenceService) {
                 $rootScope.$emit('newBonusBreadcrumb');
                 $scope.beingEdited = true;
                 $scope.isNew = true;
-                $scope.companies = companies;
                 $scope.bonus = {
-                    _class: 'bonus'
+                    _class: 'bonus',
+                    employeeRef: $scope.employeeRef
                 };
             }
-        ]
+        ],
+        resolve: {
+
+        }
     });
     $urlRouterProvider.otherwise("/");
-
-
-
 }]);
-
-
-
-
-
-
-
-
-

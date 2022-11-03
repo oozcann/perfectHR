@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-92 company sayfasında hatırlatıcı listesinin gösterilmesi">
-      <change afterPath="$PROJECT_DIR$/app/js/drct/newEditView/BonusDirective.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/js/states/company-states.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/js/states/employee-states.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/view/drct/newEditView/bonus-directive.html" afterDir="false" />
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-65 Çalışana prim verilmesi ile ilgili modül oluşturulması">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/ctrl/breadcrumbController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/ctrl/breadcrumbController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/directives.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/directives.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/services.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/states.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/states.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/main/sidebar-menu-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/main/sidebar-menu-directive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/bonus-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/bonus-directive.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,13 +55,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663614753979</updated>
-    </task>
-    <task id="LOCAL-00038" summary="MAN-53 yeni kayıtlar için just saved mekanizmasının oluşturulması">
-      <created>1664390882837</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1664390882837</updated>
     </task>
     <task id="LOCAL-00039" summary="MAN-54 Çalışanların firma ile ilişkilendirilebilmesi">
       <created>1664391513560</created>
@@ -405,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667329402653</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="MAN-65 Çalışana prim verilmesi ile ilgili modül oluşturulması">
+      <created>1667502782218</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1667502782218</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -420,7 +414,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="MAN-56 Çalışan detay sayfasındaki firma adının tıklanabilir olması" />
     <MESSAGE value="MAN-57 Çalışan liste ekranına çalışan firma bilgisinin eklenmesi" />
     <MESSAGE value="MAN-62 sidebar menünün çeşitlendirilmesi" />
     <MESSAGE value="MAN-61 Hatırlatıcılar adında bir modül oluşturulması" />
@@ -445,6 +438,7 @@
     <MESSAGE value="sidebarmenu eklemeleri" />
     <MESSAGE value="MAN-89 html-form-element eklemeleri" />
     <MESSAGE value="MAN-91 company sayfasında çalışan listesinin gösterilmesi" />
-    <option name="LAST_COMMIT_MESSAGE" value="MAN-91 company sayfasında çalışan listesinin gösterilmesi" />
+    <MESSAGE value="MAN-65 Çalışana prim verilmesi ile ilgili modül oluşturulması" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAN-65 Çalışana prim verilmesi ile ilgili modül oluşturulması" />
   </component>
 </project>
