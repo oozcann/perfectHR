@@ -143,9 +143,13 @@ const serviceModuleConf = function ($provide) {
                 entityService.findById(entityAddress, entityQuery).then((data) => {
                      reference = {
                         _id: data._id,
-                        name: data.name,
                         class: data._class
                      };
+                     if (data.fullName) {
+                        reference.fullName = data.fullName;
+                     } else {
+                        reference.name = data.name;
+                     }
                      deferred.resolve(reference);
                 });
                 return deferred.promise;

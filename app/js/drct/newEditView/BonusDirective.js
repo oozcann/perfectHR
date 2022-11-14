@@ -5,7 +5,8 @@ myApp.directive('bonusDirective', function(){
         scope: {
             beingEdited: '=',
             isNew: '=',
-            justSaved: '='
+            justSaved: '=',
+            bonus: '='
         },
         templateUrl: '../../../view/drct/newEditView/bonus-directive.html',
         controller: [

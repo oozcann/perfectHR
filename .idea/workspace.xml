@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-65 Çalışana prim verilmesi ile ilgili modül oluşturulması">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/drct/core/htmlFormElementDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/core/htmlFormElementDirective.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/drct/newEditView/BonusDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/newEditView/BonusDirective.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/services.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/states.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/states.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/drct/core/html-form-element.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/core/html-form-element.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/bonus-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/bonus-directive.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,13 +58,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663614753979</updated>
-    </task>
-    <task id="LOCAL-00039" summary="MAN-54 Çalışanların firma ile ilişkilendirilebilmesi">
-      <created>1664391513560</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1664391513560</updated>
     </task>
     <task id="LOCAL-00040" summary="MAN-54 Çalışanların firma ile ilişkilendirilebilmesi">
       <created>1664473503265</created>
@@ -399,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667502782218</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="MAN-65 Çalışana prim verilmesi ile ilgili modül oluşturulması">
+      <created>1667505323432</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1667505323432</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

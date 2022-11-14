@@ -226,7 +226,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
     })
     .state('employee.bonus', {
         url: '/bonus/new',
-        template: '<div bonus-directive being-edited="beingEdited" is-new="isNew"></div>',
+        template: '<div bonus-directive bonus="bonus" being-edited="beingEdited" is-new="isNew"></div>',
         controller: [
             '$scope',
             '$state',

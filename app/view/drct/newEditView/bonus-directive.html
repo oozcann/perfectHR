@@ -1,1 +1,14 @@
-BONUS DIRECTIVE
+<div ng-if="justSaved" call-to-action entity="entity" label="Prim"></div>
+<form name="newBonus">
+    <h3 class="pt-2 pl-3">Genel Bilgiler</h3>
+    <hr class="m-3" />
+    <div html-form-element="textReadOnly" ng-if="!isNew" being-edited="beingEdited" ng-model="bonus.uniqueName" label="Referans No"></div>
+    <div html-form-element="employeeReadOnly" being-edited="beingEdited" ng-model="bonus.employeeRef" label="Çalışan"></div>
+    <div html-form-element="text" being-edited="beingEdited" ng-model="bonus.description" ng-required="true" label="Açıklama"></div>
+    <div html-form-element="number" being-edited="beingEdited" ng-model="bonus.payment" ng-required="true" min="0" label="Prim Miktarı (TL)" quantity="TL"></div>
+    <div html-form-element="date" being-edited="beingEdited" ng-model="bonus.paymentDate" label="Prim Veriliş Tarihi"></div>
+
+    <div class="sticky-button">
+        <div new-edit-delete-buttons entity="bonus" being-edited="beingEdited" is-new="isNew" disable-opts="newBonus"></div>
+    </div>
+</form>
