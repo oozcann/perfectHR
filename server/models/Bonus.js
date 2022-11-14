@@ -5,6 +5,9 @@ const bonusSchema = new Schema({
     _class: {
         type: String
     },
+    uniqueName: {
+        type: String
+    },
     description: {
         type: String
     },

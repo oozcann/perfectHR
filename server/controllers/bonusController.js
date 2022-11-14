@@ -5,6 +5,7 @@ const Bonus = require('../models/Bonus');
 const saveBonus = (req,res,next) => {
     let bonus = new Bonus ({
         _class: 'bonus',
+        uniqueName: 'PRM-',
         description: req.body.description,
         payment: req.body.payment,
         paymentDate: req.body.paymentDate,

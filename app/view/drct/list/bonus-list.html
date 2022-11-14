@@ -20,7 +20,10 @@
         <tbody ng-repeat="bonus in allBonus  | filter : {name : search}">
         <tr>
             <td>
-                Referans No Eklenecek!
+                <a href="#!/employee/{{bonus.employeeRef._id}}/bonus/{{bonus._id}}" class="text-success">
+                    <i class="fa fa-hand-holding-usd"></i>
+                    {{bonus.uniqueName}}
+                </a>
             </td>
             <td>
                 <a href="#!/employee/{{bonus.employeeRef._id}}" class="text-danger">
