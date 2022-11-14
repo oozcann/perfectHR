@@ -246,6 +246,24 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
         resolve: {
 
         }
+    })
+    .state('all-bonus', {
+        url: '/bonus/all',
+        template: '<div bonus-list all-bonus="allBonus"></div>',
+        controller: [
+            '$scope',
+            '$state',
+            '$rootScope',
+            'entityService',
+            'allBonus',
+            function ($scope,$state,$rootScope,entityService,allBonus) {
+                $rootScope.$emit('allBonusBreadcrumb');
+                $scope.allBonus = allBonus;
+            }
+        ],
+        resolve: {
+            allBonus: ['entityService', (entityService) => {return entityService.getList("bonus", {"archived": false})}]
+        }
     });
     $urlRouterProvider.otherwise("/");
 }]);

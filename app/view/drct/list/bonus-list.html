@@ -1,0 +1,41 @@
+<div class="pl-3 pr-3 mb-1">
+    <div class="btn-group ">
+        <span new-entity-button entity="bonus"></span>
+        <button ng-click="exportData()" class="btn btn-square" style="color:#333; border:1px solid #cecece; width:70px!important;">EXCEL</button>
+    </div>
+    <input ng-model="search" type="search" class="form-control emp-search-input" placeholder="Bir isim yazınız" />
+</div>
+<div class="pl-3 pr-3" style="max-height:400px; overflow:auto;">
+    <table id="bonusList" class="table list-table" style="width:100%;">
+        <thead>
+        <tr>
+            <th>Referans No</th>
+            <th>İlişkili Çalışan</th>
+            <th>Açıklama</th>
+            <th>Prim Miktarı(TL)</th>
+            <th>Prim Veriliş Tarihi</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody ng-repeat="bonus in allBonus  | filter : {name : search}">
+        <tr>
+            <td>
+                Referans No Eklenecek!
+            </td>
+            <td>
+                <a href="#!/employee/{{bonus.employeeRef._id}}" class="text-danger">
+                    <i class="fas fa-male"></i>
+                    {{bonus.employeeRef.fullName}}
+                </a>
+            </td>
+            <td>{{bonus.description}}</td>
+            <td>{{bonus.payment}}</td>
+            <td>{{bonus.paymentDate | formatDateToDDMMYYYY}}</td>
+            <td>
+                <div new-edit-delete-buttons entity="bonus" being-edited="beingEdited" is-new="isNew" show-list-buttons="true"></div>
+            </td>
+        </tr>
+        </tbody>
+        <tr ng-if="allBonus.length == 0"><td colspan="10" style="text-align:center;padding:10px; font-size:14px;">Prim Bulunamadı</td></tr>
+    </table>
+</div>
