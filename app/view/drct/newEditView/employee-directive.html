@@ -30,5 +30,10 @@
             <button ng-if="!openTransferEmployee && !isNew && !beingEdited" ng-click="showHideTransferEmployee()" class="btn yellow btn-square">Transfer Et</button>
         </div>
     </div>
+    <div ng-show="!beingEdited">
+        <h3 class="pt-4 pl-3">Primler</h3>
+        <hr class="m-3" />
+        <div bonus-list all-bonus="allBonus"></div>
+    </div>
 </form>
 <div archive-button entity="employee"></div>

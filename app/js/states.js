@@ -98,7 +98,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
     })
     .state('employee.main', {
         url: '?justSaved',
-        template: '<div employee-directive being-edited="beingEdited" is-new="isNew" employee="employee" companies="companies" just-saved="justSaved"></div>',
+        template: '<div employee-directive being-edited="beingEdited" is-new="isNew" employee="employee" companies="companies" just-saved="justSaved" all-bonus="allBonus"></div>',
         controller: [
             '$scope',
             '$state',
@@ -106,18 +106,21 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
             '$rootScope',
             'employee',
             'companies',
-            function ($scope,$state,$stateParams,$rootScope,employee,companies) {
+            'allBonus',
+            function ($scope,$state,$stateParams,$rootScope,employee,companies,allBonus) {
                 $rootScope.$emit('employeeDetailBreadcrumb',{name: employee.name, surname:employee.surname});
                 $scope.beingEdited = false;
                 $scope.isNew = false;
                 $scope.justSaved = $stateParams.justSaved;
                 $scope.employee = employee;
                 $scope.companies = companies;
+                $scope.allBonus = allBonus;
             }
         ],
         resolve: {
             employee: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.findById("employee/:employeeId", {"employeeId": $stateParams.employeeId,"_class":"employee"})}],
-            companies: ['entityService', (entityService) => {return entityService.getList("company", {"archived": false})}]
+            companies: ['entityService', (entityService) => {return entityService.getList("company", {"archived": false})}],
+            allBonus: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.getList("bonus", {"archived": false,"employeeRef._id":$stateParams.employeeId})}]
         }
     })
     .state('employees', {
