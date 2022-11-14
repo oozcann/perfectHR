@@ -224,7 +224,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
             employeeRef: ['referenceService','$stateParams', (referenceService,$stateParams) => {return referenceService.createEntityRef('employee', $stateParams.employeeId)}],
         }
     })
-    .state('employee.bonus', {
+    .state('employee.newBonus', {
         url: '/bonus/new',
         template: '<div bonus-directive bonus="bonus" being-edited="beingEdited" is-new="isNew"></div>',
         controller: [
@@ -245,6 +245,27 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
         ],
         resolve: {
 
+        }
+    })
+    .state('employee.bonus', {
+        url: '/bonus/:bonusId',
+        template: '<div bonus-directive bonus="bonus" being-edited="beingEdited" is-new="isNew"></div>',
+        controller: [
+            '$scope',
+            '$state',
+            '$rootScope',
+            '$stateParams',
+            'referenceService',
+            'bonus',
+            function ($scope, $state, $rootScope,$stateParams,referenceService,bonus) {
+                $rootScope.$emit('bonusDetailBreadcrumb');
+                $scope.beingEdited = false;
+                $scope.isNew = false;
+                $scope.bonus = bonus;
+            }
+        ],
+        resolve: {
+            bonus: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.findById("bonus/:bonusId", {"bonusId": $stateParams.bonusId,"_class":"bonus"})}],
         }
     })
     .state('all-bonus', {

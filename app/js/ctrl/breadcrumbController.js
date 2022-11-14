@@ -117,6 +117,17 @@ myApp.controller('breadcrumbController', ['$scope', '$state', '$stateParams','$h
                 description: 'Lütfen prim detaylarını giriniz.'
             }
         });
+        $rootScope.$on('bonusDetailBreadcrumb', ()=>{
+            $scope.breadcrumbItems = [
+                {name: "Anasayfa", link:"#!/", icon:"fas fa-home"},
+                {name: "Primler", link:"#!/bonus/all"},
+                {name: "Prim Detayı", link:""}
+            ];
+            $scope.pageHeader = {
+                title: 'Prim Detayları',
+                description: ''
+            }
+        });
         $rootScope.$on('allBonusBreadcrumb', ()=>{
             $scope.breadcrumbItems = [
                 {name: "Anasayfa", link:"#!/", icon:"fas fa-home"},

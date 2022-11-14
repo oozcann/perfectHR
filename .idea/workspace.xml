@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-65 Çalışana prim verilmesi ile ilgili modül oluşturulması">
-      <change afterPath="$PROJECT_DIR$/app/js/drct/list/BonusListDirective.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/view/drct/list/bonus-list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/ctrl/breadcrumbController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/ctrl/breadcrumbController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/drct/core/NewEntityButtonDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/core/NewEntityButtonDirective.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/states.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/states.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/core/new-entity-button-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/core/new-entity-button-directive.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/main/sidebar-menu-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/main/sidebar-menu-directive.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,13 +55,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663614753979</updated>
-    </task>
-    <task id="LOCAL-00042" summary="MAN-56 Çalışan detay sayfasındaki firma adının tıklanabilir olması">
-      <created>1664475465045</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1664475465045</updated>
     </task>
     <task id="LOCAL-00043" summary="MAN-57 Çalışan liste ekranına çalışan firma bilgisinin eklenmesi">
       <created>1664476354111</created>
@@ -404,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668451784479</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="MAN-65 Çalışana prim verilmesi ile ilgili modül oluşturulması">
+      <created>1668453525521</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1668453525521</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -19,7 +19,7 @@ myApp.directive('newEntityButton', function(){
                     $state.go('new-reminder',{});
                 };
                 $scope.goToNewBonusPage = function () {
-                    $state.go('employee.bonus',{});
+                    $state.go('employee.newBonus',{});
                 };
             }
         ]
