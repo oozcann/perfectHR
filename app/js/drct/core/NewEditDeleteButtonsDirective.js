@@ -81,7 +81,10 @@ myApp.directive('newEditDeleteButtons', function(){
                     }
                 };
                 $scope.redirectAfterSave = function () {
-                    $state.go($scope.getEntityAddress, queryToRedirectAfterSave)
+                    if ($scope.getEntityAddress == 'bonus') {
+                        $scope.getEntityAddress = 'employee.' + $scope.getEntityAddress;
+                    }
+                    $state.go($scope.getEntityAddress, queryToRedirectAfterSave);
                 };
             }
         ]

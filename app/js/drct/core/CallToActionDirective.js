@@ -3,7 +3,7 @@ myApp.directive('callToAction', function(){
     return {
         restrict : "EA",
         scope: {
-            entity: '=',
+            redirectToState: '@',
             label: '@'
         },
         templateUrl: '../../../view/drct/core/call-to-action.html',
@@ -15,12 +15,16 @@ myApp.directive('callToAction', function(){
             '$rootScope',
             'entityService',
             ($scope,$state,$stateParams,$http,$rootScope,entityService) => {
-                $scope.newEntity = function (entity) {
-                    if (entity && entity._class) {
-                        $state.go('new-' + entity._class);
+                $scope.newEntity = function (redirectToState) {
+                    const query = {};
+                    if ($stateParams.employeeId) {
+                        query.employeeId = $stateParams.employeeId;
+                    }
+                    if (redirectToState) {
+                        $state.go(redirectToState,query);
                     }
                     else {
-                        console.error('_class for entity not found.')
+                        console.error('state for entity not specified.')
                     }
 
                 }

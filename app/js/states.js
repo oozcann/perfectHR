@@ -251,8 +251,8 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
         }
     })
     .state('employee.bonus', {
-        url: '/bonus/:bonusId',
-        template: '<div bonus-directive bonus="bonus" being-edited="beingEdited" is-new="isNew"></div>',
+        url: '/bonus/:bonusId?justSaved',
+        template: '<div bonus-directive bonus="bonus" being-edited="beingEdited" is-new="isNew" just-saved="justSaved"></div>',
         controller: [
             '$scope',
             '$state',
@@ -264,6 +264,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
                 $rootScope.$emit('bonusDetailBreadcrumb');
                 $scope.beingEdited = false;
                 $scope.isNew = false;
+                $scope.justSaved = $stateParams.justSaved;
                 $scope.bonus = bonus;
             }
         ],
