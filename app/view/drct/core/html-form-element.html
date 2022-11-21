@@ -33,7 +33,7 @@
             <input type="date" class="form-control" name="{{name}}" ng-model="$parent.$parent.ngModel" ng-required="$parent.$parent.ngRequired"/>
         </div>
         <div ng-switch-when="employeeReadOnly">
-            <a href="#!/employee/{{$parent.$parent.ngModel._id}}" class="text-danger form-control-item">{{$parent.$parent.ngModel.fullName}}</a>
+            <a href="#!/employee/{{$parent.$parent.ngModel._id}}" class="text-danger form-control-item"><i class="fa fa-user"></i> {{$parent.$parent.ngModel.fullName}}</a>
         </div>
     </div>
     <span ng-if="!beingEdited" ng-switch="" on="htmlFormElement" class="col-sm-9">
@@ -68,7 +68,7 @@
             <span>{{$parent.$parent.ngModel | formatDateToDDMMYYYY}}</span>
         </div>
         <div ng-switch-when="employeeReadOnly">
-            <a href="#!/employee/{{$parent.$parent.ngModel._id}}" class="text-danger form-control-item">{{$parent.$parent.ngModel.fullName}}</a>
+            <a href="#!/employee/{{$parent.$parent.ngModel._id}}" class="text-danger form-control-item"><i class="fa fa-user"></i> {{$parent.$parent.ngModel.fullName}}</a>
         </div>
     </span>
 </div>

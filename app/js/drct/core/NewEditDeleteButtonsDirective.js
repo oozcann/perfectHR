@@ -22,6 +22,9 @@ myApp.directive('newEditDeleteButtons', function(){
                 $scope.getEntityAddress = $scope.entity._class;
                 if ($scope.getEntityAddress == 'company') {
                     $scope.redirectInCancelClicked = 'companies';
+                }
+                else if ($scope.getEntityAddress == 'bonus') {
+                    $scope.redirectInCancelClicked = 'all-bonus';
                 } else {
                     $scope.redirectInCancelClicked = $scope.getEntityAddress + 's';
                 }

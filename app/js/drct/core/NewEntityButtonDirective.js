@@ -37,11 +37,11 @@ myApp.directive('newEntityButton', function(){
                             buttons: {
                                 confirm: {
                                     label: 'Devam Et',
-                                    className: 'btn-success'
+                                    className: 'btn-success btn-square'
                                 },
                                 cancel: {
                                     label: 'Vazgeç',
-                                    className: 'btn-danger'
+                                    className: 'btn-danger btn-square'
                                 }
                             },
                             callback: function(result){

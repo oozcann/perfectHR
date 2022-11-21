@@ -6,13 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-65 Çalışana prim verilmesi ile ilgili modül oluşturulması">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/drct/core/CallToActionDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/core/CallToActionDirective.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/drct/core/NewEditDeleteButtonsDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/core/NewEditDeleteButtonsDirective.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/states.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/states.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/core/call-to-action.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/core/call-to-action.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/bonus-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/bonus-directive.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/reminder-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/reminder-directive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/drct/core/NewEntityButtonDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/core/NewEntityButtonDirective.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/drct/list/bonus-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/list/bonus-list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,13 +55,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663614753979</updated>
-    </task>
-    <task id="LOCAL-00047" summary="MAN-61 Hatırlatıcılar adında bir modül oluşturulması">
-      <created>1665602307349</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1665602307349</updated>
     </task>
     <task id="LOCAL-00048" summary="MAN-61 Hatırlatıcılar adında bir modül oluşturulması">
       <created>1665674831118</created>
@@ -403,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669055613451</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="MAN-65 Çalışana prim verilmesi ile ilgili modül oluşturulması">
+      <created>1669057991446</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1669057991446</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
