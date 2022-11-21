@@ -214,3 +214,6 @@ button:focus, button, .btn, .btn:focus {
     font-weight: 300;
     letter-spacing: 0;
 }
+.bootboxPrompt select {
+    width:100%!important;
+}

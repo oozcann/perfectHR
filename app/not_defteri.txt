@@ -1,0 +1,24 @@
+/* Bunu ui-select ile özelleştirip seçimler bunun üzerinden yapılabilir.*/
+bootbox.dialog({
+    title: 'Custom Dialog Example',
+    message: '<select><option>TEST</option></select>',
+    size: 'large',
+    onEscape: true,
+    backdrop: true,
+    buttons: {
+        fee: {
+            label: 'Fee',
+            className: 'btn-primary',
+            callback: function(){
+
+            }
+        },
+        fi: {
+            label: 'Fi',
+            className: 'btn-info',
+            callback: function(){
+
+            }
+        }
+    }
+})

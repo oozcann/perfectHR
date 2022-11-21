@@ -8,36 +8,36 @@
 <div class="pl-3 pr-3" style="max-height:400px; overflow:auto;">
     <table id="bonusList" class="table list-table" style="width:100%;">
         <thead>
-        <tr>
-            <th>Referans No</th>
-            <th>İlişkili Çalışan</th>
-            <th>Açıklama</th>
-            <th>Prim Miktarı(TL)</th>
-            <th>Prim Veriliş Tarihi</th>
-            <th></th>
-        </tr>
+            <tr>
+                <th>Referans No</th>
+                <th>İlişkili Çalışan</th>
+                <th>Açıklama</th>
+                <th>Prim Miktarı(TL)</th>
+                <th>Prim Veriliş Tarihi</th>
+                <th></th>
+            </tr>
         </thead>
         <tbody ng-repeat="bonus in allBonus  | filter : {name : search}">
-        <tr>
-            <td>
-                <a href="#!/employee/{{bonus.employeeRef._id}}/bonus/{{bonus._id}}" class="text-success">
-                    <i class="fa fa-hand-holding-usd"></i>
-                    {{bonus.uniqueName}}
-                </a>
-            </td>
-            <td>
-                <a href="#!/employee/{{bonus.employeeRef._id}}" class="text-danger">
-                    <i class="fas fa-male"></i>
-                    {{bonus.employeeRef.fullName}}
-                </a>
-            </td>
-            <td>{{bonus.description}}</td>
-            <td>{{bonus.payment}}</td>
-            <td>{{bonus.paymentDate | formatDateToDDMMYYYY}}</td>
-            <td>
-                <div new-edit-delete-buttons entity="bonus" being-edited="beingEdited" is-new="isNew" show-list-buttons="true"></div>
-            </td>
-        </tr>
+            <tr>
+                <td>
+                    <a href="#!/employee/{{bonus.employeeRef._id}}/bonus/{{bonus._id}}" class="text-success">
+                        <i class="fa fa-hand-holding-usd"></i>
+                        {{bonus.uniqueName}}
+                    </a>
+                </td>
+                <td>
+                    <a href="#!/employee/{{bonus.employeeRef._id}}" class="text-danger">
+                        <i class="fas fa-male"></i>
+                        {{bonus.employeeRef.fullName}}
+                    </a>
+                </td>
+                <td>{{bonus.description}}</td>
+                <td>{{bonus.payment}}</td>
+                <td>{{bonus.paymentDate | formatDateToDDMMYYYY}}</td>
+                <td>
+                    <div new-edit-delete-buttons entity="bonus" being-edited="beingEdited" is-new="isNew" show-list-buttons="true"></div>
+                </td>
+            </tr>
         </tbody>
         <tr ng-if="allBonus.length == 0"><td colspan="10" style="text-align:center;padding:10px; font-size:14px;">Prim Bulunamadı</td></tr>
     </table>
