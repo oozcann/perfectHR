@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-65 Çalışana prim verilmesi ile ilgili modül oluşturulması">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/drct/core/NewEditDeleteButtonsDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/core/NewEditDeleteButtonsDirective.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/drct/core/NewEntityButtonDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/core/NewEntityButtonDirective.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/list/bonus-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/list/bonus-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/controllers/annualLeaveController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/models/AnnualLeave.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/routes/annualLeaveRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
