@@ -4,11 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-65 Çalışana prim verilmesi ile ilgili modül oluşturulması">
-      <change afterPath="$PROJECT_DIR$/server/controllers/annualLeaveController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/models/AnnualLeave.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/annualLeaveRoutes.js" afterDir="false" />
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-35 İzin ekleme ile ilgili ayrı bir db ve ekran oluşturulması + çalışan ile ilişkilendirilmesi">
+      <change afterPath="$PROJECT_DIR$/app/js/drct/list/AnnualLeaveListDirective.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/js/drct/newEditView/AnnualLeaveDirective.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/view/drct/list/annual-leave-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/view/drct/newEditView/annual-leave-directive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/ctrl/breadcrumbController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/ctrl/breadcrumbController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/drct/core/NewEditDeleteButtonsDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/core/NewEditDeleteButtonsDirective.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/drct/core/NewEntityButtonDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/core/NewEntityButtonDirective.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/drct/newEditView/BonusDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/newEditView/BonusDirective.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/drct/newEditView/EmployeeDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/newEditView/EmployeeDirective.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/filters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/states.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/states.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/drct/core/new-entity-button-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/core/new-entity-button-directive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/drct/main/sidebar-menu-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/main/sidebar-menu-directive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/employee-directive.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/annualLeaveController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/annualLeaveController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/AnnualLeave.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/AnnualLeave.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,13 +70,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663614753979</updated>
-    </task>
-    <task id="LOCAL-00048" summary="MAN-61 Hatırlatıcılar adında bir modül oluşturulması">
-      <created>1665674831118</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1665674831118</updated>
     </task>
     <task id="LOCAL-00049" summary="MAN-61 Hatırlatıcılar adında bir modül oluşturulması">
       <created>1665677285862</created>
@@ -399,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669057991446</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="MAN-35 İzin ekleme ile ilgili ayrı bir db ve ekran oluşturulması + çalışan ile ilişkilendirilmesi">
+      <created>1669742063028</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1669742063028</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -414,7 +429,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="MAN-57 Çalışan liste ekranına çalışan firma bilgisinin eklenmesi" />
     <MESSAGE value="MAN-62 sidebar menünün çeşitlendirilmesi" />
     <MESSAGE value="MAN-61 Hatırlatıcılar adında bir modül oluşturulması" />
     <MESSAGE value="MAN-33 save,update,delete işlemlerinin tek bir directive üzerinden yapılması (abstractNewEditView)" />
@@ -439,6 +453,7 @@
     <MESSAGE value="MAN-89 html-form-element eklemeleri" />
     <MESSAGE value="MAN-91 company sayfasında çalışan listesinin gösterilmesi" />
     <MESSAGE value="MAN-65 Çalışana prim verilmesi ile ilgili modül oluşturulması" />
-    <option name="LAST_COMMIT_MESSAGE" value="MAN-65 Çalışana prim verilmesi ile ilgili modül oluşturulması" />
+    <MESSAGE value="MAN-35 İzin ekleme ile ilgili ayrı bir db ve ekran oluşturulması + çalışan ile ilişkilendirilmesi" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAN-35 İzin ekleme ile ilgili ayrı bir db ve ekran oluşturulması + çalışan ile ilişkilendirilmesi" />
   </component>
 </project>

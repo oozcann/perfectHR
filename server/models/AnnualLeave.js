@@ -14,6 +14,9 @@ const annualLeaveSchema = new Schema({
     annualLeaveStartDate: {
         type: Date
     },
+    jobStartDate: {
+        type: Date
+    },
     annualLeaveEndDate: {
         type: Date
     },

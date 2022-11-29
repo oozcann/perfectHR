@@ -1,14 +1,15 @@
-const Bonus = require('../models/AnnualLeave');
+const AnnualLeave = require('../models/AnnualLeave');
 
 //Save AnnualLeave
 
 const saveAnnualLeave = (req,res,next) => {
     let annualLeave = new AnnualLeave ({
-        _class: 'annual_leave',
+        _class: 'annualLeave',
         uniqueName: 'IZN-',
         description: req.body.description,
         annualLeaveStartDate: req.body.annualLeaveStartDate,
         annualLeaveEndDate: req.body.annualLeaveEndDate,
+        jobStartDate: req.body.jobStartDate,
         employeeRef: {
             _id: req.body.employeeRef._id,
             fullName: req.body.employeeRef.fullName,

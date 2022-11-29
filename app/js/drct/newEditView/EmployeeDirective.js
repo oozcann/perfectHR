@@ -8,7 +8,8 @@ myApp.directive('employeeDirective', function(){
             justSaved: '=',
             employee: '=',
             companies: '=',
-            allBonus: '='
+            allBonus: '=',
+            annualLeaves: '='
         },
         templateUrl: '../../../view/drct/newEditView/employee-directive.html',
         controller: [

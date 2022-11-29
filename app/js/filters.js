@@ -10,6 +10,18 @@ angular.module('myApp.filters', [])
     return dateToFormat;
 
 })
+.filter('dateDiffInDays', () => (date1,date2) => {
+    /*Çalışmıyor düzenlenmesi gerekli*/
+    if (!date1 || !date2) {
+        return 'Belirtilmemiş';
+    }
+    let date1ToFormat = moment(date1);
+    let date2ToFormat = moment(date2);
+    if (date1ToFormat.isValid() && date2ToFormat.isValid()) {
+        const dateDiff = date2ToFormat.diff(date1ToFormat, 'days');
+    }
+    return dateDiff;
+})
 .filter('age', [
 	() => (dateValue) => {
     	if (!dateValue) {

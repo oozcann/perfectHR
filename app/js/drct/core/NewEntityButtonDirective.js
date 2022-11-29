@@ -63,6 +63,9 @@ myApp.directive('newEntityButton', function(){
                 $scope.goToNewBonusPage = function () {
                     $scope.askForEmployeeBeforeRedirect('employee.newBonus','employeeId');
                 };
+                $scope.goToNewAnnualLeavePage = function () {
+                    $scope.askForEmployeeBeforeRedirect('employee.newAnnualLeave','employeeId');
+                };
             }
         ]
     }

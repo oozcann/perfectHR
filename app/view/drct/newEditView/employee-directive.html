@@ -35,5 +35,10 @@
         <hr class="m-3" />
         <div bonus-list all-bonus="allBonus"></div>
     </div>
+    <div ng-show="!beingEdited">
+        <h3 class="pt-4 pl-3">Yıllık İzinler</h3>
+        <hr class="m-3" />
+        <div annual-leave-list annual-leaves="annualLeaves"></div>
+    </div>
 </form>
 <div archive-button entity="employee"></div>

@@ -138,6 +138,38 @@ myApp.controller('breadcrumbController', ['$scope', '$state', '$stateParams','$h
                 description: 'Çalışanlara verilen prim detayları'
             }
         });
+        $rootScope.$on('newAnnualLeaveBreadcrumb', ()=>{
+            $scope.breadcrumbItems = [
+                {name: "Anasayfa", link:"#!/", icon:"fas fa-home"},
+                {name: "Yıllık İzinler", link:"#!/annualLeaves/list"},
+                {name: "Yeni Yıllık İzin", link:""}
+            ];
+            $scope.pageHeader = {
+                title: 'Yeni Yıllık İzin',
+                description: 'Lütfen izin detaylarını giriniz.'
+            }
+        });
+        $rootScope.$on('annualLeaveDetailBreadcrumb', ()=>{
+            $scope.breadcrumbItems = [
+                {name: "Anasayfa", link:"#!/", icon:"fas fa-home"},
+                {name: "Yıllık İzinler", link:"#!/annualLeaves/list"},
+                {name: "Yıllık İzin Detayı", link:""}
+            ];
+            $scope.pageHeader = {
+                title: 'İzin Detayları',
+                description: ''
+            }
+        });
+        $rootScope.$on('annualLeavesBreadcrumb', ()=>{
+            $scope.breadcrumbItems = [
+                {name: "Anasayfa", link:"#!/", icon:"fas fa-home"},
+                {name: "Yıllık İzinler", link:""}
+            ];
+            $scope.pageHeader = {
+                title: 'Yıllık İzinler',
+                description: 'Çalışanlara verilen yıllık izin detayları'
+            }
+        });
     }
 ]);
 

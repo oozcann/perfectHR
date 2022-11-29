@@ -98,7 +98,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
     })
     .state('employee.main', {
         url: '?justSaved',
-        template: '<div employee-directive being-edited="beingEdited" is-new="isNew" employee="employee" companies="companies" just-saved="justSaved" all-bonus="allBonus"></div>',
+        template: '<div employee-directive being-edited="beingEdited" is-new="isNew" employee="employee" companies="companies" just-saved="justSaved" all-bonus="allBonus" annual-leaves="annualLeaves"></div>',
         controller: [
             '$scope',
             '$state',
@@ -107,7 +107,8 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
             'employee',
             'companies',
             'allBonus',
-            function ($scope,$state,$stateParams,$rootScope,employee,companies,allBonus) {
+            'annualLeaves',
+            function ($scope,$state,$stateParams,$rootScope,employee,companies,allBonus,annualLeaves) {
                 $rootScope.$emit('employeeDetailBreadcrumb',{name: employee.name, surname:employee.surname});
                 $scope.beingEdited = false;
                 $scope.isNew = false;
@@ -115,12 +116,14 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
                 $scope.employee = employee;
                 $scope.companies = companies;
                 $scope.allBonus = allBonus;
+                $scope.annualLeaves = annualLeaves;
             }
         ],
         resolve: {
             employee: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.findById("employee/:employeeId", {"employeeId": $stateParams.employeeId,"_class":"employee"})}],
             companies: ['entityService', (entityService) => {return entityService.getList("company", {"archived": false})}],
-            allBonus: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.getList("bonus", {"archived": false,"employeeRef._id":$stateParams.employeeId})}]
+            allBonus: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.getList("bonus", {"archived": false,"employeeRef._id":$stateParams.employeeId})}],
+            annualLeaves: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.getList("annualLeave", {"archived": false,"employeeRef._id":$stateParams.employeeId})}]
         }
     })
     .state('employees', {
@@ -288,6 +291,69 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
         ],
         resolve: {
             allBonus: ['entityService', (entityService) => {return entityService.getList("bonus", {"archived": false})}]
+        }
+    })
+    .state('employee.newAnnualLeave', {
+        url: '/annualLeave/new',
+        template: '<div annual-leave-directive annual-leave="annualLeave" being-edited="beingEdited" is-new="isNew"></div>',
+        controller: [
+            '$scope',
+            '$state',
+            '$rootScope',
+            '$stateParams',
+            'referenceService',
+            function ($scope, $state, $rootScope,$stateParams,referenceService) {
+                $rootScope.$emit('newAnnualLeaveBreadcrumb');
+                $scope.beingEdited = true;
+                $scope.isNew = true;
+                $scope.annualLeave = {
+                    _class: 'annualLeave',
+                    employeeRef: $scope.employeeRef
+                };
+            }
+        ],
+        resolve: {
+
+        }
+    })
+    .state('employee.annualLeave', {
+        url: '/annualLeave/:annualLeaveId?justSaved',
+        template: '<div annual-leave-directive annual-leave="annualLeave" being-edited="beingEdited" is-new="isNew" just-saved="justSaved"></div>',
+        controller: [
+            '$scope',
+            '$state',
+            '$rootScope',
+            '$stateParams',
+            'referenceService',
+            'annualLeave',
+            function ($scope, $state, $rootScope,$stateParams,referenceService,annualLeave) {
+                $rootScope.$emit('annualLeaveDetailBreadcrumb');
+                $scope.beingEdited = false;
+                $scope.isNew = false;
+                $scope.justSaved = $stateParams.justSaved;
+                $scope.annualLeave = annualLeave;
+            }
+        ],
+        resolve: {
+            annualLeave: ['entityService','$stateParams', (entityService,$stateParams) => {return entityService.findById("annualLeave/:annualLeaveId", {"annualLeaveId": $stateParams.annualLeaveId,"_class":"annualLeave"})}],
+        }
+    })
+    .state('annualLeaves', {
+        url: '/annualLeaves/list',
+        template: '<div annual-leave-list annual-leaves="annualLeaves"></div>',
+        controller: [
+            '$scope',
+            '$state',
+            '$rootScope',
+            'entityService',
+            'annualLeaves',
+            function ($scope,$state,$rootScope,entityService,annualLeaves) {
+                $rootScope.$emit('annualLeavesBreadcrumb');
+                $scope.annualLeaves = annualLeaves;
+            }
+        ],
+        resolve: {
+            annualLeaves: ['entityService', (entityService) => {return entityService.getList("annualLeave", {"archived": false})}]
         }
     });
     $urlRouterProvider.otherwise("/");

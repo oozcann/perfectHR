@@ -14,6 +14,9 @@ myApp.directive('bonusDirective', function(){
             ($scope) => {
                 $scope.getEntityAddress = 'bonus';
                 $scope.entity = $scope.bonus;
+                if (!$scope.isNew && $scope.bonus.paymentDate) {
+                    $scope.bonus.paymentDate = new Date($scope.bonus.paymentDate);
+                }
             }
         ]
     }

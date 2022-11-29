@@ -43,5 +43,5 @@ app.use('/api/employee', EmployeeRoute);
 app.use('/api/company', CompanyRoute);
 app.use('/api/reminder', ReminderRoute);
 app.use('/api/bonus', BonusRoute);
-app.use('/api/annual-leave', AnnualLeaveRoute);
+app.use('/api/annualLeave', AnnualLeaveRoute);
 app.use('/api/entity', EntityRoute);

@@ -1,0 +1,15 @@
+<div ng-if="justSaved" call-to-action redirect-to-state="employee.newAnnualLeave" label="Yıllık İzin"></div>
+<form name="newAnnualLeave">
+    <h3 class="pt-2 pl-3">Genel Bilgiler</h3>
+    <hr class="m-3" />
+    <div html-form-element="textReadOnly" ng-if="!isNew" being-edited="beingEdited" ng-model="annualLeave.uniqueName" label="Referans No"></div>
+    <div html-form-element="employeeReadOnly" being-edited="beingEdited" ng-model="annualLeave.employeeRef" label="Çalışan"></div>
+    <div html-form-element="text" being-edited="beingEdited" ng-model="annualLeave.description" ng-required="true" label="Açıklama"></div>
+    <div html-form-element="date" being-edited="beingEdited" ng-model="annualLeave.annualLeaveStartDate" ng-required="true" label="İzin Başlangıç Tarihi"></div>
+    <div html-form-element="date" being-edited="beingEdited" ng-model="annualLeave.annualLeaveEndDate" ng-required="true" label="İzin Bitiş Tarihi"></div>
+    <div html-form-element="date" being-edited="beingEdited" ng-model="annualLeave.jobStartDate" ng-required="true" label="İşbaşı Tarihi"></div>
+
+    <div class="sticky-button">
+        <div new-edit-delete-buttons entity="annualLeave" being-edited="beingEdited" is-new="isNew" disable-opts="newAnnualLeave"></div>
+    </div>
+</form>

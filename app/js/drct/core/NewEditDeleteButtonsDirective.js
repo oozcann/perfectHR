@@ -52,8 +52,9 @@ myApp.directive('newEditDeleteButtons', function(){
                     bootboxOpts.closeButton = false;
 
                     bootboxOpts.buttons = {
-                        cancel: { label: 'Vazgeç', className: 'btn-success btn-square' },
-                        confirm: { label: 'Sil', className: 'btn-danger btn-square' }
+                        confirm: { label: 'Sil', className: 'btn-danger btn-square' },
+                        cancel: { label: 'Vazgeç', className: 'btn-success btn-square' }
+
                     };
                     bootboxOpts.buttons.confirm.callback = function () {
                         entityService.deleteEntity($scope.getEntityAddress, JSON.stringify($scope.entity)).then(function (response) {
@@ -84,7 +85,7 @@ myApp.directive('newEditDeleteButtons', function(){
                     }
                 };
                 $scope.redirectAfterSave = function () {
-                    if ($scope.getEntityAddress == 'bonus') {
+                    if ($scope.getEntityAddress == 'bonus' || $scope.getEntityAddress == 'annualLeave') {
                         $scope.getEntityAddress = 'employee.' + $scope.getEntityAddress;
                     }
                     $state.go($scope.getEntityAddress, queryToRedirectAfterSave);

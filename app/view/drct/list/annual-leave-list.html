@@ -1,0 +1,48 @@
+<div class="pl-3 pr-3 mb-1">
+    <div class="btn-group ">
+        <span new-entity-button entity="annualLeave"></span>
+        <button ng-click="exportData()" class="btn btn-square" style="color:#333; border:1px solid #cecece; width:70px!important;">EXCEL</button>
+    </div>
+    <input ng-model="search" type="search" class="form-control emp-search-input" placeholder="Bir isim yazınız" />
+</div>
+<div class="pl-3 pr-3" style="max-height:400px; overflow:auto;">
+    <table id="bonusList" class="table list-table" style="width:100%;">
+        <thead>
+        <tr>
+            <th>Referans No</th>
+            <th>İlişkili Çalışan</th>
+            <th>Açıklama</th>
+            <th>İzin Başlangıç Tarihi</th>
+            <th>İzin Bitiş Tarihi</th>
+            <th>İşbaşı Tarihi</th>
+            <th>İzin Süresi (Gün)</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody ng-repeat="annualLeave in annualLeaves  | filter : search">
+        <tr>
+            <td>
+                <a href="#!/employee/{{annualLeave.employeeRef._id}}/annualLeave/{{annualLeave._id}}" class="text-success">
+                    <i class="fas fa-procedures"></i>
+                    {{annualLeave.uniqueName}}
+                </a>
+            </td>
+            <td>
+                <a href="#!/employee/{{annualLeave.employeeRef._id}}" class="text-danger">
+                    <i class="fas fa-male"></i>
+                    {{annualLeave.employeeRef.fullName}}
+                </a>
+            </td>
+            <td>{{annualLeave.description}}</td>
+            <td>{{annualLeave.annualLeaveStartDate | formatDateToDDMMYYYY}}</td>
+            <td>{{annualLeave.annualLeaveEndDate | formatDateToDDMMYYYY}}</td>
+            <td>{{annualLeave.jobStartDate | formatDateToDDMMYYYY}}</td>
+            <td>İzin Süresi</td>
+            <td>
+                <div new-edit-delete-buttons entity="annualLeave" being-edited="beingEdited" is-new="isNew" show-list-buttons="true"></div>
+            </td>
+        </tr>
+        </tbody>
+        <tr ng-if="annualLeaves.length == 0"><td colspan="10" style="text-align:center;padding:10px; font-size:14px;">Yıllık İzin Bulunamadı</td></tr>
+    </table>
+</div>
