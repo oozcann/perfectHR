@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-35 İzin ekleme ile ilgili ayrı bir db ve ekran oluşturulması + çalışan ile ilişkilendirilmesi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/drct/newEditView/AnnualLeaveDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/newEditView/AnnualLeaveDirective.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/core/html-form-element.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/core/html-form-element.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/list/annual-leave-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/list/annual-leave-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/newEditView/annual-leave-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/newEditView/annual-leave-directive.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/annualLeaveController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/annualLeaveController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/AnnualLeave.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/AnnualLeave.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/drct/newEditView/EmployeeDirective.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/drct/newEditView/EmployeeDirective.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,13 +53,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663614753979</updated>
-    </task>
-    <task id="LOCAL-00050" summary="MAN-61 Hatırlatıcılar adında bir modül oluşturulması">
-      <created>1665677685213</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1665677685213</updated>
     </task>
     <task id="LOCAL-00051" summary="MAN-33 save,update,delete işlemlerinin tek bir directive üzerinden yapılması (abstractNewEditView)">
       <created>1665767935703</created>
@@ -402,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669747248920</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="MAN-35 İzin ekleme ile ilgili ayrı bir db ve ekran oluşturulması + çalışan ile ilişkilendirilmesi">
+      <created>1669748460292</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1669748460292</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

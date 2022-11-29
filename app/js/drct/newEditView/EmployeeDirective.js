@@ -47,6 +47,13 @@ myApp.directive('employeeDirective', function(){
                     });
 
                 };
+                if ($scope.annualLeaves) {
+                    let count = 0;
+                    for (let i = 0; i < $scope.annualLeaves.length; i++) {
+                        count += Number($scope.annualLeaves[i].daysInDiff);
+                    }
+                    $scope.employee.annualLeaveSpent = count;
+                };
             }
         ]
     }
