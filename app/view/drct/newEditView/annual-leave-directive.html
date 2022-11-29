@@ -5,9 +5,10 @@
     <div html-form-element="textReadOnly" ng-if="!isNew" being-edited="beingEdited" ng-model="annualLeave.uniqueName" label="Referans No"></div>
     <div html-form-element="employeeReadOnly" being-edited="beingEdited" ng-model="annualLeave.employeeRef" label="Çalışan"></div>
     <div html-form-element="text" being-edited="beingEdited" ng-model="annualLeave.description" ng-required="true" label="Açıklama"></div>
-    <div html-form-element="date" being-edited="beingEdited" ng-model="annualLeave.annualLeaveStartDate" ng-required="true" label="İzin Başlangıç Tarihi"></div>
-    <div html-form-element="date" being-edited="beingEdited" ng-model="annualLeave.annualLeaveEndDate" ng-required="true" label="İzin Bitiş Tarihi"></div>
+    <div html-form-element="date" being-edited="beingEdited" ng-model="annualLeave.annualLeaveStartDate" ng-change="calculateDaysInDiff()" ng-required="true" label="İzin Başlangıç Tarihi"></div>
+    <div html-form-element="date" being-edited="beingEdited" ng-model="annualLeave.annualLeaveEndDate" ng-change="calculateDaysInDiff()" ng-required="true" label="İzin Bitiş Tarihi"></div>
     <div html-form-element="date" being-edited="beingEdited" ng-model="annualLeave.jobStartDate" ng-required="true" label="İşbaşı Tarihi"></div>
+    <div html-form-element="textReadOnly" ng-if="!isNew" being-edited="beingEdited" ng-model="annualLeave.daysInDiff" label="Kullanılan İzin (Gün)"></div>
 
     <div class="sticky-button">
         <div new-edit-delete-buttons entity="annualLeave" being-edited="beingEdited" is-new="isNew" disable-opts="newAnnualLeave"></div>

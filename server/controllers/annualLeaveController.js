@@ -10,6 +10,7 @@ const saveAnnualLeave = (req,res,next) => {
         annualLeaveStartDate: req.body.annualLeaveStartDate,
         annualLeaveEndDate: req.body.annualLeaveEndDate,
         jobStartDate: req.body.jobStartDate,
+        daysInDiff: req.body.daysInDiff,
         employeeRef: {
             _id: req.body.employeeRef._id,
             fullName: req.body.employeeRef.fullName,

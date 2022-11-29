@@ -20,6 +20,9 @@ const annualLeaveSchema = new Schema({
     annualLeaveEndDate: {
         type: Date
     },
+    daysInDiff: {
+        type: Number
+    },
     employeeRef:{
         type: Object
     },

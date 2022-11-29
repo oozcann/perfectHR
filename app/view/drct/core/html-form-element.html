@@ -30,7 +30,7 @@
             </select>
         </div>
         <div ng-switch-when="date">
-            <input type="date" class="form-control" name="{{name}}" ng-model="$parent.$parent.ngModel" ng-required="$parent.$parent.ngRequired"/>
+            <input type="date" class="form-control" name="{{name}}" ng-model="$parent.$parent.ngModel" ng-change="ngChange()" ng-required="$parent.$parent.ngRequired"/>
         </div>
         <div ng-switch-when="employeeReadOnly">
             <a href="#!/employee/{{$parent.$parent.ngModel._id}}" class="text-danger form-control-item"><i class="fa fa-user"></i> {{$parent.$parent.ngModel.fullName}}</a>

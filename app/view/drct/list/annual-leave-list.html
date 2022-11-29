@@ -37,7 +37,7 @@
             <td>{{annualLeave.annualLeaveStartDate | formatDateToDDMMYYYY}}</td>
             <td>{{annualLeave.annualLeaveEndDate | formatDateToDDMMYYYY}}</td>
             <td>{{annualLeave.jobStartDate | formatDateToDDMMYYYY}}</td>
-            <td>İzin Süresi</td>
+            <td>{{annualLeave.daysInDiff}}</td>
             <td>
                 <div new-edit-delete-buttons entity="annualLeave" being-edited="beingEdited" is-new="isNew" show-list-buttons="true"></div>
             </td>
