@@ -1,11 +1,21 @@
 const Bonus = require('../models/Bonus');
+const mongoose = require('mongoose');
 
+const collection = mongoose.connection.collection('ANNUAL_LEAVE');
+const getNumDocs = () => {
+    return collection.countDocuments().then(count => {
+        return count;
+    });
+}
+let count = 0;
+getNumDocs().then(result => {
+    count = result;
+})
 //Save Bonus
-
 const saveBonus = (req,res,next) => {
     let bonus = new Bonus ({
         _class: 'bonus',
-        uniqueName: 'PRM-',
+        uniqueName: 'PRM-' + (count + 1),
         description: req.body.description,
         payment: req.body.payment,
         paymentDate: req.body.paymentDate,

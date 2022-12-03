@@ -1,11 +1,21 @@
 const AnnualLeave = require('../models/AnnualLeave');
-
+const mongoose = require('mongoose');
 //Save AnnualLeave
 
+const collection = mongoose.connection.collection('ANNUAL_LEAVE');
+const getNumDocs = () => {
+    return collection.countDocuments().then(count => {
+        return count;
+    });
+}
+let count = 0;
+getNumDocs().then(result => {
+    count = result;
+})
 const saveAnnualLeave = (req,res,next) => {
     let annualLeave = new AnnualLeave ({
         _class: 'annualLeave',
-        uniqueName: 'IZN-',
+        uniqueName: 'IZN-' + (count + 1),
         description: req.body.description,
         annualLeaveStartDate: req.body.annualLeaveStartDate,
         annualLeaveEndDate: req.body.annualLeaveEndDate,
