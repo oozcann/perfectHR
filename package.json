@@ -29,6 +29,7 @@
     "webpack-dev-server": "^4.9.2"
   },
   "devDependencies": {
+    "angular-translate": "^2.19.0",
     "nodemon": "^2.0.16",
     "webpack": "^5.73.0"
   }

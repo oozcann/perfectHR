@@ -1,6 +1,7 @@
-var myApp = angular.module("myApp", ['ui.router','myApp.services','myApp.filters','ui.select']);
+var myApp = angular.module("myApp", ['ui.router','myApp.services','myApp.filters','ui.select','pascalprecht.translate']);
 
-myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+myApp
+.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
     $stateProvider.state('home', {
         url: '/',
@@ -357,4 +358,15 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
         }
     });
     $urlRouterProvider.otherwise("/");
+}])
+.config(['$translateProvider', function ($translateProvider) {
+    $translateProvider.useStaticFilesLoader({
+        prefix: './assets/json/translations/',
+        suffix: '.json'
+    })
+    .preferredLanguage('tr')
+    .fallbackLanguage('en')
+    .uniformLanguageTag('iso639-1')
+    .determinePreferredLanguage();
+    $translateProvider.useSanitizeValueStrategy(null);
 }]);

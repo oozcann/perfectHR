@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-96 employee-card üzerindeki kullanılan izin sayısının annualLeave üzerinden güncellenmesi">
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-93 Prim+izin için random referans no üretilmesi">
+      <change afterPath="$PROJECT_DIR$/app/assets/json/translations/en.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/json/translations/tr.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/annualLeaveController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/annualLeaveController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/bonusController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/bonusController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/states.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/states.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,13 +59,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663614753979</updated>
-    </task>
-    <task id="LOCAL-00051" summary="MAN-33 save,update,delete işlemlerinin tek bir directive üzerinden yapılması (abstractNewEditView)">
-      <created>1665767935703</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1665767935704</updated>
     </task>
     <task id="LOCAL-00052" summary="MAN-33 save,update,delete işlemlerinin tek bir directive üzerinden yapılması (abstractNewEditView)">
       <created>1665770728679</created>
@@ -398,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669748460292</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="MAN-93 Prim+izin için random referans no üretilmesi">
+      <created>1670081553448</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1670081553449</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -413,7 +418,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="MAN-62 sidebar menünün çeşitlendirilmesi" />
     <MESSAGE value="MAN-61 Hatırlatıcılar adında bir modül oluşturulması" />
     <MESSAGE value="MAN-33 save,update,delete işlemlerinin tek bir directive üzerinden yapılması (abstractNewEditView)" />
     <MESSAGE value="MAN-64 Hatırlatıcılara companyRef ilişkisi kurulması" />
@@ -438,6 +442,7 @@
     <MESSAGE value="MAN-91 company sayfasında çalışan listesinin gösterilmesi" />
     <MESSAGE value="MAN-65 Çalışana prim verilmesi ile ilgili modül oluşturulması" />
     <MESSAGE value="MAN-35 İzin ekleme ile ilgili ayrı bir db ve ekran oluşturulması + çalışan ile ilişkilendirilmesi" />
-    <option name="LAST_COMMIT_MESSAGE" value="MAN-35 İzin ekleme ile ilgili ayrı bir db ve ekran oluşturulması + çalışan ile ilişkilendirilmesi" />
+    <MESSAGE value="MAN-93 Prim+izin için random referans no üretilmesi" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAN-93 Prim+izin için random referans no üretilmesi" />
   </component>
 </project>

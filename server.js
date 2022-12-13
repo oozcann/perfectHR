@@ -24,6 +24,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '/app')));
+app.use(express.static(path.join(__dirname, '/node_modules')));
 app.get('/home', (req,res) =>{
     //res.redirect('/login');
     res.sendFile(path.join(__dirname, '/app', '/index.html'));
