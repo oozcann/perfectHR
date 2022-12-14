@@ -1,11 +1,11 @@
-<div ng-if="justSaved" call-to-action redirect-to-state="new-reminder" label="Hatırlatıcı"></div>
+<div ng-if="justSaved" call-to-action redirect-to-state="new-reminder" label="{{'FORMS.REMINDER.REMINDER' | translate}}"></div>
 <form name="newReminder">
-    <h3 class="pt-0 pl-3">Genel Bilgiler</h3>
+    <h3 class="pt-0 pl-3" translate="FORMS.HEADER.GENERAL">Genel Bilgiler</h3>
     <hr class="m-3" />
-    <div html-form-element="text" being-edited="beingEdited" ng-model="reminder.name" ng-required="true" label="Hatırlatıcı Adı"></div>
-    <div html-form-element="textarea" being-edited="beingEdited" ng-model="reminder.description" label="Açıklama"></div>
+    <div html-form-element="text" being-edited="beingEdited" ng-model="reminder.name" ng-required="true" label="{{'FORMS.NAME' | translate}}"></div>
+    <div html-form-element="textarea" being-edited="beingEdited" ng-model="reminder.description" label="{{'FORMS.DESCRIPTION' | translate}}"></div>
     <div company-select being-edited="beingEdited" is-new="isNew" entity="entity" ng-model="reminderCompanyRef"></div>
-    <div html-form-element="date" being-edited="beingEdited" ng-model="reminder.reminderDate" label="Hatırlatma Tarihi"></div>
+    <div html-form-element="date" being-edited="beingEdited" ng-model="reminder.reminderDate" label="{{'FORMS.REMINDER.REMINDER_DATE' | translate}}"></div>
     <div class="sticky-button">
         <div new-edit-delete-buttons entity="reminder" being-edited="beingEdited" is-new="isNew" disable-opts="newReminder"></div>
     </div>

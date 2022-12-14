@@ -6,32 +6,32 @@
     <div class="col-10 p-3 bg-light" style="font-family: 'Open Sans', sans-serif;">
         <h3 class="m-0 p-0">{{employee.name}} {{employee.surname}}</h3>
         <div class="w-25 d-inline-block">
-            <span class="emp-detail-label">{{'FORMS.EMPLOYEE.UNIQUE_NAME' | translate}}:</span>
+            <span class="emp-detail-label" translate="FORMS.EMPLOYEE.UNIQUE_NAME">TC Kimlik</span>
             <p class="emp-detail-property">{{employee.uniqueName}}</p>
-            <span class="emp-detail-label">D. Tarihi:</span>
+            <span class="emp-detail-label" translate="FORMS.EMPLOYEE.DATEOFBIRTH">Doğum Tarihi</span>
             <p class="emp-detail-property">{{employee.dateOfBirth | formatDateToDDMMYYYY}}</p>
-            <span class="emp-detail-label">Yaş:</span>
+            <span class="emp-detail-label" translate="FORMS.EMPLOYEE.AGE">Yaş</span>
             <p class="emp-detail-property">{{employee.dateOfBirth | age}}</p>
         </div>
         <div class="w-25 d-inline-block">
-            <span class="emp-detail-label">Firma/Tesis:</span>
+            <span class="emp-detail-label" translate="FORMS.COMPANY.COMPANY">Firma</span>
             <p class="emp-detail-property">
                 <a href="#!/company/{{employee.companyRef._id}}" class="text-success">
                     <i class="fas fa-industry"></i>
                     {{employee.companyRef.name}}
                 </a>
             </p>
-            <span class="emp-detail-label">Telefon:</span>
+            <span class="emp-detail-label" translate="FORMS.EMPLOYEE.PHONE">Telefon</span>
             <p class="emp-detail-property">{{employee.phone}}</p>
-            <span class="emp-detail-label">Email:</span>
+            <span class="emp-detail-label" translate="FORMS.EMPLOYEE.EMAIL">Email</span>
             <p class="emp-detail-property">{{employee.email}}</p>
         </div>
         <div class="w-25 d-inline-block">
-            <span class="emp-detail-label">Cinsiyet:</span>
+            <span class="emp-detail-label" translate="FORMS.EMPLOYEE.GENDER">Cinsiyet</span>
             <p class="emp-detail-property">{{employee.gender | gender}}</p>
-            <span class="emp-detail-label">İşe Başlama Tarihi:</span>
+            <span class="emp-detail-label" translate="FORMS.EMPLOYEE.JOB_STARTDATE">İşe Başlama Tarihi</span>
             <p class="emp-detail-property">{{employee.jobStartDate | formatDateToDDMMYYYY}}</p>
-            <span class="emp-detail-label">Kullanılan İzin (Gün):</span>
+            <span class="emp-detail-label" translate="FORMS.EMPLOYEE.ANNUAL_LEAVE">Kullanılan İzin (Gün)</span>
             <p class="emp-detail-property font-weight-bold">{{employee.annualLeaveSpent}}</p>
         </div>
     </div>

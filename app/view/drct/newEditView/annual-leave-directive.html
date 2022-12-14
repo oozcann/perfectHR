@@ -1,14 +1,14 @@
-<div ng-if="justSaved" call-to-action redirect-to-state="employee.newAnnualLeave" label="Yıllık İzin"></div>
+<div ng-if="justSaved" call-to-action redirect-to-state="employee.newAnnualLeave" label="{{'FORMS.ANNUAL_LEAVE.ANNUAL_LEAVE' | translate}}"></div>
 <form name="newAnnualLeave">
-    <h3 class="pt-2 pl-3">Genel Bilgiler</h3>
+    <h3 class="pt-2 pl-3" translate="FORMS.HEADER.GENERAL">Genel Bilgiler</h3>
     <hr class="m-3" />
-    <div html-form-element="textReadOnly" ng-if="!isNew" being-edited="beingEdited" ng-model="annualLeave.uniqueName" label="Referans No"></div>
-    <div html-form-element="employeeReadOnly" being-edited="beingEdited" ng-model="annualLeave.employeeRef" label="Çalışan"></div>
-    <div html-form-element="text" being-edited="beingEdited" ng-model="annualLeave.description" ng-required="true" label="Açıklama"></div>
-    <div html-form-element="date" being-edited="beingEdited" ng-model="annualLeave.annualLeaveStartDate" ng-change="calculateDaysInDiff()" ng-required="true" label="İzin Başlangıç Tarihi"></div>
-    <div html-form-element="date" being-edited="beingEdited" ng-model="annualLeave.annualLeaveEndDate" ng-change="calculateDaysInDiff()" ng-required="true" label="İzin Bitiş Tarihi"></div>
-    <div html-form-element="date" being-edited="beingEdited" ng-model="annualLeave.jobStartDate" ng-required="true" label="İşbaşı Tarihi"></div>
-    <div html-form-element="textReadOnly" ng-if="!isNew" being-edited="beingEdited" ng-model="annualLeave.daysInDiff" label="Kullanılan İzin (Gün)"></div>
+    <div html-form-element="textReadOnly" ng-if="!isNew" being-edited="beingEdited" ng-model="annualLeave.uniqueName" label="{{'FORMS.UNIQUENAME' | translate}}"></div>
+    <div html-form-element="employeeReadOnly" being-edited="beingEdited" ng-model="annualLeave.employeeRef" label="{{'FORMS.EMPLOYEE.EMPLOYEE' | translate}}"></div>
+    <div html-form-element="text" being-edited="beingEdited" ng-model="annualLeave.description" ng-required="true" label="{{'FORMS.DESCRIPTION' | translate}}"></div>
+    <div html-form-element="date" being-edited="beingEdited" ng-model="annualLeave.annualLeaveStartDate" ng-change="calculateDaysInDiff()" ng-required="true" label="{{'FORMS.ANNUAL_LEAVE.AL_STARTDATE' | translate}}"></div>
+    <div html-form-element="date" being-edited="beingEdited" ng-model="annualLeave.annualLeaveEndDate" ng-change="calculateDaysInDiff()" ng-required="true" label="{{'FORMS.ANNUAL_LEAVE.AL_ENDDATE' | translate}}"></div>
+    <div html-form-element="date" being-edited="beingEdited" ng-model="annualLeave.jobStartDate" ng-required="true" label="{{'FORMS.ANNUAL_LEAVE.WORK_STARTDATE' | translate}}"></div>
+    <div html-form-element="textReadOnly" ng-if="!isNew" being-edited="beingEdited" ng-model="annualLeave.daysInDiff" label="{{'FORMS.EMPLOYEE.ANNUAL_LEAVE' | translate}}"></div>
 
     <div class="sticky-button">
         <div new-edit-delete-buttons entity="annualLeave" being-edited="beingEdited" is-new="isNew" disable-opts="newAnnualLeave"></div>

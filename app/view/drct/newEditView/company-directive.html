@@ -1,14 +1,14 @@
-<div ng-if="justSaved" call-to-action redirect-to-state="new-company" label="Tesis"></div>
+<div ng-if="justSaved" call-to-action redirect-to-state="new-company" label="{{'FORMS.COMPANY.COMPANY' | translate}}"></div>
 <div company-card company="company" being-edited="beingEdited"></div>
 <form name="newCompany" ng-if="!company.archived">
-    <h3 class="pt-2 pl-3">Firma/Tesis Bilgileri</h3>
+    <h3 class="pt-2 pl-3" translate="FORMS.HEADER.COMPANY">Firma/Tesis Bilgileri</h3>
     <hr class="m-3" />
-    <div html-form-element="text" being-edited="beingEdited" ng-model="company.name" ng-required="true" label="Tesis Adı"></div>
-    <div html-form-element="text" being-edited="beingEdited" ng-model="company.uniqueName" ng-required="true" label="Sicil No"></div>
-    <h3 class="pt-4 pl-3">İletişim Bilgileri</h3>
+    <div html-form-element="text" being-edited="beingEdited" ng-model="company.name" ng-required="true" label="{{'FORMS.COMPANY.NAME' | translate}}"></div>
+    <div html-form-element="text" being-edited="beingEdited" ng-model="company.uniqueName" ng-required="true" label="{{'FORMS.COMPANY.SGK' | translate}}"></div>
+    <h3 class="pt-4 pl-3" translate="FORMS.HEADER.CONTACT">İletişim Bilgileri</h3>
     <hr class="m-3" />
-    <div html-form-element="phone" being-edited="beingEdited" ng-model="company.phone" label="Telefon" placeholder="___-_______"></div>
-    <div html-form-element="textarea" being-edited="beingEdited" ng-model="company.address" label="Adres"></div>
+    <div html-form-element="phone" being-edited="beingEdited" ng-model="company.phone" label="{{'FORMS.COMPANY.PHONE' | translate}}" placeholder="___-_______"></div>
+    <div html-form-element="textarea" being-edited="beingEdited" ng-model="company.address" label="{{'FORMS.COMPANY.ADDRESS' | translate}}"></div>
     <div class="sticky-button">
         <div new-edit-delete-buttons entity="company" being-edited="beingEdited" is-new="isNew" disable-opts="newCompany"></div>
     </div>

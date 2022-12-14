@@ -9,10 +9,32 @@
       "TRANSFER": "Transfer Et"
   },
   "FORMS": {
+      "ANNUAL_LEAVE": {
+        "ANNUAL_LEAVE": "Yıllık İzin",
+        "AL_STARTDATE": "İzin Başlangıç Tarihi",
+        "AL_ENDDATE": "İzin Bitiş Tarihi",
+        "WORK_STARTDATE": "İşbaşı Tarihi"
+      },
+      "BONUS": {
+        "BONUS": "Prim",
+        "BONUS_TL": "Prim Miktarı(TL)",
+        "PAYMENT_DATE": "Prim Veriliş Tarihi"
+      },
+      "COMPANY": {
+        "ADDRESS": "Adres",
+        "COMPANY": "Tesis",
+        "NAME": "Tesis Adı",
+        "PHONE": "Telefon",
+        "SGK": "SGK Sicil No",
+        "TRANSFER_TO": "Transfer Edilecek Tesis"
+      },
+      "DESCRIPTION": "Açıklama",
       "EMPLOYEE": {
         "AGE": "Yaş",
+        "ANNUAL_LEAVE": "Kullanılan İzin(Gün)",
         "DATEOFBIRTH": "Doğum Tarihi",
         "EMAIL": "Email",
+        "EMPLOYEE": "Çalışan",
         "GENDER": "Cinsiyet",
         "INTERNAL_UNIQUE_NAME": "Sicil No",
         "JOB_STARTDATE": "İşe Başlama Tarihi",
@@ -21,6 +43,22 @@
         "SURNAME": "Soyad",
         "UNIQUE_NAME": "TC Kimlik"
 
-      }
+      },
+      "HEADER": {
+        "COMPANY": "Tesis Bilgileri",
+        "CONTACT": "İletişim Bilgileri",
+        "GENERAL": "Genel Bilgiler",
+        "PERSONAL": "Özlük Bilgileri"
+      },
+      "NAME": "Ad",
+      "REMINDER": {
+        "REMINDER": "Hatırlatıcı",
+        "REMINDER_DATE": "Hatırlatma Tarihi"
+      },
+      "UNIQUENAME": "Referans No"
+  },
+  "LIST": {
+    "EMPLOYEES": "Çalışanlar",
+    "REMINDERS": "Hatırlatıcılar"
   }
 }

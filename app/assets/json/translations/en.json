@@ -9,10 +9,32 @@
     "TRANSFER": "Transfer"
   },
   "FORMS": {
+    "ANNUAL_LEAVE": {
+      "ANNUAL_LEAVE": "Annual Leave",
+      "AL_STARTDATE": "Leave Start Date",
+      "AL_ENDDATE": "Leave End Date",
+      "WORK_STARTDATE": "Work Start Date"
+    },
+    "BONUS": {
+      "BONUS": "Bonus",
+      "BONUS_TL": "Bonus(TL)",
+      "PAYMENT_DATE": "Payment Date"
+    },
+    "COMPANY": {
+      "ADDRESS": "Address",
+      "COMPANY": "Company",
+      "NAME": "Company Name",
+      "PHONE": "Company Phone",
+      "SGK": "SGK No",
+      "TRANSFER_TO": "Transfer To"
+    },
+    "DESCRIPTION": "Description",
     "EMPLOYEE": {
       "AGE": "Age",
+      "ANNUAL_LEAVE": "Annual Leave Spend(Days)",
       "DATEOFBIRTH": "Date of Birth",
       "EMAIL": "Email",
+      "EMPLOYEE": "Employee",
       "GENDER": "Gender",
       "INTERNAL_UNIQUE_NAME": "Internal Unique Name",
       "JOB_STARTDATE": "Job Start Date",
@@ -21,6 +43,22 @@
       "SURNAME": "Surname",
       "UNIQUE_NAME": "National ID"
 
-    }
+    },
+    "HEADER": {
+      "COMPANY": "Company Information",
+      "CONTACT": "Contact Information",
+      "GENERAL": "General Information",
+      "PERSONAL": "Personal Information"
+    },
+    "NAME": "Ad",
+    "REMINDER": {
+      "REMINDER": "Reminder",
+      "REMINDER_DATE": "Reminder Date"
+    },
+    "UNIQUENAME": "Reference No"
+  },
+  "LIST": {
+    "EMPLOYEES": "Employees",
+    "REMINDERS": "Reminders"
   }
 }
