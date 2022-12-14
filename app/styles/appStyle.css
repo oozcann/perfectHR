@@ -63,7 +63,7 @@ h3 {
 .col-sm-9 > input.form-control,
 .col-sm-9 >div > input.form-control,
 .col-sm-9 > select.form-control,
- div[ng-switch-when] > select.form-control {
+div[ng-switch-when] > select.form-control {
     width: 100% !important;
     height: 34px !important;
     border-radius:0;
@@ -81,10 +81,10 @@ h3 {
 .form-group > .col-sm-9 {
     padding-right: 30px;
 }
-    .form-control:focus {
-        box-shadow:none;
-        border: 1px solid green;
-    }
+.form-control:focus {
+    box-shadow:none;
+    border: 1px solid green;
+}
 .input-group {
     float: left;
 }
@@ -94,13 +94,15 @@ h3 {
     text-align:right;
     float:left;
     border-right: 1px solid #cecece;
-
+    color: #0275d8;
 }
 .control-span, .form-group > span {
     margin:0;
     padding: 4px 0 0 8px;
 }
-
+.form-group {
+    margin: 0 !important;
+}
 
 .list-table {
     font-family: Arial, Helvetica, sans-serif;
