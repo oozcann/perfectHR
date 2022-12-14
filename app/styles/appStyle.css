@@ -103,7 +103,9 @@ div[ng-switch-when] > select.form-control {
 .form-group {
     margin: 0 !important;
 }
-
+.form-group > span, .form-group > div, .form-group > label {
+    padding:6px;
+}
 .list-table {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
