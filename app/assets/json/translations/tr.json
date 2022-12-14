@@ -1,3 +1,26 @@
 {
+  "ACTIONS": {
+      "ADD": "Ekle",
+      "CANCEL": "Vazgeç",
+      "DELETE": "Sil",
+      "EDIT": "Düzenle",
+      "REMOVE_PERMANENTLY": "Kalıcı Olarak Sil",
+      "SAVE": "Kaydet",
+      "TRANSFER": "Transfer Et"
+  },
+  "FORMS": {
+      "EMPLOYEE": {
+        "AGE": "Yaş",
+        "DATEOFBIRTH": "Doğum Tarihi",
+        "EMAIL": "Email",
+        "GENDER": "Cinsiyet",
+        "INTERNAL_UNIQUE_NAME": "Sicil No",
+        "JOB_STARTDATE": "İşe Başlama Tarihi",
+        "NAME": "Ad",
+        "PHONE": "Telefon",
+        "SURNAME": "Soyad",
+        "UNIQUE_NAME": "TC Kimlik"
 
+      }
+  }
 }

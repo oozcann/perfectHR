@@ -12,19 +12,19 @@
 <form name="newEmployee" ng-if="!employee.archived && !openTransferEmployee">
     <h3 class="pt-2 pl-3">Özlük Bilgileri</h3>
     <hr class="m-3" />
-    <div html-form-element="text" being-edited="beingEdited" ng-model="employee.name" ng-required="true" label="Ad"></div>
-    <div html-form-element="text" being-edited="beingEdited" ng-model="employee.surname" ng-required="true" label="Soyad"></div>
-    <div html-form-element="tckimlik" being-edited="beingEdited" ng-model="employee.uniqueName" ng-required="true" label="TC Kimlik No" ng-minlength="11" ng-maxlength="11"></div>
-    <div html-form-element="text" being-edited="beingEdited" ng-model="employee.internalUniqueName" label="Sicil No"></div>
+    <div html-form-element="text" being-edited="beingEdited" ng-model="employee.name" ng-required="true" label="{{'FORMS.EMPLOYEE.NAME' | translate}}"></div>
+    <div html-form-element="text" being-edited="beingEdited" ng-model="employee.surname" ng-required="true" label="{{'FORMS.EMPLOYEE.SURNAME' | translate}}"></div>
+    <div html-form-element="tckimlik" being-edited="beingEdited" ng-model="employee.uniqueName" ng-required="true" label="{{'FORMS.EMPLOYEE.UNIQUE_NAME' | translate}}" ng-minlength="11" ng-maxlength="11"></div>
+    <div html-form-element="text" being-edited="beingEdited" ng-model="employee.internalUniqueName" label="{{'FORMS.EMPLOYEE.INTERNAL_UNIQUE_NAME' | translate}}"></div>
     <div company-select being-edited="beingEdited" is-new="isNew" entity="entity" ng-model="employeeCompanyRef"></div>
-    <div html-form-element="gender" being-edited="beingEdited" ng-model="employee.gender" ng-required="true" label="Cinsiyet"></div>
-    <div html-form-element="date" being-edited="beingEdited" ng-model="employee.dateOfBirth" label="Doğum Tarihi"></div>
-    <div html-form-element="age" ng-show="!beingEdited" being-edited="beingEdited" ng-model="employee.dateOfBirth" label="Yaş"></div>
-    <div html-form-element="date" being-edited="beingEdited" ng-model="employee.jobStartDate" label="İşe Başlama Tarihi"></div>
+    <div html-form-element="gender" being-edited="beingEdited" ng-model="employee.gender" ng-required="true" label="{{'FORMS.EMPLOYEE.GENDER' | translate}}"></div>
+    <div html-form-element="date" being-edited="beingEdited" ng-model="employee.dateOfBirth" label="{{'FORMS.EMPLOYEE.DATEOFBIRTH' | translate}}"></div>
+    <div html-form-element="age" ng-show="!beingEdited" being-edited="beingEdited" ng-model="employee.dateOfBirth" label="{{'FORMS.EMPLOYEE.AGE' | translate}}"></div>
+    <div html-form-element="date" being-edited="beingEdited" ng-model="employee.jobStartDate" label="{{'FORMS.EMPLOYEE.JOB_STARTDATE' | translate}}"></div>
     <h3 class="pt-4 pl-3">İletişim Bilgileri</h3>
     <hr class="m-3" />
-    <div html-form-element="phone" being-edited="beingEdited" ng-model="employee.phone" label="Telefon" placeholder="___-_______"></div>
-    <div html-form-element="email" being-edited="beingEdited" ng-model="employee.email" label="E-mail"></div>
+    <div html-form-element="phone" being-edited="beingEdited" ng-model="employee.phone" label="{{'FORMS.EMPLOYEE.PHONE' | translate}}" placeholder="___-_______"></div>
+    <div html-form-element="email" being-edited="beingEdited" ng-model="employee.email" label="{{'FORMS.EMPLOYEE.EMAIL' | translate}}"></div>
     <div class="sticky-button" ng-show="!openTransferEmployee">
         <div new-edit-delete-buttons entity="employee" being-edited="beingEdited" is-new="isNew" disable-opts="newEmployee">
             <button ng-if="!openTransferEmployee && !isNew && !beingEdited" ng-click="showHideTransferEmployee()" class="btn yellow btn-square">Transfer Et</button>

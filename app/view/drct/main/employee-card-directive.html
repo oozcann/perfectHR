@@ -6,7 +6,7 @@
     <div class="col-10 p-3 bg-light" style="font-family: 'Open Sans', sans-serif;">
         <h3 class="m-0 p-0">{{employee.name}} {{employee.surname}}</h3>
         <div class="w-25 d-inline-block">
-            <span class="emp-detail-label">TC Kimlik:</span>
+            <span class="emp-detail-label">{{'FORMS.EMPLOYEE.UNIQUE_NAME' | translate}}:</span>
             <p class="emp-detail-property">{{employee.uniqueName}}</p>
             <span class="emp-detail-label">D. Tarihi:</span>
             <p class="emp-detail-property">{{employee.dateOfBirth | formatDateToDDMMYYYY}}</p>

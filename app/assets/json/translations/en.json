@@ -1,0 +1,26 @@
+{
+  "ACTIONS": {
+    "ADD": "Add",
+    "CANCEL": "Cancel",
+    "DELETE": "Delete",
+    "EDIT": "Edit",
+    "REMOVE_PERMANENTLY": "Remove Permanently",
+    "SAVE": "Save",
+    "TRANSFER": "Transfer"
+  },
+  "FORMS": {
+    "EMPLOYEE": {
+      "AGE": "Age",
+      "DATEOFBIRTH": "Date of Birth",
+      "EMAIL": "Email",
+      "GENDER": "Gender",
+      "INTERNAL_UNIQUE_NAME": "Internal Unique Name",
+      "JOB_STARTDATE": "Job Start Date",
+      "NAME": "Name",
+      "PHONE": "Phone",
+      "SURNAME": "Surname",
+      "UNIQUE_NAME": "National ID"
+
+    }
+  }
+}
