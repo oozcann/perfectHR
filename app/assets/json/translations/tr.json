@@ -15,6 +15,31 @@
       "SAVE": "Kaydet",
       "TRANSFER": "Transfer Et"
   },
+  "BREADCRUMB": {
+      "ANNUAL_LEAVE": {
+        "ANNUAL_LEAVES": "Yıllık İzinler",
+        "DETAIL": "İzin Detayı",
+        "NEW": "Yeni İzin"
+      },
+      "BONUS": {
+        "BONUS": "Primler",
+        "DETAIL": "Prim Detayı",
+        "NEW": "Yeni Prim"
+      },
+      "COMPANY": {
+        "COMPANIES": "Firmalar",
+        "NEW": "Yeni Firma"
+      },
+      "EMPLOYEE": {
+        "EMPLOYEES": "Çalışanlar",
+        "NEW": "Yeni Çalışan"
+      },
+      "HOME": "Anasayfa",
+      "REMINDER": {
+        "NEW": "Yeni Hatırlatıcı",
+        "REMINDERS": "Hatırlatıcılar"
+      }
+  },
   "FORMS": {
       "ANNUAL_LEAVE": {
         "ANNUAL_LEAVE": "Yıllık İzin",
@@ -32,11 +57,11 @@
       },
       "COMPANY": {
         "ADDRESS": "Adres",
-        "COMPANY": "Tesis",
-        "NAME": "Tesis Adı",
+        "COMPANY": "Firma",
+        "NAME": "Firma Adı",
         "PHONE": "Telefon",
         "SGK": "SGK Sicil No",
-        "TRANSFER_TO": "Transfer Edilecek Tesis"
+        "TRANSFER_TO": "Transfer Edilecek Firma"
       },
       "CREATION_DATE": "Oluşturulma Tarihi",
       "DESCRIPTION": "Açıklama",
@@ -57,7 +82,7 @@
 
       },
       "HEADER": {
-        "COMPANY": "Tesis Bilgileri",
+        "COMPANY": "Firma Bilgileri",
         "CONTACT": "İletişim Bilgileri",
         "GENERAL": "Genel Bilgiler",
         "PERSONAL": "Özlük Bilgileri"
@@ -65,7 +90,7 @@
       "NAME": "Ad",
       "REFERENCE_NO": "Referans No",
       "RELATED": {
-        "COMPANY": "İlişkili Tesis",
+        "COMPANY": "İlişkili Firma",
         "EMPLOYEE": "İlişkili Çalışan"
       },
       "REMINDER": {
@@ -78,6 +103,64 @@
   "LIST": {
     "EMPLOYEES": "Çalışanlar",
     "REMINDERS": "Hatırlatıcılar"
+  },
+  "PAGE_HEADER": {
+    "ANNUAL_LEAVE": {
+      "DETAIL": "Yıllık İzin Detayları",
+      "NEW": {
+        "DESCRIPTION": "Lütfen izin detaylarını giriniz.",
+        "TITLE": "Yeni Yıllık İzin"
+      },
+      "LIST": {
+        "DESCRIPTION": "Çalışanlara verilen izin detayları",
+        "TITLE": "İzinler"
+      }
+    },
+    "BONUS": {
+      "DETAIL": "Prim Detayları",
+      "NEW": {
+        "DESCRIPTION": "Lütfen prim detaylarını giriniz.",
+        "TITLE": "Yeni Prim"
+      },
+      "LIST": {
+        "DESCRIPTION": "Çalışanlara verilen prim detayları",
+        "TITLE": "Primler"
+      }
+    },
+    "COMPANY": {
+      "NEW": {
+        "DESCRIPTION": "Lütfen firma detaylarını giriniz.",
+        "TITLE": "Yeni Firma"
+      },
+      "LIST": {
+        "DESCRIPTION": "Kayıtlı firmalar listesi üzerinden seçim işlemlerini yapabilirsiniz.",
+        "TITLE": "Firmalar"
+      }
+    },
+    "EMPLOYEE": {
+      "NEW": {
+        "DESCRIPTION": "Lütfen çalışan detaylarını giriniz.",
+        "TITLE": "Yeni Çalışan"
+      },
+      "LIST": {
+        "DESCRIPTION": "Kayıtlı çalışanlar listesi üzerinden seçim işlemlerini yapabilirsiniz.",
+        "TITLE": "Çalışanlar"
+      }
+    },
+    "HOME": {
+      "DESCRIPTION": "Raporlar & Genel Bilgiler",
+      "TITLE": "Anasayfa"
+    },
+    "REMINDER": {
+      "NEW": {
+        "DESCRIPTION": "Lütfen hatırlatıcı detaylarını giriniz.",
+        "TITLE": "Yeni Hatırlatıcı"
+      },
+      "LIST": {
+        "DESCRIPTION": "Listeleme & Takip",
+        "TITLE": "Hatırlatıcılar"
+      }
+    }
   },
   "PLACEHOLDER": {
     "ENTER_NAME": "Bir isim giriniz."

@@ -15,6 +15,31 @@
     "SAVE": "Save",
     "TRANSFER": "Transfer"
   },
+  "BREADCRUMB": {
+    "ANNUAL_LEAVE": {
+      "ANNUAL_LEAVES": "Annual Leaves",
+      "DETAIL": "Leave Detail",
+      "NEW": "New Annual Leave"
+    },
+    "BONUS": {
+      "BONUS": "All Bonus",
+      "DETAIL": "Bonus Detail",
+      "NEW": "New Bonus"
+    },
+    "COMPANY": {
+      "COMPANIES": "Companies",
+      "NEW": "New Company"
+    },
+    "EMPLOYEE": {
+      "EMPLOYEES": "Employees",
+      "NEW": "New Employee"
+    },
+    "HOME": "Homepage",
+    "REMINDER": {
+      "NEW": "New Reminder",
+      "REMINDERS": "Reminders"
+    }
+  },
   "FORMS": {
     "ANNUAL_LEAVE": {
       "ANNUAL_LEAVE": "Annual Leave",
@@ -78,6 +103,64 @@
   "LIST": {
     "EMPLOYEES": "Employees",
     "REMINDERS": "Reminders"
+  },
+  "PAGE_HEADER": {
+    "ANNUAL_LEAVE": {
+      "DETAIL": "Annual Leave Details",
+      "NEW": {
+        "DESCRIPTION": "Please provide annual leave information",
+        "TITLE": "New Annual Leave"
+      },
+      "LIST": {
+        "DESCRIPTION": "Annual leave details given to employees",
+        "TITLE": "Annual Leaves"
+      }
+    },
+    "BONUS": {
+      "DETAIL": "Bonus Details",
+      "NEW": {
+        "DESCRIPTION": "Please provide bonus information",
+        "TITLE": "New Bonus"
+      },
+      "LIST": {
+        "DESCRIPTION": "Bonus details given to employees",
+        "TITLE": "All Bonus"
+      }
+    },
+    "COMPANY": {
+      "NEW": {
+        "DESCRIPTION": "Please provide company information",
+        "TITLE": "New Company"
+      },
+      "LIST": {
+        "DESCRIPTION": "List of companies you are authorized to view.",
+        "TITLE": "Companies"
+      }
+    },
+    "EMPLOYEE": {
+      "NEW": {
+        "DESCRIPTION": "Please provide employee information.",
+        "TITLE": "New Employee"
+      },
+      "LIST": {
+        "DESCRIPTION": "List of employees you are authorized to view.",
+        "TITLE": "Employees"
+      }
+    },
+    "HOME": {
+      "DESCRIPTION": "Reports & General Information",
+      "TITLE": "Homepage"
+    },
+    "REMINDER": {
+      "NEW": {
+        "DESCRIPTION": "Please provide reminder details.",
+        "TITLE": "New Reminder"
+      },
+      "LIST": {
+        "DESCRIPTION": "Search & Listing",
+        "TITLE": "Reminders"
+      }
+    }
   },
   "PLACEHOLDER": {
     "ENTER_NAME": "Enter a name"

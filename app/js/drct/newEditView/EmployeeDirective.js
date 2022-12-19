@@ -17,7 +17,8 @@ myApp.directive('employeeDirective', function(){
             'entityService',
             'referenceService',
             'rendererService',
-            ($scope,entityService,referenceService,rendererService) => {
+            '$translate',
+            ($scope,entityService,referenceService,rendererService,$translate) => {
                 $scope.getEntityAddress = 'employee';
                 $scope.entity = $scope.employee;
                 if (!$scope.isNew && $scope.employee.dateOfBirth) {
@@ -54,6 +55,7 @@ myApp.directive('employeeDirective', function(){
                     }
                     $scope.employee.annualLeaveSpent = count;
                 };
+                console.log($translate.instant('BREADCRUMB.HOME'));
             }
         ]
     }
