@@ -5,6 +5,9 @@ const reminderSchema = new Schema({
     _class: {
         type: String
     },
+    uniqueName: {
+        type: String
+    },
     name: {
         type: String
     },

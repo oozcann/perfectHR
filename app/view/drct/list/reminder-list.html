@@ -9,6 +9,7 @@
     <table id="reminderList" class="table list-table" style="width:100%;">
         <thead>
             <tr>
+                <th translate="FORMS.UNIQUENAME">Referans No</th>
                 <th translate="FORMS.NAME">Hatırlatıcı Adı</th>
                 <th translate="FORMS.DESCRIPTION">Açıklama</th>
                 <th translate="FORMS.RELATED.COMPANY">İlişkili Tesis</th>
@@ -21,10 +22,11 @@
             <tr>
                 <td>
                     <a href="#!/reminder/{{reminder._id}}" class="text-danger">
-                        <i class="fas fa-bell"></i>
-                        {{reminder.name}}
+                        <i class="fa fa-bell"></i>
+                        {{reminder.uniqueName}}
                     </a>
                 </td>
+                <td>{{reminder.name}}</td>
                 <td>{{reminder.description}}</td>
                 <td>
                     <a href="#!/company/{{reminder.companyRef._id}}" class="text-success">

@@ -2,6 +2,7 @@
 <form name="newReminder">
     <h3 class="pt-0 pl-3" translate="FORMS.HEADER.GENERAL">Genel Bilgiler</h3>
     <hr class="m-3" />
+    <div html-form-element="textReadOnly" ng-if="!isNew" being-edited="beingEdited" ng-model="reminder.uniqueName" label="{{'FORMS.UNIQUENAME' | translate}}"></div>
     <div html-form-element="text" being-edited="beingEdited" ng-model="reminder.name" ng-required="true" label="{{'FORMS.NAME' | translate}}"></div>
     <div html-form-element="textarea" being-edited="beingEdited" ng-model="reminder.description" label="{{'FORMS.DESCRIPTION' | translate}}"></div>
     <div company-select being-edited="beingEdited" is-new="isNew" entity="entity" ng-model="reminderCompanyRef"></div>

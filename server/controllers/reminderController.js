@@ -1,10 +1,22 @@
 const Reminder = require('../models/Reminder');
+const mongoose = require('mongoose');
 
+const collection = mongoose.connection.collection('BONUS');
+const getNumDocs = () => {
+    return collection.countDocuments().then(count => {
+        return count;
+    });
+}
+let count = 0;
+getNumDocs().then(result => {
+    count = result;
+})
 //Save Reminder
 
 const saveReminder = (req,res,next) => {
     let reminder = new Reminder ({
         _class: 'reminder',
+        uniqueName: 'RMD-' + (count + 1),
         name: req.body.name,
         description: req.body.description,
         companyRef: {
