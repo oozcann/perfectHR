@@ -3,19 +3,19 @@
         <span new-entity-button entity="annualLeave"></span>
         <button ng-click="exportData()" class="btn btn-square" style="color:#333; border:1px solid #cecece; width:70px!important;">EXCEL</button>
     </div>
-    <input ng-model="search" type="search" class="form-control emp-search-input" placeholder="Bir isim yazınız" />
+    <input ng-model="search" type="search" class="form-control emp-search-input" placeholder="{{'PLACEHOLDER.ENTER_NAME' | translate}}" />
 </div>
 <div class="pl-3 pr-3" style="max-height:400px; overflow:auto;">
     <table id="bonusList" class="table list-table" style="width:100%;">
         <thead>
         <tr>
-            <th>Referans No</th>
-            <th>İlişkili Çalışan</th>
-            <th>Açıklama</th>
-            <th>İzin Başlangıç Tarihi</th>
-            <th>İzin Bitiş Tarihi</th>
-            <th>İşbaşı Tarihi</th>
-            <th>İzin Süresi (Gün)</th>
+            <th translate="FORMS.REFERENCE_NO">Referans No</th>
+            <th translate="FORMS.RELATED.EMPLOYEE">İlişkili Çalışan</th>
+            <th translate="FORMS.DESCRIPTION">Açıklama</th>
+            <th translate="FORMS.ANNUAL_LEAVE.AL_STARTDATE">İzin Başlangıç Tarihi</th>
+            <th translate="FORMS.ANNUAL_LEAVE.AL_ENDDATE">İzin Bitiş Tarihi</th>
+            <th translate="FORMS.ANNUAL_LEAVE.WORK_STARTDATE">İşbaşı Tarihi</th>
+            <th translate="FORMS.ANNUAL_LEAVE.AL_SPENT">İzin Süresi (Gün)</th>
             <th></th>
         </tr>
         </thead>
@@ -43,6 +43,6 @@
             </td>
         </tr>
         </tbody>
-        <tr ng-if="annualLeaves.length == 0"><td colspan="10" style="text-align:center;padding:10px; font-size:14px;">Yıllık İzin Bulunamadı</td></tr>
+        <tr ng-if="annualLeaves.length == 0"><td colspan="10" style="text-align:center;padding:10px; font-size:14px;" translate="FORMS.ANNUAL_LEAVE.AL_NOT_FOUND">Yıllık İzin Bulunamadı</td></tr>
     </table>
 </div>

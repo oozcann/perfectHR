@@ -4,21 +4,21 @@
         <button ng-hide="hideArchivedDataButton" ng-click="toggleArchivedEmployee()" class="btn btn-square {{btnClass}}">{{showHideArchivedEmployees}} Çalışanları Göster</button>
         <button ng-click="exportData()" class="btn btn-square" style="color:#333; border:1px solid #cecece; width:70px!important;">EXCEL</button>
     </div>
-    <input ng-model="search" type="search" class="form-control emp-search-input" placeholder="Bir isim yazınız" />
+    <input ng-model="search" type="search" class="form-control emp-search-input" placeholder="{{'PLACEHOLDER.ENTER_NAME' | translate}}" />
 </div>
 <div class="pl-3 pr-3" style="max-height:400px; overflow:auto;">
     <table id="employeesList" class="table list-table" style="width:100%;">
         <thead>
             <tr>
-                <th>TC Kimlik</th>
-                <th>Çalışan</th>
-                <th>Firma</th>
-                <th>İşe Başlama Tarihi</th>
-                <th>Doğum Tarihi</th>
-                <th>Cinsiyet</th>
-                <th>Telefon</th>
-                <th>E-mail</th>
-                <th>Yaş</th>
+                <th translate="FORMS.EMPLOYEE.UNIQUE_NAME">TC Kimlik</th>
+                <th translate="FORMS.EMPLOYEE.EMPLOYEE">Çalışan</th>
+                <th translate="FORMS.COMPANY.COMPANY">Firma</th>
+                <th translate="FORMS.EMPLOYEE.JOB_STARTDATE">İşe Başlama Tarihi</th>
+                <th translate="FORMS.EMPLOYEE.DATEOFBIRTH">Doğum Tarihi</th>
+                <th translate="FORMS.EMPLOYEE.GENDER">Cinsiyet</th>
+                <th translate="FORMS.EMPLOYEE.PHONE">Telefon</th>
+                <th translate="FORMS.EMPLOYEE.EMAIL">E-mail</th>
+                <th translate="FORMS.EMPLOYEE.AGE">Yaş</th>
                 <th></th>
             </tr>
         </thead>
@@ -49,6 +49,6 @@
                 </td>
             </tr>
         </tbody>
-        <tr ng-if="employees.length == 0"><td colspan="10" style="text-align:center;padding:10px; font-size:14px;">Çalışan Bulunamadı</td></tr>
+        <tr ng-if="employees.length == 0"><td colspan="10" style="text-align:center;padding:10px; font-size:14px;" translate="FORMS.EMPLOYEE.EMPLOYEE_NOT_FOUND">Çalışan Bulunamadı</td></tr>
     </table>
 </div>

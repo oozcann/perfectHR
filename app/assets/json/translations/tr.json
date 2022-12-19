@@ -4,6 +4,13 @@
       "CANCEL": "Vazgeç",
       "DELETE": "Sil",
       "EDIT": "Düzenle",
+      "NEW": {
+        "ANNUAL_LEAVE": "Yeni Yıllık İzin",
+        "BONUS": "Yeni Prim",
+        "COMPANY": "Yeni Firma",
+        "EMPLOYEE": "Yeni Çalışan",
+        "REMINDER": "Yeni Hatırlatıcı"
+      },
       "REMOVE_PERMANENTLY": "Kalıcı Olarak Sil",
       "SAVE": "Kaydet",
       "TRANSFER": "Transfer Et"
@@ -13,11 +20,14 @@
         "ANNUAL_LEAVE": "Yıllık İzin",
         "AL_STARTDATE": "İzin Başlangıç Tarihi",
         "AL_ENDDATE": "İzin Bitiş Tarihi",
+        "AL_NOT_FOUND": "Yıllık İzin Bulunamadı.",
+        "AL_SPENT": "İzin Süresi (Gün)",
         "WORK_STARTDATE": "İşbaşı Tarihi"
       },
       "BONUS": {
         "BONUS": "Prim",
         "BONUS_TL": "Prim Miktarı(TL)",
+        "BONUS_NOT_FOUND": "Prim Bulunamadı.",
         "PAYMENT_DATE": "Prim Veriliş Tarihi"
       },
       "COMPANY": {
@@ -28,6 +38,7 @@
         "SGK": "SGK Sicil No",
         "TRANSFER_TO": "Transfer Edilecek Tesis"
       },
+      "CREATION_DATE": "Oluşturulma Tarihi",
       "DESCRIPTION": "Açıklama",
       "EMPLOYEE": {
         "AGE": "Yaş",
@@ -35,6 +46,7 @@
         "DATEOFBIRTH": "Doğum Tarihi",
         "EMAIL": "Email",
         "EMPLOYEE": "Çalışan",
+        "EMPLOYEE_NOT_FOUND": "Çalışan Bulunamadı.",
         "GENDER": "Cinsiyet",
         "INTERNAL_UNIQUE_NAME": "Sicil No",
         "JOB_STARTDATE": "İşe Başlama Tarihi",
@@ -51,14 +63,23 @@
         "PERSONAL": "Özlük Bilgileri"
       },
       "NAME": "Ad",
+      "REFERENCE_NO": "Referans No",
+      "RELATED": {
+        "COMPANY": "İlişkili Tesis",
+        "EMPLOYEE": "İlişkili Çalışan"
+      },
       "REMINDER": {
         "REMINDER": "Hatırlatıcı",
-        "REMINDER_DATE": "Hatırlatma Tarihi"
+        "REMINDER_DATE": "Hatırlatma Tarihi",
+        "REMINDER_NOT_FOUND": "Hatırlatıcı Bulunamadı"
       },
       "UNIQUENAME": "Referans No"
   },
   "LIST": {
     "EMPLOYEES": "Çalışanlar",
     "REMINDERS": "Hatırlatıcılar"
+  },
+  "PLACEHOLDER": {
+    "ENTER_NAME": "Bir isim giriniz."
   }
 }

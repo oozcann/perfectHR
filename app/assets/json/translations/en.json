@@ -4,6 +4,13 @@
     "CANCEL": "Cancel",
     "DELETE": "Delete",
     "EDIT": "Edit",
+    "NEW": {
+      "ANNUAL_LEAVE": "New Annual Leave",
+      "BONUS": "New Bonus",
+      "COMPANY": "New Company",
+      "EMPLOYEE": "New Employee",
+      "REMINDER": "New Reminder"
+    },
     "REMOVE_PERMANENTLY": "Remove Permanently",
     "SAVE": "Save",
     "TRANSFER": "Transfer"
@@ -13,11 +20,14 @@
       "ANNUAL_LEAVE": "Annual Leave",
       "AL_STARTDATE": "Leave Start Date",
       "AL_ENDDATE": "Leave End Date",
+      "AL_NOT_FOUND": "Annual Leave Not Found.",
+      "AL_SPENT": "Leave (Day)",
       "WORK_STARTDATE": "Work Start Date"
     },
     "BONUS": {
       "BONUS": "Bonus",
       "BONUS_TL": "Bonus(TL)",
+      "BONUS_NOT_FOUND": "Bonus Not Found",
       "PAYMENT_DATE": "Payment Date"
     },
     "COMPANY": {
@@ -28,6 +38,7 @@
       "SGK": "SGK No",
       "TRANSFER_TO": "Transfer To"
     },
+    "CREATION_DATE": "Creation Date",
     "DESCRIPTION": "Description",
     "EMPLOYEE": {
       "AGE": "Age",
@@ -35,6 +46,7 @@
       "DATEOFBIRTH": "Date of Birth",
       "EMAIL": "Email",
       "EMPLOYEE": "Employee",
+      "EMPLOYEE_NOT_FOUND": "Employee Not Found",
       "GENDER": "Gender",
       "INTERNAL_UNIQUE_NAME": "Internal Unique Name",
       "JOB_STARTDATE": "Job Start Date",
@@ -51,14 +63,23 @@
       "PERSONAL": "Personal Information"
     },
     "NAME": "Ad",
+    "REFERENCE_NO": "Reference No",
+    "RELATED": {
+      "COMPANY": "Related Company",
+      "EMPLOYEE": "Related Employee"
+    },
     "REMINDER": {
       "REMINDER": "Reminder",
-      "REMINDER_DATE": "Reminder Date"
+      "REMINDER_DATE": "Reminder Date",
+      "REMINDER_NOT_FOUND": "Reminder Not Found"
     },
     "UNIQUENAME": "Reference No"
   },
   "LIST": {
     "EMPLOYEES": "Employees",
     "REMINDERS": "Reminders"
+  },
+  "PLACEHOLDER": {
+    "ENTER_NAME": "Enter a name"
   }
 }
