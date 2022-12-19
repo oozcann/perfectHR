@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-99 CDN'lerin node_modules üzerinden tanıtılması">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/json/translations/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/json/translations/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/json/translations/tr.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/json/translations/tr.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/core/new-edit-delete-buttons-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/core/new-edit-delete-buttons-directive.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/core/new-entity-button-directive.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/core/new-entity-button-directive.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/list/annual-leave-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/list/annual-leave-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/list/bonus-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/list/bonus-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/list/companies-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/list/companies-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/list/employees-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/list/employees-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/drct/list/reminder-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/drct/list/reminder-list.html" afterDir="false" />
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-100 Sayfalardaki metinlerin $translate üzerinden alınması">
+      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,13 +52,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663614753979</updated>
-    </task>
-    <task id="LOCAL-00056" summary="MAN-60 entityRef için service oluşturulması">
-      <created>1666116419107</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1666116419107</updated>
     </task>
     <task id="LOCAL-00057" summary="MAN-66 Kayıt yapılırken loading olduğunu gösteren bir mekanizmanın kurulması">
       <created>1666203599993</created>
@@ -405,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671474954315</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="MAN-100 Sayfalardaki metinlerin $translate üzerinden alınması">
+      <created>1671477185666</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1671477185666</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -443,8 +434,8 @@
     <MESSAGE value="MAN-65 Çalışana prim verilmesi ile ilgili modül oluşturulması" />
     <MESSAGE value="MAN-35 İzin ekleme ile ilgili ayrı bir db ve ekran oluşturulması + çalışan ile ilişkilendirilmesi" />
     <MESSAGE value="MAN-93 Prim+izin için random referans no üretilmesi" />
-    <MESSAGE value="MAN-100 Sayfalardaki metinlerin $translate üzerinden alınması" />
     <MESSAGE value="MAN-99 CDN'lerin node_modules üzerinden tanıtılması" />
-    <option name="LAST_COMMIT_MESSAGE" value="MAN-99 CDN'lerin node_modules üzerinden tanıtılması" />
+    <MESSAGE value="MAN-100 Sayfalardaki metinlerin $translate üzerinden alınması" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAN-100 Sayfalardaki metinlerin $translate üzerinden alınması" />
   </component>
 </project>
