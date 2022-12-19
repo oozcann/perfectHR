@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="UI iyileştirmeleri">
+    <list default="true" id="535282a7-7f41-4cfe-8070-679eda91fef4" name="Changes" comment="MAN-99 CDN'lerin node_modules üzerinden tanıtılması">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/styles/appStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/appStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,13 +53,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663614753979</updated>
-    </task>
-    <task id="LOCAL-00054" summary="MAN-33 save,update,delete işlemlerinin tek bir directive üzerinden yapılması (abstractNewEditView)">
-      <created>1665771892383</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1665771892383</updated>
     </task>
     <task id="LOCAL-00055" summary="MAN-64 Hatırlatıcılara companyRef ilişkisi kurulması">
       <created>1665773065427</created>
@@ -400,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671043229814</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="MAN-99 CDN'lerin node_modules üzerinden tanıtılması">
+      <created>1671473961184</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1671473961185</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -415,7 +412,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="MAN-33 save,update,delete işlemlerinin tek bir directive üzerinden yapılması (abstractNewEditView)" />
     <MESSAGE value="MAN-64 Hatırlatıcılara companyRef ilişkisi kurulması" />
     <MESSAGE value="MAN-60 entityRef için service oluşturulması" />
     <MESSAGE value="MAN-66 Kayıt yapılırken loading olduğunu gösteren bir mekanizmanın kurulması" />
@@ -440,6 +436,7 @@
     <MESSAGE value="MAN-35 İzin ekleme ile ilgili ayrı bir db ve ekran oluşturulması + çalışan ile ilişkilendirilmesi" />
     <MESSAGE value="MAN-93 Prim+izin için random referans no üretilmesi" />
     <MESSAGE value="MAN-100 Sayfalardaki metinlerin $translate üzerinden alınması" />
-    <option name="LAST_COMMIT_MESSAGE" value="MAN-100 Sayfalardaki metinlerin $translate üzerinden alınması" />
+    <MESSAGE value="MAN-99 CDN'lerin node_modules üzerinden tanıtılması" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAN-99 CDN'lerin node_modules üzerinden tanıtılması" />
   </component>
 </project>

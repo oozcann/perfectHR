@@ -1,8 +1,8 @@
 .yellow {
-    background-color: #f0ad4e;
-    color: white;
+    background-color: #f0ad4e !important;
+    color: white !important;
 }
 button.yellow:hover {
-    background-color: #eea236;
-    color: white;
+    background-color: #eea236 !important;
+    color: white !important;
 }
